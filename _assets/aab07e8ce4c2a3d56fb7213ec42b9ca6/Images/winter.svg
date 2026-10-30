@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 540" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="himmel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1f45"/>
+      <stop offset=".55" stop-color="#153a78"/>
+      <stop offset="1" stop-color="#2f69b5"/>
+    </linearGradient>
+    <radialGradient id="schein" cx=".5" cy=".92" r=".62">
+      <stop offset="0" stop-color="#fbe7b2" stop-opacity=".5"/>
+      <stop offset=".6" stop-color="#fbe7b2" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fbe7b2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="schnee1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe7f6"/>
+    </linearGradient>
+    <linearGradient id="schnee2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9cfeb"/>
+      <stop offset="1" stop-color="#8fb0dc"/>
+    </linearGradient>
+    <path id="funkel" d="M0-9C.8-2.4 2.4-.8 9 0 2.4.8.8 2.4 0 9-.8 2.4-2.4.8-9 0-2.4-.8-.8-2.4 0-9z"/>
+    <g id="tanne">
+      <rect x="-5" y="-14" width="10" height="16" fill="#0a1a38"/>
+      <path d="M0-150 21-108 10-111 34-70 15-74 44-28 16-33 54 0H-54L-16-33-44-28-15-74-34-70-10-111-21-108z"/>
+      <path d="M0-150 9-132 1-128-8-131z M-13-96 2-104 16-92 4-90-6-86z M-21-54 3-66 27-50 8-48-8-42z M-34-12 4-24 40-6 12-8-14-2z" fill="#ffffff" opacity=".92"/>
+    </g>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#himmel)"/>
+  <rect width="960" height="540" fill="url(#schein)"/>
+
+  <g fill="#ffffff">
+    <circle cx="84" cy="62" r="1.6" opacity=".8"/><circle cx="168" cy="132" r="1.2" opacity=".6"/><circle cx="238" cy="44" r="1.4" opacity=".7"/>
+    <circle cx="312" cy="176" r="1.1" opacity=".5"/><circle cx="668" cy="58" r="1.5" opacity=".75"/><circle cx="742" cy="150" r="1.2" opacity=".6"/>
+    <circle cx="812" cy="38" r="1.6" opacity=".8"/><circle cx="890" cy="118" r="1.2" opacity=".6"/><circle cx="52" cy="196" r="1.1" opacity=".5"/>
+    <circle cx="916" cy="224" r="1.1" opacity=".5"/><circle cx="140" cy="228" r="1" opacity=".45"/><circle cx="824" cy="246" r="1" opacity=".45"/>
+    <circle cx="420" cy="30" r="1" opacity=".5"/><circle cx="548" cy="24" r="1.1" opacity=".5"/>
+  </g>
+  <g fill="#f6dc9b">
+    <use href="#funkel" xlink:href="#funkel" transform="translate(128 92)"/>
+    <use href="#funkel" xlink:href="#funkel" transform="translate(846 86) scale(1.25)"/>
+    <use href="#funkel" xlink:href="#funkel" transform="translate(58 142) scale(.6)"/>
+    <use href="#funkel" xlink:href="#funkel" transform="translate(770 206) scale(.7)"/>
+    <use href="#funkel" xlink:href="#funkel" transform="translate(206 186) scale(.7)"/>
+  </g>
+
+  <path d="M0 396C150 340 300 352 480 372S810 356 960 386V540H0z" fill="url(#schnee2)"/>
+  <g fill="#123066" opacity=".75">
+    <use href="#tanne" xlink:href="#tanne" transform="translate(70 384) scale(.62)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(136 368) scale(.48)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(842 372) scale(.5)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(902 382) scale(.68)"/>
+  </g>
+
+  <path d="M0 448C200 408 330 470 480 474S770 414 960 446V540H0z" fill="url(#schnee1)"/>
+  <path d="M0 448C200 408 330 470 480 474S770 414 960 446" fill="none" stroke="#f3d27a" stroke-width="2" opacity=".85"/>
+
+  <g fill="#0f2a58">
+    <use href="#tanne" xlink:href="#tanne" transform="translate(44 462) scale(1.5)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(150 450) scale(1.08)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(236 462) scale(.78)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(724 458) scale(.8)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(812 450) scale(1.12)"/>
+    <use href="#tanne" xlink:href="#tanne" transform="translate(918 462) scale(1.55)"/>
+  </g>
+
+  <g fill="#ffffff">
+    <circle cx="300" cy="110" r="2.4" opacity=".6"/><circle cx="356" cy="238" r="2" opacity=".5"/><circle cx="612" cy="214" r="2.4" opacity=".55"/>
+    <circle cx="664" cy="298" r="2" opacity=".5"/><circle cx="268" cy="302" r="2.4" opacity=".55"/><circle cx="486" cy="330" r="2" opacity=".45"/>
+    <circle cx="402" cy="316" r="1.6" opacity=".4"/><circle cx="578" cy="340" r="1.8" opacity=".45"/>
+  </g>
+</svg>

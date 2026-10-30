@@ -210,10 +210,10 @@ html:not(.mit-umschalter) .demoleiste { display: none; }
 [data-konzept="klar"] .buehne--start .buehne-bild-1 { display: block; height: 100%; }
 [data-konzept="klar"] .buehne--seite .buehne-bild-1 { height: 100%; }
 [data-konzept="klar"] .buehne-bild img { object-position: 65% 50%; }
-[data-konzept="klar"] .buehne--start .buehne-raster { min-height: 620px; padding-bottom: 56px; }
+[data-konzept="klar"] .buehne--start .buehne-raster { min-height: 39rem; padding-bottom: 56px; }
 [data-konzept="klar"] .buehne--seite .buehne-raster { min-height: 360px; }
 [data-konzept="klar"] .buehne-text {
-  background: #fff; padding: 44px 48px 40px; max-width: 600px;
+  background: #fff; padding: 44px 48px 40px;
   border-top: 5px solid var(--c-marke); box-shadow: 0 30px 60px -30px rgba(16, 33, 55, .45);
 }
 [data-konzept="klar"] .buehne--seite .buehne-text { padding: 32px 40px 30px; }
@@ -347,12 +347,6 @@ main { padding-bottom: 88px; }
 .kalender-monat { display: block; padding: 6px 0; background: var(--c-marke); color: #fff; font-size: .85rem; font-weight: 600; }
 .kalender-tag { display: block; padding: 8px 0 0; font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: 2.8rem; line-height: 1; color: var(--c-text); }
 .kalender-wochentag { display: block; padding: 4px 0 10px; font-size: .8rem; color: var(--c-leise); }
-/* Im Dezember: eine dezente Schneeflocke */
-.meldung--winter .meldung-kopf {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%232a5caa' stroke-opacity='.22' stroke-width='2' stroke-linecap='round'%3E%3Cg id='a'%3E%3Cpath d='M50 8v84'/%3E%3Cpath d='M50 22l-8-8M50 22l8-8M50 78l-8 8M50 78l8 8M50 36l-11-9M50 36l11-9M50 64l-11 9M50 64l11 9'/%3E%3C/g%3E%3Cuse href='%23a' transform='rotate(60 50 50)'/%3E%3Cuse href='%23a' transform='rotate(120 50 50)'/%3E%3C/svg%3E"),
-                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%232a5caa' stroke-opacity='.16' stroke-width='2.4' stroke-linecap='round'%3E%3Cg id='a'%3E%3Cpath d='M50 8v84'/%3E%3Cpath d='M50 22l-8-8M50 22l8-8M50 78l-8 8M50 78l8 8'/%3E%3C/g%3E%3Cuse href='%23a' transform='rotate(60 50 50)'/%3E%3Cuse href='%23a' transform='rotate(120 50 50)'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-size: 110px, 64px; background-position: right -20px top -20px, left 22px bottom 14px;
-}
 .meldung-text { display: flex; flex-direction: column; flex: 1 1 auto; padding: 18px 22px 22px; }
 .meldung-zeile { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 10px; font-size: .92rem; color: var(--c-leise); }
 .meldung-art { display: inline-flex; padding: 3px 10px; font-size: .82rem; font-weight: 600; line-height: 1.4; background: var(--c-chip); color: var(--c-chip-text); border-radius: var(--r-knopf); }
@@ -438,23 +432,7 @@ main { padding-bottom: 88px; }
 /* Gelbe Leiste: Link zu den Details */
 .hinweis-link { margin-left: auto; font-weight: 600; color: var(--c-text); white-space: nowrap; }
 
-/* ---------- Leistungen-Kacheln ---------- */
-.leistungen { padding: 80px 0; margin: 72px 0 -88px; background: var(--c-flaeche); }
-.abschnitt-titel { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 1.1em; }
-.leistungen-liste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.leistung a { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: var(--c-text); background: var(--c-grund); border-radius: var(--r-karte); overflow: hidden; }
-.leistung-bild { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
-.leistung-bild img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-.leistung a:hover .leistung-bild img { transform: scale(1.03); }
-.leistung-name { font-family: var(--f-kopf); font-weight: var(--gew-kopf); letter-spacing: var(--sperr-kopf); font-size: 1.35rem; padding: 20px 22px 4px; }
-.leistung-text { color: var(--c-leise); padding: 0 22px 24px; }
-.leistung a:hover .leistung-name { color: var(--c-marke); }
-
-[data-konzept="herzlich"] .abschnitt-titel { text-align: center; }
-[data-konzept="herzlich"] .leistung a { box-shadow: var(--schatten); }
-[data-konzept="herzlich"] .leistung-bild { margin: 12px 12px 0; border-radius: 999px 999px 14px 14px; }
-[data-konzept="herzlich"] .leistung-name, [data-konzept="herzlich"] .leistung-text { text-align: center; }
-
+.abschnitt-titel { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: .6em; }
 
 /* ---------- Praxisteam: jede Ärztin und jeder Arzt ausführlich vorgestellt ---------- */
 .kompetenz { background: var(--c-flaeche); padding: 40px 0; }
@@ -742,23 +720,7 @@ textarea.form-control { min-height: 96px; resize: vertical; }
 [data-konzept="modern"] .ablage { background: #fff; }
 [data-konzept="modern"] .frame-layout-1 { border-radius: var(--r-karte); }
 
-/* Knopf „Schrift größer“ im Kopf */
-.schrift-knopf {
-  display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 14px;
-  font: inherit; font-size: .9rem; font-weight: 600; color: var(--c-text); cursor: pointer;
-  background: transparent; border: 1.5px solid var(--c-linie); border-radius: var(--r-knopf); white-space: nowrap;
-}
-.schrift-knopf > span { font-size: .85rem; letter-spacing: -0.02em; }
-.schrift-knopf > span > span { font-size: 1.15rem; }
-.schrift-knopf:hover { border-color: var(--c-marke); color: var(--c-marke); }
-.schrift-knopf[aria-pressed="true"] { background: var(--c-marke); border-color: var(--c-marke); color: #fff; }
-html.schrift-gross { font-size: 118.75%; }
-
 /* ---------- Tablet und Handy ---------- */
-@media (max-width: 1180px) {
-  .schrift-knopf { padding: 0 10px; }
-  .schrift-knopf > span { display: none; }
-}
 @media (max-width: 1080px) {
   .menue-knopf {
     display: inline-flex; margin-left: auto; min-height: 42px; padding: 0 16px; align-items: center;
@@ -804,13 +766,12 @@ html.schrift-gross { font-size: 118.75%; }
 
   .start-raster, .karriere-raster, .film-raster, .fuss-raster { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .start-raster, .karriere-raster { padding-top: 48px; }
-  .news-list-view, .leistungen-liste { grid-template-columns: minmax(0, 1fr); }
+  .news-list-view { grid-template-columns: minmax(0, 1fr); }
   .start-raster > .service { grid-column: 1; grid-row: auto; }
   .bewerbung { position: static; padding: 28px 20px; }
   fieldset.schritt[id$="schritt-person"]:not([hidden]) { grid-template-columns: minmax(0, 1fr); }
   .film { padding: 56px 0; }
-  .leistungen { padding: 56px 0; margin-top: 48px; }
-  .karriere-inhalt > .frame:last-child ul { columns: 1; }
+    .karriere-inhalt > .frame:last-child ul { columns: 1; }
 
   /* Team */
   .kompetenz { padding: 28px 0; }
@@ -826,7 +787,6 @@ html.schrift-gross { font-size: 118.75%; }
   .profil-raster { grid-template-columns: minmax(0, 1fr); max-height: none; }
   .profil-text { padding: 24px 20px 28px; max-height: none; overflow: visible; }
   .profil-name { padding-right: 0; }
-}
 }
 
 /* Bestätigung nach dem Absenden */
@@ -846,7 +806,7 @@ html.schrift-gross { font-size: 118.75%; }
   right: max(24px, calc((100vw - 1152px) / 2)); width: min(44%, 540px);
 }
 [data-konzept="klar"] .buehne--seite .buehne-bild-1 img { border-radius: var(--r-bild); object-position: 50% 45%; }
-[data-konzept="klar"] .buehne--seite .buehne-raster { min-height: 400px; }
+[data-konzept="klar"] .buehne--seite .buehne-raster { min-height: 25rem; }
 [data-konzept="klar"] .buehne--seite .buehne-text { max-width: 50%; padding: 56px 32px 56px 0; background: transparent; box-shadow: none; border-top: 0; }
 [data-konzept="klar"] .buehne--seite h1::before { content: ""; display: block; width: 56px; height: 4px; margin-bottom: 18px; background: var(--c-marke); }
 
@@ -866,4 +826,405 @@ html.schrift-gross { font-size: 118.75%; }
   .frame-layout-3 .ce-gallery { grid-column: 1; grid-row: 2; max-width: 280px; }
   .frame-layout-3 header h2 { font-size: 1.3rem; }
   .hinweis-link { margin-left: 0; }
+}
+
+/* =========================================================
+   Sechste Runde: Werkzeugleiste, Barrierefreiheit, Hero 2, Hilfe, Anleitungen,
+   Leistungen, Vorsorge-Finder, Standort Epe, Winter-Grafik
+   ========================================================= */
+
+/* ---------- Direkt zum Inhalt ---------- */
+.sprungmarke {
+  position: absolute; left: 12px; top: -80px; z-index: 100; padding: 12px 18px;
+  background: var(--c-marke-dunkel); color: #fff; font-weight: 600; border-radius: 8px;
+}
+.sprungmarke:focus { top: 12px; color: #fff; }
+main:focus { outline: none; }
+
+/* ---------- Werkzeugleiste ganz oben ---------- */
+.werkzeug { position: relative; z-index: 45; background: #eef2f7; border-bottom: 1px solid var(--c-linie); font-size: .92rem; }
+.werkzeug .rahmen { max-width: 1440px; }
+.werkzeug-innen { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; min-height: 48px; padding-top: 5px; padding-bottom: 5px; }
+.werkzeug-rechts { margin-left: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.jetzt { display: inline-flex; align-items: center; gap: 9px; margin: 0; min-height: 28px; font-weight: 600; }
+.jetzt-punkt { width: 11px; height: 11px; flex: none; border-radius: 50%; background: #7b8794; }
+.jetzt.offen .jetzt-punkt { background: #1f8a4c; box-shadow: 0 0 0 4px rgba(31, 138, 76, .18); }
+.jetzt.zu .jetzt-punkt { background: #b8791a; }
+.jetzt-text { color: var(--c-text); }
+.standort-wahl, .sprache-wahl { display: inline-flex; padding: 2px; background: #fff; border: 1.5px solid #c7d1dd; border-radius: 999px; }
+.standort-wahl a, .sprache-wahl a {
+  display: inline-flex; align-items: center; min-height: 30px; padding: 0 13px; border-radius: 999px;
+  color: var(--c-text); font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.standort-wahl a:hover, .sprache-wahl a:hover { color: var(--c-marke); }
+.standort-wahl a[aria-current], .sprache-wahl a[aria-current] { background: var(--c-marke); color: #fff; }
+.schrift-wahl { display: inline-flex; align-items: center; gap: 3px; }
+.schrift-wahl-text { margin-right: 5px; font-weight: 600; }
+.schrift-wahl button {
+  min-width: 34px; height: 34px; padding: 0; font-family: inherit; font-weight: 700; line-height: 1; color: var(--c-text); cursor: pointer;
+  background: #fff; border: 1.5px solid #c7d1dd; border-radius: 8px;
+}
+.schrift-wahl button:nth-of-type(1) { font-size: .85rem; }
+.schrift-wahl button:nth-of-type(2) { font-size: 1.05rem; }
+.schrift-wahl button:nth-of-type(3) { font-size: 1.3rem; }
+.schrift-wahl button:hover { border-color: var(--c-marke); color: var(--c-marke); }
+.schrift-wahl button[aria-pressed="true"] { background: var(--c-marke); border-color: var(--c-marke); color: #fff; }
+.werkzeug-knopf {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; font: inherit; font-weight: 600; color: var(--c-text); cursor: pointer;
+  background: #fff; border: 1.5px solid #c7d1dd; border-radius: 8px;
+}
+.werkzeug-knopf[hidden] { display: none; }
+.werkzeug-knopf svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.werkzeug-knopf:hover { border-color: var(--c-marke); color: var(--c-marke); }
+.werkzeug-knopf[aria-pressed="true"] { background: var(--c-marke); border-color: var(--c-marke); color: #fff; }
+
+/* Schieber für die Startbild-Variante */
+.hero-schieber { position: relative; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; cursor: pointer; }
+.hero-schieber-text { margin-right: 2px; }
+.hero-schieber-zahl { font-variant-numeric: tabular-nums; color: var(--c-leise); }
+.hero-schieber input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.hero-schieber-bahn { position: relative; width: 46px; height: 26px; background: #9fb0c3; border-radius: 999px; transition: background .2s ease; }
+.hero-schieber-bahn::after { content: ""; position: absolute; left: 3px; top: 3px; width: 20px; height: 20px; background: #fff; border-radius: 50%; box-shadow: 0 1px 3px rgba(16, 33, 55, .4); transition: transform .2s ease; }
+.hero-schieber input:checked ~ .hero-schieber-bahn { background: var(--c-marke); }
+.hero-schieber input:checked ~ .hero-schieber-bahn::after { transform: translateX(20px); }
+.hero-schieber input:focus-visible ~ .hero-schieber-bahn { outline: 3px solid var(--c-marke); outline-offset: 2px; }
+
+/* ---------- Schriftgrößen: alles wächst mit, nichts wird abgeschnitten ---------- */
+html[data-schrift="1"] { font-size: 118.75%; }
+html[data-schrift="2"] { font-size: 137.5%; }
+[data-konzept="klar"] .buehne-text { max-width: 37.5rem; }
+html[data-schrift] .buehne h1 { max-width: none; }
+html[data-schrift] .kacheln { grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr)); }
+html[data-schrift] .news-list-view { grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+html[data-schrift] .team { grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
+html[data-schrift] .kompetenz-raster { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+html[data-schrift] .feld-gross { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+html[data-schrift] .feld-gross .feld-karte:first-child { grid-row: auto; }
+html[data-schrift] .feld-karte { min-height: 15rem; }
+html[data-schrift="2"] .start-raster, html[data-schrift="2"] .karriere-raster, html[data-schrift="2"] .detail-raster, html[data-schrift="2"] .film-raster { grid-template-columns: minmax(0, 1fr); }
+html[data-schrift="2"] .start-raster > .service { grid-column: 1; grid-row: auto; }
+html[data-schrift="2"] .detail-info, html[data-schrift="2"] .bewerbung { position: static; }
+@media (min-width: 1081px) {
+  html[data-schrift] .kopf-innen { flex-wrap: wrap; gap: 6px 24px; padding-top: 10px; padding-bottom: 6px; }
+  html[data-schrift] .menue { order: 3; flex: 1 0 100%; margin-left: -12px; }
+  html[data-schrift] .menue > ul { flex-wrap: wrap; }
+  html[data-schrift] .knopf--kopf { margin-left: auto; }
+}
+html[data-schrift] [data-konzept="klar"] .buehne--seite .buehne-text { max-width: 100%; }
+html[data-schrift="2"][data-konzept="klar"] .buehne--seite .buehne-bilder { display: none; }
+html[data-schrift="2"][data-konzept="klar"] .buehne--seite .buehne-text { max-width: 100%; }
+
+/* ---------- Hoher Kontrast ---------- */
+html.kontrast[data-konzept] {
+  --c-grund: #fff; --c-flaeche: #fff; --c-text: #000; --c-leise: #000; --c-marke: #0a2f78; --c-marke-dunkel: #051c4d;
+  --c-linie: #000; --c-chip: #fff; --c-chip-text: #000; --c-akzent-flaeche: #fff2a8;
+}
+html.kontrast a { text-decoration: underline; }
+html.kontrast .knopf, html.kontrast .band-karte, html.kontrast .standort-wahl a, html.kontrast .sprache-wahl a { text-decoration: none; }
+html.kontrast .knopf { border-width: 3px; }
+html.kontrast .werkzeug { background: #fff; border-bottom: 2px solid #000; }
+html.kontrast .kachel, html.kontrast .meldung, html.kontrast .feld-kachel, html.kontrast .band-karte, html.kontrast .schritt-karte,
+html.kontrast .wegweiser-knopf, html.kontrast .hilfe-karte, html.kontrast .vorsorge-wahl, html.kontrast .vorsorge-eintrag, html.kontrast .standort-wahl,
+html.kontrast .sprache-wahl, html.kontrast .schrift-wahl button, html.kontrast .werkzeug-knopf, html.kontrast .kachel-hilfe, html.kontrast .person-schwerpunkte li { border: 2px solid #000; }
+html.kontrast .hilfe-buehne { background: #fff; }
+html.kontrast .feld-verlauf { background: rgba(0, 0, 0, .78); }
+html.kontrast .band-karte, html.kontrast .hilfe-karte { background: #fff; color: #000; }
+html.kontrast .uebung, html.kontrast .ueben-band-raster { background: #000; }
+html.kontrast :focus-visible { outline: 4px solid #000; outline-offset: 3px; }
+
+/* ---------- Hero 2: leichte Wölbung wie die Anmeldung, kleinere Karte ---------- */
+.buehne-kurve { display: none; }
+@media (min-width: 861px) {
+  html[data-hero="2"] .buehne--start .buehne-kurve {
+    display: block; position: absolute; left: 0; bottom: -1px; z-index: 1; width: 100%; height: 124px; pointer-events: none;
+  }
+  .kurve-flaeche { fill: var(--c-grund); }
+  .kurve-linie { fill: none; stroke: var(--c-marke); stroke-width: 3; }
+  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-raster { min-height: 36rem; padding-top: 40px; padding-bottom: 150px; align-items: flex-start; }
+  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-text {
+    max-width: 25rem; padding: 26px 30px 24px; border-top: 0; border-radius: 22px;
+    background: rgba(255, 255, 255, .95); box-shadow: 0 24px 50px -28px rgba(16, 33, 55, .55);
+  }
+  html[data-hero="2"] .buehne--start h1 { font-size: clamp(1.9rem, 3vw, 2.5rem); }
+  html[data-hero="2"] .buehne--start .buehne-unterzeile { font-size: 1.05rem; }
+  html[data-hero="2"] .buehne--start .buehne-aktionen { display: none; }
+  html[data-hero="2"] .buehne--start .buehne-telefon { margin-top: 14px; font-size: .98rem; }
+  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-bild img { object-position: 60% 40%; }
+  html[data-hero="2"][data-konzept="klar"] .service-kacheln { margin-top: -118px; }
+  html[data-hero="2"] .kachel { border-radius: 18px; }
+  html[data-hero="2"] .kacheln li:nth-child(1), html[data-hero="2"] .kacheln li:nth-child(5) { margin-top: -6px; }
+  html[data-hero="2"] .kacheln li:nth-child(2), html[data-hero="2"] .kacheln li:nth-child(4) { margin-top: 12px; }
+  html[data-hero="2"] .kacheln li:nth-child(3) { margin-top: 20px; }
+}
+html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
+@media (max-width: 860px) {
+  html[data-hero="2"] .buehne--start .buehne-bilder { border-radius: 0 0 50% 50% / 0 0 34px 34px; overflow: hidden; }
+  html[data-hero="2"] .buehne--start .buehne-aktionen { margin-bottom: 10px; }
+  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-text { margin: 0; border-top: 0; box-shadow: none; padding: 22px 0 8px; background: transparent; }
+  html[data-hero="2"] .kachel { border-radius: 16px; }
+}
+
+/* Bild folgt */
+.bild-folgt {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; aspect-ratio: 4 / 3;
+  color: #3f4c5c; font-weight: 600; text-align: center;
+  background: repeating-linear-gradient(45deg, #e8edf4, #e8edf4 14px, #f1f4f8 14px, #f1f4f8 28px);
+  border: 2px dashed #a9b7c8; border-radius: 14px;
+}
+.bild-folgt svg { width: 46px; height: 46px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.bild-folgt-gross .bild-folgt { height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; align-items: flex-end; padding-right: 12%; }
+.epe-bilder { margin-top: 72px; }
+.epe-bilder ul { list-style: none; margin: 0 0 20px; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 20px; }
+.epe-bilder strong { display: block; margin-top: 10px; }
+
+/* Öffnungszeiten als Tabelle */
+.service table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: .97rem; }
+.service td { padding: .42em .5em .42em 0; border-bottom: 1px solid var(--c-linie); vertical-align: top; }
+.service tr.heute td { font-weight: 700; color: var(--c-marke-dunkel); }
+.service td:empty { display: none; }
+
+/* ---------- Leistungen ---------- */
+.leistungen { padding: 72px 0; margin: 72px 0 0; }
+.leistungen-kopf { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; margin-bottom: 32px; }
+.leistungen-kopf .abschnitt-titel { margin-bottom: .2em; }
+.leistungen-kopf p { margin: 0; color: var(--c-leise); font-size: 1.15rem; }
+.feld-gross { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-rows: repeat(2, minmax(15rem, 1fr)); gap: 20px; }
+.feld-karte:first-child { grid-row: 1 / 3; }
+.feld-karte a { position: relative; display: block; height: 100%; min-height: 15rem; overflow: hidden; border-radius: 22px; color: #fff; text-decoration: none; background: var(--c-marke-dunkel); }
+.feld-karte img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2, .7, .2, 1); }
+.feld-karte a:hover img { transform: scale(1.04); }
+.feld-verlauf { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 26, 54, .86) 0%, rgba(10, 26, 54, .45) 42%, rgba(10, 26, 54, 0) 72%); }
+.feld-text { position: absolute; left: 28px; right: 84px; bottom: 26px; display: block; }
+.feld-name { display: block; font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.15; }
+.feld-zeile { display: block; margin-top: 6px; font-size: 1.02rem; line-height: 1.4; color: #eaf0f8; }
+.feld-pfeil {
+  position: absolute; right: 22px; bottom: 24px; width: 46px; height: 46px; padding: 11px; border-radius: 50%; background: #fff;
+  fill: none; stroke: var(--c-marke-dunkel); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s ease;
+}
+.feld-karte a:hover .feld-pfeil { transform: translateX(4px); }
+.leistungen-seite { padding-top: 40px; }
+.leistungen-einleitung { max-width: 46rem; margin-bottom: 32px; }
+.leistungen-einleitung .frame { margin-bottom: 0; }
+.leistungen-einleitung h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.leistungen-einleitung p { font-size: 1.2rem; color: var(--c-leise); }
+.leistungen-weitere { margin: 64px 0 24px; }
+.kachel-feld { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr)); gap: 16px; }
+.feld-kachel { padding: 24px 24px 22px; background: var(--c-flaeche); border-radius: 20px; transition: transform .2s ease, background .2s ease; }
+.feld-kachel:hover { transform: translateY(-3px); background: #e7edf5; }
+.feld-kachel h3 { margin: 14px 0 6px; font-size: 1.2rem; line-height: 1.25; hyphens: auto; }
+.feld-kachel p { margin: 0; color: var(--c-leise); font-size: 1rem; line-height: 1.5; }
+.symbol { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.feld-kachel .symbol { box-sizing: content-box; width: 26px; height: 26px; padding: 11px; border-radius: 50%; background: #fff; color: var(--c-marke); }
+
+/* Band: Hilfe und Vorsorge */
+.band { padding-top: 64px; }
+.band-raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 20px; }
+.band-karte { display: flex; flex-direction: column; gap: 6px; padding: 30px 32px 28px; border-radius: 24px; color: var(--c-text); text-decoration: none; transition: transform .2s ease; }
+.band-karte:hover { transform: translateY(-3px); color: var(--c-text); }
+.band-karte--hilfe { background: #fbecd6; }
+.band-karte--vorsorge { background: #e3edf9; }
+.band-karte .symbol { width: 34px; height: 34px; color: var(--c-marke-dunkel); margin-bottom: 8px; }
+.band-titel { font-family: var(--f-kopf); font-weight: var(--gew-kopf); letter-spacing: var(--sperr-kopf); font-size: 1.5rem; line-height: 1.2; }
+.band-text { color: #3a4654; }
+.band-link { margin-top: 10px; font-weight: 600; color: var(--c-marke-dunkel); text-decoration: underline; text-underline-offset: .2em; }
+
+/* ---------- Hilfe: herzlich, warme Farben, runde Formen ---------- */
+.hilfe-buehne { position: relative; overflow: hidden; padding: 64px 0 132px; background: linear-gradient(155deg, #fdf4e6 0%, #fbe9d3 62%, #f7dfc3 100%); }
+.hilfe-buehne--klein { padding: 44px 0 104px; }
+.hilfe-buehne h1 { font-size: clamp(2.3rem, 4.6vw, 3.8rem); line-height: 1.08; color: var(--c-marke-dunkel); margin: 0 0 .35em; }
+.hilfe-buehne--klein h1 { font-size: clamp(2rem, 3.8vw, 3rem); margin-bottom: .2em; }
+.hilfe-unterzeile { font-size: 1.25rem; color: #4b4336; margin: 0; }
+.hilfe-zurueck { display: inline-block; margin-bottom: 14px; font-weight: 600; color: var(--c-marke-dunkel); }
+.hilfe-buehne-raster { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.hilfe-gruss-text p { font-size: 1.28rem; line-height: 1.55; color: #3f3a30; }
+.hilfe-telefon { margin: 24px 0 0; }
+.hilfe-bild { position: relative; margin: 0; }
+.hilfe-bild img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 64% 50%; border-radius: 47% 53% 44% 56% / 52% 46% 54% 48%; box-shadow: 0 30px 60px -34px rgba(90, 60, 20, .6); }
+.hilfe-blase {
+  position: absolute; left: -14px; bottom: 26px; max-width: 16rem; padding: 14px 18px; font-size: 1.05rem; font-weight: 600; line-height: 1.35;
+  color: var(--c-marke-dunkel); background: #fff; border-radius: 20px 20px 20px 4px; box-shadow: 0 16px 30px -18px rgba(60, 40, 10, .55);
+}
+.hilfe-welle { position: absolute; left: 0; bottom: -1px; width: 100%; height: 84px; fill: var(--c-grund); }
+
+.wegweiser { padding: 8px 0 56px; }
+.wegweiser h2 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); margin-bottom: .15em; text-align: center; }
+.wegweiser-zeile { text-align: center; font-size: 1.2rem; color: var(--c-leise); margin-bottom: 30px; }
+.wegweiser-feld { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.5rem), 1fr)); gap: 16px; }
+.wegweiser-eintrag.offen { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); gap: 0; background: #fff8ec; border-radius: 24px; box-shadow: 0 0 0 2px var(--c-marke); }
+.wegweiser-knopf {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; width: 100%; height: 100%; min-height: 11.5rem; padding: 24px 16px;
+  font: inherit; font-weight: 600; font-size: 1.2rem; line-height: 1.3; text-align: center; color: var(--c-text); cursor: pointer;
+  background: #fff; border: 2px solid #f0dcc1; border-radius: 24px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.wegweiser-knopf:hover { transform: translateY(-3px); border-color: #e6bf85; box-shadow: 0 18px 32px -24px rgba(90, 60, 20, .6); }
+.wegweiser-eintrag.offen .wegweiser-knopf { border: 0; background: transparent; transform: none; box-shadow: none; }
+.wegweiser-symbol { display: grid; place-items: center; width: 74px; height: 74px; border-radius: 50%; background: #fbecd6; color: var(--c-marke-dunkel); }
+.wegweiser-symbol .symbol { width: 38px; height: 38px; }
+.wegweiser--notfall .wegweiser-symbol { background: #fbdcd8; color: #a3231a; }
+.wegweiser--telefon .wegweiser-symbol { background: #dcefe3; color: #17653a; }
+.wegweiser-antwort { padding: 26px 30px 22px 6px; font-size: 1.15rem; line-height: 1.6; align-self: center; }
+.wegweiser-antwort p { margin-bottom: .7em; }
+.wegweiser-antwort .knopf { color: var(--c-auf-marke); }
+.ueben-band { padding-bottom: 56px; }
+.ueben-band-raster {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; padding-top: 38px; padding-bottom: 38px;
+  color: #fff; background: linear-gradient(135deg, var(--c-marke-dunkel), var(--c-marke)); border-radius: 28px;
+}
+.ueben-band h2 { color: #fff; margin-bottom: .25em; font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.ueben-band p { margin: 0; font-size: 1.15rem; max-width: 34rem; color: #e8eff9; }
+.ueben-band-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
+.ueben-band .knopf { background: #fff; border-color: #fff; color: var(--c-marke-dunkel); }
+.ueben-band .knopf:hover { background: #fbecd6; border-color: #fbecd6; color: var(--c-marke-dunkel); }
+.hilfe-unten-raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 16px; }
+.hilfe-karte { display: block; padding: 28px; background: #fdf4e6; border-radius: 24px; color: var(--c-text); text-decoration: none; }
+.hilfe-karte--link:hover { background: #fbecd6; color: var(--c-text); }
+.hilfe-karte .symbol { width: 34px; height: 34px; color: var(--c-marke-dunkel); }
+.hilfe-karte h2 { margin: 10px 0 6px; font-size: 1.4rem; }
+.hilfe-karte p { margin: 0; color: #4b4336; }
+.hilfe-nummer { display: inline-block; margin-top: 12px; font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: 1.7rem; color: var(--c-marke-dunkel); text-decoration: none; }
+
+/* ---------- Anleitungen ---------- */
+.anleitung { padding-top: 16px; counter-reset: schritt; }
+.anleitung > .frame { max-width: 46rem; }
+.anleitung > .frame-layout-0 h2, .checkliste h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+.anleitung > .frame .ce-bodytext p, .anleitung > .frame .ce-bodytext li { font-size: 1.18rem; line-height: 1.6; }
+.anleitung > .frame-layout-1 { max-width: none; background: #fbecd6; border-radius: 22px; padding: 26px 30px; margin-top: 28px; }
+.schritt-karte {
+  counter-increment: schritt; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; gap: 40px; align-items: start;
+  margin: 0 0 18px; padding: 32px 36px 32px 108px; background: #fff; border: 1.5px solid #f0dcc1; border-radius: 26px;
+}
+.schritt-karte:not([data-hat-bild]) { grid-template-columns: minmax(0, 1fr); }
+.schritt-karte::before {
+  content: counter(schritt); position: absolute; left: 28px; top: 28px; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%;
+  font-family: var(--f-kopf); font-weight: 700; font-size: 1.6rem; color: #fff; background: var(--c-marke);
+}
+.schritt-karte h2 { font-size: 1.55rem; margin: 10px 0 .45em; }
+.schritt-beschreibung { font-size: 1.18rem; line-height: 1.6; }
+.schritt-beschreibung strong { color: var(--c-marke-dunkel); }
+.handy { margin: 0; padding: 7px; background: #141c28; border-radius: 26px; box-shadow: 0 22px 36px -24px rgba(16, 33, 55, .7); }
+.handy img { width: 100%; border-radius: 20px; }
+.checkliste { margin: 24px 0 32px; padding: 26px 30px; background: #e3edf9; border-radius: 22px; }
+.checkliste ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 8px 24px; }
+.checkliste label { display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 1.15rem; cursor: pointer; }
+.checkliste input { width: 26px; height: 26px; flex: none; accent-color: var(--c-marke); }
+.anleitung-druck { margin: 32px 0 0; }
+.anleitung .frage { margin: 0 0 10px; }
+
+/* Übungsmodus: echte Bildschirme zum Antippen */
+.uebung {
+  display: grid; grid-template-columns: minmax(0, 1fr) 19.5rem; gap: 44px; align-items: center; margin: 28px 0 44px; padding: 44px;
+  color: #fff; background: linear-gradient(150deg, var(--c-marke-dunkel) 0%, var(--c-marke) 100%); border-radius: 32px; scroll-margin-top: 16px;
+}
+.uebung-marke { display: inline-block; margin: 0 0 12px; padding: 4px 14px; font-weight: 600; color: var(--c-marke-dunkel); background: #fbe3b0; border-radius: 999px; }
+.uebung h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: .3em; }
+.uebung-text > p:not(.uebung-marke) { font-size: 1.15rem; color: #e8eff9; }
+.uebung-anweisung { min-height: 8.5rem; margin: 18px 0 14px; padding: 20px 22px; color: var(--c-text); background: #fff; border-radius: 18px; }
+.uebung-anweisung h3 { margin: 0 0 6px; font-size: 1.3rem; color: var(--c-marke-dunkel); }
+.uebung-anweisung p { margin: 0; font-size: 1.1rem; line-height: 1.5; }
+.uebung-anweisung strong { color: var(--c-marke-dunkel); }
+.uebung-anweisung.richtig { box-shadow: 0 0 0 4px #7fd6a3; }
+.uebung-anweisung.fast { box-shadow: 0 0 0 4px #fbd27a; }
+.uebung-schritt { display: block; margin-bottom: 4px; font-size: .95rem; font-weight: 600; color: var(--c-leise); }
+.uebung-leiste { height: 10px; background: rgba(255, 255, 255, .28); border-radius: 999px; overflow: hidden; }
+.uebung-fortschritt { display: block; width: 0; height: 100%; background: #fbd27a; border-radius: 999px; transition: width .35s ease; }
+.uebung-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; min-height: 48px; }
+.uebung-knoepfe .knopf { background: #fff; border-color: #fff; color: var(--c-marke-dunkel); }
+.uebung-knoepfe .knopf:hover { background: #fbe3b0; border-color: #fbe3b0; color: var(--c-marke-dunkel); }
+.uebung-handy { padding: 11px; background: #0e1622; border-radius: 38px; box-shadow: 0 34px 50px -26px rgba(4, 12, 28, .85); }
+.uebung-bildschirm { position: relative; min-height: 26rem; background: #fff; border-radius: 28px; overflow: hidden; }
+.uebung-bildschirm img { width: 100%; }
+.tippflaeche { position: absolute; padding: 0; background: transparent; border: 0; border-radius: 12px; cursor: pointer; }
+.tippflaeche:focus-visible { outline: 4px solid #fbd27a; outline-offset: 1px; }
+.tippflaeche.zeigen { animation: tippen 1.3s ease-in-out infinite; }
+@keyframes tippen { 0%, 100% { box-shadow: 0 0 0 3px rgba(42, 92, 170, .85); } 50% { box-shadow: 0 0 0 9px rgba(42, 92, 170, .25); } }
+.uebung-fertig { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; min-height: 26rem; padding: 24px; text-align: center; color: var(--c-text); }
+.uebung-fertig svg { width: 72px; height: 72px; fill: none; stroke: #1f8a4c; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.uebung-fertig strong { font-size: 1.35rem; }
+
+/* ---------- Vorsorge-Finder ---------- */
+.vorsorge { padding-top: 16px; }
+.vorsorge > .frame { max-width: 46rem; }
+.vorsorge > .frame p { font-size: 1.2rem; }
+.vorsorge-wahl { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 28px 44px; padding: 30px 34px; margin: 8px 0 28px; background: #e3edf9; border-radius: 26px; }
+.vorsorge-alter label, .vorsorge-wer legend { display: block; padding: 0; font-weight: 600; font-size: 1.15rem; }
+.vorsorge-zahl { display: block; margin: 2px 0 8px; font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: 2.3rem; line-height: 1.1; color: var(--c-marke-dunkel); }
+.vorsorge-alter input { width: 100%; height: 44px; margin: 0; accent-color: var(--c-marke); cursor: pointer; }
+.vorsorge-wer { margin: 0; padding: 0; border: 0; }
+.vorsorge-wer label { display: inline-block; margin: 10px 8px 0 0; cursor: pointer; }
+.vorsorge-wer input { position: absolute; opacity: 0; }
+.vorsorge-wer span { display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; font-weight: 600; font-size: 1.1rem; background: #fff; border: 2px solid #b9c9dc; border-radius: 999px; }
+.vorsorge-wer input:checked + span { background: var(--c-marke); border-color: var(--c-marke); color: #fff; }
+.vorsorge-wer input:focus-visible + span { outline: 3px solid var(--c-marke); outline-offset: 3px; }
+.vorsorge-gruppe { margin: 0 0 26px; }
+.vorsorge-gruppe h2 { font-size: 1.4rem; margin-bottom: .6em; }
+.vorsorge-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.vorsorge-eintrag { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 20px; align-items: center; padding: 18px 22px; background: #fff; border: 1.5px solid var(--c-linie); border-radius: 18px; }
+.vorsorge-eintrag strong { font-size: 1.15rem; }
+.vorsorge-eintrag span { grid-column: 1; color: var(--c-leise); }
+.vorsorge-rhythmus { grid-column: 2 !important; grid-row: 1 / 3; max-width: 15rem; padding: 6px 14px; font-weight: 600; text-align: center; color: var(--c-marke-dunkel) !important; background: #e3edf9; border-radius: 14px; }
+.vorsorge-kinder { margin-top: 8px; font-size: 1.1rem; }
+
+/* ---------- Winter-Grafik ---------- */
+.meldung--winter .meldung-kopf { display: block; background: #0b1f45; background-image: none; }
+.winter-grafik { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.winter-gruss { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; padding-top: 7%; text-align: center; color: #fff; }
+.winter-titel { font-family: "SerifVier", Georgia, serif; font-weight: 600; font-size: clamp(1.45rem, 2.3vw, 1.95rem); line-height: 1.15; letter-spacing: .005em; }
+.winter-strich { width: 44px; height: 1.5px; margin: 9px 0 8px; background: #f3d27a; }
+.winter-datum { font-size: .86rem; font-weight: 500; letter-spacing: .04em; color: #fbe9bd; }
+.meldung--winter .meldung-art { background: #123066; color: #fff; }
+.meldung--winter .meldung-wieder { background: #eef3fb; border-left-color: var(--c-marke); }
+.detail-winter { position: relative; margin: 0 0 24px; aspect-ratio: 21 / 9; overflow: hidden; border-radius: 20px; background: #0b1f45; }
+.detail-winter .winter-titel { font-size: clamp(1.8rem, 4vw, 3rem); }
+
+/* ---------- Dezente Bewegung ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .einblenden { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }
+  .einblenden.da { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- Tablet und Handy ---------- */
+@media (max-width: 1180px) {
+  .schrift-wahl-text, .hero-schieber-text { display: none; }
+}
+@media (max-width: 1080px) {
+  .feld-gross { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+  .feld-karte:first-child { grid-row: auto; }
+  .uebung { grid-template-columns: minmax(0, 1fr); padding: 30px 24px; }
+  .uebung-handy { max-width: 20rem; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 860px) {
+  .werkzeug { font-size: .88rem; }
+  .werkzeug-rechts { margin-left: 0; }
+  .werkzeug-knopf span { display: none; }
+  .hero-schieber-zahl { display: none; }
+  .werkzeug-innen { gap: 4px 10px; }
+  .werkzeug-rechts { gap: 4px 8px; }
+  .werkzeug-knopf { padding: 0 8px; }
+  .hilfe-buehne { padding: 36px 0 84px; }
+  .hilfe-buehne-raster { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .hilfe-bild { max-width: 20rem; margin: 0 auto; }
+  .hilfe-welle { height: 48px; }
+  .wegweiser-feld { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .wegweiser-knopf { min-height: 9.5rem; font-size: 1.05rem; padding: 18px 10px; }
+  .wegweiser-symbol { width: 60px; height: 60px; }
+  .wegweiser-eintrag.offen { grid-template-columns: minmax(0, 1fr); }
+  .wegweiser-eintrag.offen .wegweiser-knopf { min-height: 0; flex-direction: row; justify-content: flex-start; padding: 16px 18px 6px; }
+  .wegweiser-antwort { padding: 8px 20px 18px; }
+  .schritt-karte { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 24px 20px; }
+  .schritt-karte::before { position: static; width: 46px; height: 46px; font-size: 1.3rem; }
+  .schritt-karte .handy { max-width: 15rem; }
+  .vorsorge-eintrag { grid-template-columns: minmax(0, 1fr); }
+  .vorsorge-rhythmus { grid-column: 1 !important; grid-row: auto; max-width: none; text-align: left; justify-self: start; }
+  .ueben-band-raster { border-radius: 0; }
+  .feld-karte a { min-height: 14rem; }
+  .feld-text { left: 20px; right: 72px; bottom: 20px; }
+}
+@media print {
+  .werkzeug, .kopf, .fuss, .uebung, .anleitung-druck, .hilfe-zurueck, .brotkrumen, .sprungmarke, .hilfe-welle { display: none !important; }
+  .hilfe-buehne { background: none; padding: 0 0 12px; }
+  .schritt-karte { break-inside: avoid; border: 1px solid #000; }
+  .einblenden { opacity: 1 !important; transform: none !important; }
 }

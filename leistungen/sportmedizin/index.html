@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-konzept="klar">
+<html lang="de-DE" data-konzept="klar">
 <head>
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:,">
@@ -24,137 +24,198 @@
 
 
 
-<script>try{var d=document.documentElement,k=new URLSearchParams(location.search).get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}if(localStorage.getItem('praxis-schrift')==='gross')d.classList.add('schrift-gross')}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-hero')==='2')d.dataset.hero='2'}catch(e){}</script>
 
 </head>
 <body>
-
-
-
-
-<div class="demoleiste">
-  <div class="rahmen demoleiste-innen">
-    <span class="demoleiste-titel">Designvorschlag</span>
-    <div class="umschalter" role="group" aria-label="Designvorschlag wählen">
-      <button type="button" data-konzept-wahl="klar">Klar</button>
-      <button type="button" data-konzept-wahl="herzlich">Herzlich</button>
-      <button type="button" data-konzept-wahl="modern">Modern</button>
-    </div>
-    <span class="demoleiste-hinweis">Entwurf von Leon Oßendorf</span>
-  </div>
-</div>
-
-<header class="kopf">
-  <div class="rahmen kopf-innen">
-    <a class="logo" href="/">
-      <img src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/logo.png" width="512" height="70" alt="Gemeinschaftspraxis Gesenhues &amp; Partner – zur Startseite" />
-    </a>
-    <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
-    <nav class="menue" id="hauptmenue" aria-label="Hauptmenü">
-      <ul>
-        
-          <li class="aktiv hat-unter">
-            <a href="/leistungen/">Leistungen</a>
-            
-              <ul>
-                
-                  <li><a href="/leistungen/diabetologie/">Diabetologie</a></li>
-                
-                  <li><a href="/leistungen/kindergesundheit/">Kindergesundheit</a></li>
-                
-                  <li><a href="/leistungen/sportmedizin/">Sportmedizin</a></li>
-                
-              </ul>
-            
-          </li>
-        
-          <li class=" hat-unter">
-            <a href="/service/">Service</a>
-            
-              <ul>
-                
-                  <li><a href="/service/rezept-online-bestellen/">Hilfe: Rezept online bestellen</a></li>
-                
-                  <li><a href="/service/termin-online-buchen/">Hilfe: Termin online buchen</a></li>
-                
-              </ul>
-            
-          </li>
-        
-          <li class="">
-            <a href="/praxisteam/">Praxisteam</a>
-            
-          </li>
-        
-          <li class="">
-            <a href="/aktuelles/">Aktuelles</a>
-            
-          </li>
-        
-          <li class="">
-            <a href="/karriere/">Karriere</a>
-            
-          </li>
-        
-          <li class="">
-            <a href="/kontakt/">Kontakt</a>
-            
-          </li>
-        
-      </ul>
-    </nav>
-    <button class="schrift-knopf" type="button" aria-pressed="false" title="Schrift auf der ganzen Seite vergrößern"><span aria-hidden="true">A<span>A</span></span> Schrift größer</button>
-    <a class="knopf knopf--kopf" href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noopener">Termin buchen</a>
-  </div>
-</header>
-
-
-
-
-
-  
-
-
-
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="sprungmarke" href="#inhalt">Direkt zum Inhalt</a>
+
+
+<div class="demoleiste">
+  <div class="rahmen demoleiste-innen">
+    <span class="demoleiste-titel">Designvorschlag</span>
+    <div class="umschalter" role="group" aria-label="Designvorschlag wählen">
+      <button type="button" data-konzept-wahl="klar">Klar</button>
+      <button type="button" data-konzept-wahl="herzlich">Herzlich</button>
+      <button type="button" data-konzept-wahl="modern">Modern</button>
+    </div>
+    <span class="demoleiste-hinweis">Entwurf von Leon Oßendorf</span>
+  </div>
+</div>
+
+<div class="werkzeug">
+  <div class="rahmen werkzeug-innen">
+    <p class="jetzt" data-zeiten="Montag|07:30 – 12:00|14:30 – 18:00
+Dienstag|07:30 – 13:00|
+Mittwoch|07:30 – 13:00|
+Donnerstag|07:30 – 12:00|14:30 – 18:00
+Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span class="jetzt-punkt" aria-hidden="true"></span><span class="jetzt-text"></span></p>
+    <div class="standort-wahl" role="group" aria-label="Standort wählen">
+      <a href="/" aria-current="true">Ochtrup</a>
+      <a href="/epe/">Gronau-Epe</a>
+    </div>
+    <div class="werkzeug-rechts">
+      
+      
+      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
+        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
+        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      </div>
+      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+        <span>Kontrast</span>
+      </button>
+      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+        <span>Vorlesen</span>
+      </button>
+      
+        <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
+          
+            <a href="/leistungen/sportmedizin/" hreflang="de-DE" lang="de-DE" aria-current="true">DE<span class="nur-vorlesen"> (Deutsch)</span></a>
+          
+            <a href="/en/leistungen/sportmedizin/" hreflang="en-GB" lang="en-GB">EN<span class="nur-vorlesen"> (English)</span></a>
+          
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<header class="kopf">
+  <div class="rahmen kopf-innen">
+    <a class="logo" href="/">
+      <img src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/logo.png" width="512" height="70" alt="Gemeinschaftspraxis Gesenhues &amp; Partner – zur Startseite" />
+    </a>
+    <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
+    <nav class="menue" id="hauptmenue" aria-label="Hauptmenü">
+      <ul>
+        
+          <li class="aktiv hat-unter">
+            <a href="/leistungen/">Leistungen</a>
+            
+              <ul>
+                
+                  <li><a href="/leistungen/diabetologie/">Diabetologie</a></li>
+                
+                  <li><a href="/leistungen/kindergesundheit/">Kindergesundheit</a></li>
+                
+                  <li><a href="/leistungen/sportmedizin/">Sportmedizin</a></li>
+                
+                  <li><a href="/leistungen/vorsorge-finder/">Vorsorge-Finder</a></li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class=" hat-unter">
+            <a href="/hilfe/">Hilfe</a>
+            
+              <ul>
+                
+                  <li><a href="/hilfe/rezept-online-bestellen/">Rezept und Überweisung (medflex)</a></li>
+                
+                  <li><a href="/hilfe/termin-online-buchen/">Termin buchen (Doctolib)</a></li>
+                
+                  <li><a href="/hilfe/neu-bei-uns/">Neu bei uns</a></li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="">
+            <a href="/praxisteam/">Praxisteam</a>
+            
+          </li>
+        
+          <li class="">
+            <a href="/aktuelles/">Aktuelles</a>
+            
+          </li>
+        
+          <li class="">
+            <a href="/karriere/">Karriere</a>
+            
+          </li>
+        
+          <li class="">
+            <a href="/kontakt/">Kontakt</a>
+            
+          </li>
+        
+      </ul>
+    </nav>
+    <a class="knopf knopf--kopf" href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noopener">Termin buchen</a>
+  </div>
+</header>
+
+
+
+
+
+  
+
+
+
 
   
   
-  
-<section class="buehne buehne--seite">
-  <div class="buehne-bilder">
-    
-      <figure class="buehne-bild buehne-bild-1">
-        <img loading="eager" src="/fileadmin/praxis/bilder/klettern.jpg" width="800" height="600" alt="" />
-        
-      </figure>
-    
-    
-  </div>
-  <div class="rahmen buehne-raster">
-    <div class="buehne-text">
-      <h1>Sportmedizin</h1>
-      <p class="buehne-unterzeile">Qualifiziert für Höchstleistungen</p>
-      
-    </div>
-  </div>
-</section>
-
+  
+<section class="buehne buehne--seite">
+  <div class="buehne-bilder">
+    
+        
+          <figure class="buehne-bild buehne-bild-1">
+            <img loading="eager" src="/fileadmin/praxis/bilder/klettern.jpg" width="800" height="600" alt="" />
+            
+          </figure>
+        
+      
+    
+  </div>
+  <div class="rahmen buehne-raster">
+    <div class="buehne-text">
+      <h1>Sportmedizin</h1>
+      <p class="buehne-unterzeile">Qualifiziert für Höchstleistungen</p>
+      
+    </div>
+  </div>
+  
+</section>
 
-
-
-
-  <nav class="rahmen brotkrumen" aria-label="Sie sind hier">
-    
-      <a href="/">Startseite</a><span class="trenner" aria-hidden="true">/</span>
-    
-      <a href="/leistungen/">Leistungen</a><span class="trenner" aria-hidden="true">/</span>
-    
-      <span aria-current="page">Sportmedizin</span>
-    
-  </nav>
-
-
-<main id="inhalt">
+
+
+
+
+
+
+  <nav class="rahmen brotkrumen" aria-label="Sie sind hier">
+    
+      <a href="/">Startseite</a><span class="trenner" aria-hidden="true">/</span>
+    
+      <a href="/leistungen/">Leistungen</a><span class="trenner" aria-hidden="true">/</span>
+    
+      <span aria-current="page">Sportmedizin</span>
+    
+  </nav>
+
+
+<main id="inhalt" tabindex="-1">
   
   <div class="rahmen lesespalte">
     
@@ -322,29 +383,32 @@
 
     
   </div>
-
-</main>
-
-<footer class="fuss">
-  <div class="rahmen fuss-raster">
-    <div>
-      <p class="fuss-name">Gemeinschaftspraxis<br />Gesenhues &amp; Partner</p>
-      <p>Marktplatz 1<br />48607 Ochtrup</p>
-      <p><a href="tel:+490255393970">02553 93 97 0</a><br /><a href="mailto:kontakt@praxis-gesenhues.de">kontakt@praxis-gesenhues.de</a></p>
-    </div>
-    <div>
-      <h2 class="fuss-titel">Außerhalb der Sprechzeiten</h2>
-      <p>Ärztlicher Bereitschaftsdienst<br /><a class="fuss-nummer" href="tel:116117">116 117</a></p>
-      <p>Lebensbedrohlicher Notfall<br /><a class="fuss-nummer" href="tel:112">112</a></p>
-    </div>
-    <blockquote class="fuss-zitat">
-      <p>Die beste Arznei für den Menschen ist der Mensch.</p>
-      <footer>Paracelsus</footer>
-    </blockquote>
-  </div>
-  <div class="rahmen fuss-unten">
-    <span>Unverbindlicher Entwurf von Leon Oßendorf, kein offizieller Auftritt der Gemeinschaftspraxis Gesenhues &amp; Partner.</span>
-  </div>
+
+</main>
+
+<footer class="fuss">
+  <div class="rahmen fuss-raster">
+    <div>
+      <p class="fuss-name">Gemeinschaftspraxis<br />Gesenhues &amp; Partner</p>
+      <p>Marktplatz 1<br />48607 Ochtrup</p>
+      <p><a href="tel:+490255393970">02553 93 97 0</a><br /><a href="mailto:kontakt@praxis-gesenhues.de">kontakt@praxis-gesenhues.de</a></p>
+    </div>
+    <div>
+      <h2 class="fuss-titel">Außerhalb der Sprechzeiten</h2>
+      <p>Ärztlicher Bereitschaftsdienst<br /><a class="fuss-nummer" href="tel:116117">116 117</a></p>
+      <p>Lebensbedrohlicher Notfall<br /><a class="fuss-nummer" href="tel:112">112</a></p>
+    </div>
+    <blockquote class="fuss-zitat">
+      <p>Die beste Arznei für den Menschen ist der Mensch.</p>
+      <footer>Paracelsus</footer>
+    </blockquote>
+  </div>
+  <div class="rahmen fuss-unten">
+    <span>Unverbindlicher Entwurf von Leon Oßendorf, kein offizieller Auftritt der Gemeinschaftspraxis Gesenhues &amp; Partner.</span>
+    <a href="/hilfe/">Hilfe</a>
+    <a href="/barrierefreiheit/">Barrierefreiheit</a>
+    <a href="/leichte-sprache/">Leichte Sprache</a>
+  </div>
 </footer>
 
 <script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js"></script>

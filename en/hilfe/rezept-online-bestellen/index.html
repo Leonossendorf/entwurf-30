@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
       <a href="/en/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Choose text size">
-        <span class="schrift-wahl-text" aria-hidden="true">Text size</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Reading aids: text size, contrast, read aloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Reading aids</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Choose text size">
+            <span class="lesehilfe-name" aria-hidden="true">Text size</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Contrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Read aloud</span>
+          </button>
+          <a class="lesehilfe-link" href="/en/leichte-sprache/">Plain language</a>
+          <a class="lesehilfe-link" href="/en/barrierefreiheit/">Accessibility</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Contrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Read aloud</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Choose language">
           
@@ -172,15 +182,15 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
 
 
-
-  <section class="hilfe-buehne hilfe-buehne--klein">
-    <div class="rahmen">
-      <a class="hilfe-zurueck" href="/en/hilfe/">Back to help</a>
-      <h1>Order a prescription online</h1>
-      <p class="hilfe-unterzeile">How to order repeat prescriptions and referrals via medflex</p>
-    </div>
-    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
-  </section>
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/en/hilfe/">Back to help</a>
+      <h1>Order a prescription online</h1>
+      <p class="hilfe-unterzeile">How to order repeat prescriptions and referrals via medflex</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
 
 
 
@@ -188,13 +198,16 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
 
 <main id="inhalt" tabindex="-1">
-  
-  <div class="rahmen anleitung">
-    
-      
-      
-      
-      
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="rezept">
+    
+      
+      
+      
+      
+          
     
 
             <div id="c60" class="frame frame-default frame-type-text frame-layout-0">
@@ -220,7 +233,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
     
             <h2 class="">
-                Order a repeat prescription without coming in
+                Order a repeat prescription without coming to the practice
             </h2>
         
 
@@ -247,8 +260,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
                 
                 
 
-    <p>Do you take a medicine regularly and need a new prescription? Or do you need a referral to a specialist? You can order both via medflex from home. Requests are possible from <strong>Monday 7 am to Friday 12 noon</strong>. It costs you nothing.</p>
-<p><a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" class="knopf" rel="noreferrer">Open medflex</a></p>
+    <p>Do you take a medication regularly and need a new prescription? Or do you need a referral to a specialist? You can order this free of charge via medflex from home. This is possible from <strong>Monday at 7 am to Friday at 12 noon</strong>.</p>
 
 
                 
@@ -267,12 +279,48 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
+
+        
+    
+      
+      
+      
+      
+          
+
+<section class="fallwahl" id="fallwahl" data-art="rezept" aria-labelledby="fallwahl-titel">
+  <h2 id="fallwahl-titel">Which guide is right for you?</h2>
+  <p class="fallwahl-text">Answer a few short questions. You will then only see the steps that apply to you.</p>
+  <fieldset class="fall-frage" data-dim="besuch">
+    <legend>Have you been treated at our practice before?</legend>
+    <label><input type="radio" name="fall-besuch" value="patient" /><span>Yes, I have been before</span></label>
+    <label><input type="radio" name="fall-besuch" value="neu" /><span>No, I am new</span></label>
+  </fieldset>
+  
+  <fieldset class="fall-frage" data-dim="konto" hidden>
+    <legend>How would you like to use medflex?</legend>
+    <label><input type="radio" name="fall-konto" value="ohne" /><span>Without an account (the easiest way)</span></label>
+    <label><input type="radio" name="fall-konto" value="mit" /><span>With my existing account</span></label>
+    
+      <label><input type="radio" name="fall-konto" value="anlegen" /><span>I would like to create an account</span></label>
+    
+  </fieldset>
+  <div class="fall-ergebnis" aria-live="polite" hidden>
+    <p class="fall-ergebnis-text"><span>Your guide:</span> <strong></strong></p>
+    <a class="knopf knopf--zweit fall-ueben" href="#ueben" hidden>Practise first</a>
+  </div>
+</section>
+
+
+          <p class="medflex-status" hidden></p>
+          <div class="uebung-platz"></div>
+        
+    
+      
+      
+      
+      
+          <div class="fall-teil" data-fall="patient">
     
 
             <div id="c61" class="frame frame-default frame-type-text frame-layout-0">
@@ -325,7 +373,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
                 
                 
 
-    <ul><li>A phone, tablet or computer with internet access</li><li>Your mobile number</li><li>The packet or the name of your medicine (ideally with the strength, e.g. “100 mg”)</li></ul>
+    <ul><li>a phone, tablet or computer with internet access</li><li>your mobile number</li><li>the packet or the name of your medication (ideally with the strength, e.g. “100 mg”)</li></ul>
 
 
                 
@@ -344,99 +392,264 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Open the medflex page</h2>
-              <div class="schritt-beschreibung"><p>On our website, tap <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer"><strong>“Order prescription”</strong></a>. The medflex page opens with our practice name. Scroll down a little to the box <strong>“Wie können wir Ihnen helfen?”</strong> (How can we help you?).</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Open the medflex page" loading="lazy" src="/fileadmin/praxis/hilfe/m1.jpg" width="780" height="1400" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="8.7,31.8,82.1,11;30.3,90.5,39.5,8.9|Weiter (next)" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Choose “Folgerezept anfragen”</h2>
-              <div class="schritt-beschreibung"><p>Tap <strong>“Folgerezept anfragen”</strong> (request a repeat prescription). For a referral, choose <strong>“Überweisung anfragen”</strong>. Then tap <strong>“Weiter”</strong> (next).</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Choose “Folgerezept anfragen”" loading="lazy" src="/fileadmin/praxis/hilfe/m2.jpg" width="780" height="1348" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="8.7,48.8,82.1,14.2;30.3,82.1,39.5,12.5|Weiter (next)" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Choose your practice</h2>
-              <div class="schritt-beschreibung"><p>Choose the practice where you are a patient: <strong>Ochtrup</strong> or <strong>Epe</strong>. Then tap <strong>“Weiter”</strong> (next).</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Choose your practice" loading="lazy" src="/fileadmin/praxis/hilfe/m3.jpg" width="780" height="960" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="8.7,59.4,82.1,15.7;28,82,44,11|Bestätigen (confirm)" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Confirm that you are already a patient</h2>
-              <div class="schritt-beschreibung"><p>Tick <strong>“Ja, ich bin bereits Patient”</strong> (yes, I am already a patient) and tap <strong>“Bestätigen”</strong> (confirm).</p>
-<p>New to us? Then please make an appointment first.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Confirm that you are already a patient" loading="lazy" src="/fileadmin/praxis/hilfe/m4.jpg" width="780" height="868" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Enter your medicine and contact details</h2>
-              <div class="schritt-beschreibung"><p>medflex now asks which medicine you need and for your contact details. Fill in everything and follow the instructions on the screen. Finally, send the request.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Wait for the reply</h2>
-              <div class="schritt-beschreibung"><p>We reply in writing. Without registering, you get our message by text and can reply to it directly. You can redeem an electronic prescription with your health insurance card at any pharmacy.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
+</div>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Open the medflex page</h2>
+              <div class="schritt-beschreibung"><p>Tap this button:</p>
+<p><a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" class="knopf" rel="noreferrer">Open medflex</a></p>
+<p>The medflex page opens in a new window with our practice name at the top. You do not need an account and do not have to log in.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Choose “Folgerezept anfragen”</h2>
+              <div class="schritt-beschreibung"><p>Scroll down to the box <strong>“Wie können wir Ihnen helfen?”</strong> (How can we help you?). Tap <strong>“Folgerezept anfragen”</strong> (repeat prescription), or <strong>“Überweisung anfragen”</strong> for a referral. Then tap <strong>“Weiter”</strong> (next).</p>
+<p>Can’t find the box? From Friday at 12 noon to Monday at 7 am it is hidden and you only see a yellow notice. That is not an error, please try again from Monday at 7 am.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Choose your practice</h2>
+              <div class="schritt-beschreibung"><p>Under <strong>“Wer soll Ihre Anfrage erhalten?”</strong> (who should receive your request) choose the practice where you are a patient: <strong>Ochtrup</strong> or <strong>Epe</strong>. Then tap <strong>“Weiter”</strong> (next).</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Confirm that you are already a patient</h2>
+              <div class="schritt-beschreibung"><p>Tap the box next to <strong>“Ja, ich bin bereits Patient”</strong> (yes, I am already a patient). The tick appears and the grey button <strong>“Bestätigen”</strong> (confirm) turns blue. Tap it.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Enter your medication and contact details</h2>
+              <div class="schritt-beschreibung"><p>Enter the medication you need and then your contact details. Follow the instructions on the screen. Finally, send the request.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Wait for the reply</h2>
+              <div class="schritt-beschreibung"><p>We deal with your request during our opening hours. Without an account, you get our reply by text and can respond to it directly. You can redeem an electronic prescription with your health insurance card at any pharmacy.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Log in to medflex</h2>
+              <div class="schritt-beschreibung"><p>Tap this button:</p>
+<p><a href="https://app.medflex.de/patient" target="_blank" class="knopf" rel="noreferrer">Go to medflex login</a></p>
+<p>Already on our medflex page? Then tap <strong>“Einloggen”</strong> (log in) at the top right.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Log in to medflex" loading="lazy" src="/fileadmin/praxis/hilfe/m-einloggen-knopf.jpg" width="780" height="660" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Enter your email address and password</h2>
+              <div class="schritt-beschreibung"><p>Enter your email address and password. Then tap <strong>“Als Patient einloggen”</strong> (log in as a patient).</p>
+<p>Forgotten your password? Tap <strong>“Neues Passwort festlegen”</strong> (set a new password).</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Enter your email address and password" loading="lazy" src="/fileadmin/praxis/hilfe/m-login.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit">
+            <div class="schritt-inhalt">
+              <h2>Choose our practice and make a request</h2>
+              <div class="schritt-beschreibung"><p>Choose our practice in your contact list. At the bottom of the chat, tap <strong>“Anfrage stellen”</strong> (make a request) and then <strong>“Folgerezept anfragen”</strong> (repeat prescription).</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit">
+            <div class="schritt-inhalt">
+              <h2>Enter your medication and send</h2>
+              <div class="schritt-beschreibung"><p>Enter the medication and the pack size. Choose whether you want to collect the prescription at the practice or receive it via medflex. Then send the request.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit">
+            <div class="schritt-inhalt">
+              <h2>Read the reply</h2>
+              <div class="schritt-beschreibung"><p>You will find our reply in medflex, in your chat with our practice.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Open the medflex page</h2>
+              <div class="schritt-beschreibung"><p>Tap this button:</p>
+<p><a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" class="knopf" rel="noreferrer">Open medflex</a></p>
+<p>Have you already received an invitation from us by text or email? Then tap the link in it instead and continue with step 3.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Choose “Über medflex verbinden”</h2>
+              <div class="schritt-beschreibung"><p>Scroll down to the box <strong>“Wie können wir Ihnen helfen?”</strong> (How can we help you?). Tap <strong>“Über medflex verbinden”</strong> (connect via medflex) and then <strong>“Weiter”</strong> (next).</p>
+<p>Can’t find the box? It is hidden from Friday at 12 noon to Monday at 7 am. Please try again from Monday at 7 am.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Enter your details</h2>
+              <div class="schritt-beschreibung"><p>Follow the instructions on the screen. Enter your details and your email address, and choose a password. Keep a note of it somewhere safe.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Confirm your email address</h2>
+              <div class="schritt-beschreibung"><p>You receive an email from medflex. Tap the link in it. No email? Check your spam folder. Your account is then connected to our practice.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Log in and get started</h2>
+              <div class="schritt-beschreibung"><p>From now on, log in here:</p>
+<p><a href="https://app.medflex.de/patient" target="_blank" class="knopf" rel="noreferrer">Go to medflex login</a></p>
+<p><a href="#patient-mit">The guide for account holders</a> shows you how to order a prescription with an account.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu">
+            <div class="schritt-inhalt">
+              <h2>First, come and see us once</h2>
+              <div class="schritt-beschreibung"><p>You can only order prescriptions and referrals online once you have been treated by us. So please make your first appointment first. Our guide takes you through everything else:</p>
+<p><a href="/en/hilfe/termin-online-buchen/#neu" class="knopf">Make your first appointment</a> <a href="/en/hilfe/neu-bei-uns/" class="knopf knopf--zweit">New here</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu">
+            <div class="schritt-inhalt">
+              <h2>After your first visit</h2>
+              <div class="schritt-beschreibung"><p>Once you have been to see us, you can do everything online. Just come back to this page and answer the question above with “Yes”: <a href="#patient-ohne">guide for patients</a>.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <div class="fall-teil" data-fall="patient">
     
 
             <div id="c68" class="frame frame-default frame-type-text frame-layout-1">
@@ -489,7 +702,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
                 
                 
 
-    <p>Try it out first, nothing will be sent: <a href="#ueben">Practise now</a>. You will find answers to common questions just below.</p>
+    <p>Try it out first, nothing is sent: <a href="#ueben">Practise now</a>. You will find answers to common questions just below.</p>
 <p>Still have a question? You can reach us on <a href="tel:+490255393970">02553 93 97 0</a>.</p>
 
 
@@ -509,64 +722,65 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Does ordering via medflex cost anything?</span></summary>
-            <div class="stelle-text"><p>No. It is free for you.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Do I have to register with medflex?</span></summary>
-            <div class="stelle-text"><p>No. You can use medflex without registering. You then get our reply by text. If you like, you can install the free medflex app and see all your messages at a glance.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">I am new to the practice. Can I still order?</span></summary>
-            <div class="stelle-text"><p>You can only order prescriptions and referrals if you are already being treated by us. Please book an appointment first: <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">book online</a>. Everything you need to get started is under <a href="/en/hilfe/neu-bei-uns/">New here</a>.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Why can I not order at the weekend?</span></summary>
-            <div class="stelle-text"><p>From Friday 12 noon to Monday 7 am, medflex does not accept requests. We deal with everything during practice hours, so it is best to order your prescription in good time.</p></div>
-          </details>
-        
-    
-    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Print these instructions</button></p>
-  </div>
-
-  <template id="uebung-vorlage">
-    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
-      <div class="uebung-text">
-        <p class="uebung-marke">Practise first, then do it</p>
-        <h2 id="uebung-titel">Practise here at your own pace</h2>
-        <p>The phone shows the real screens. Nothing is sent, you cannot do anything wrong.</p>
-        <div class="uebung-anweisung" aria-live="polite"></div>
-        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
-        <div class="uebung-knoepfe"></div>
-      </div>
-      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
-    </section>
-  </template>
+</div>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Does ordering via medflex cost anything?</span></summary>
+            <div class="stelle-text"><p>No. It is free of charge for you.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Do I have to register with medflex?</span></summary>
+            <div class="stelle-text"><p>No. You can order prescriptions without an account. You then get our reply by text. With an account, you see all your messages in one place. <a href="#patient-anlegen">How to create an account</a>.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">I am new to the practice. Can I still order?</span></summary>
+            <div class="stelle-text"><p>Not yet. Prescriptions and referrals are only available online after your first visit. <a href="/en/hilfe/termin-online-buchen/#neu">How to make your first appointment</a>.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Why can’t I see the box on medflex?</span></summary>
+            <div class="stelle-text"><p>From Friday at 12 noon to Monday at 7 am, medflex does not accept requests. During this time the box “Wie können wir Ihnen helfen?” is hidden and you only see the yellow notice. So it is best to order your prescription in good time.</p></div>
+          </details>
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Print these instructions</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Practise first, then do it</p>
+        <h2 id="uebung-titel">Practise here at your own pace</h2>
+        <p>The phone recreates the real steps. Nothing is sent, you cannot do anything wrong.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
 
 </main>
 
@@ -595,7 +809,8 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
       <a href="/en/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Choose text size">
-        <span class="schrift-wahl-text" aria-hidden="true">Text size</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Reading aids: text size, contrast, read aloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Reading aids</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Choose text size">
+            <span class="lesehilfe-name" aria-hidden="true">Text size</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Contrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Read aloud</span>
+          </button>
+          <a class="lesehilfe-link" href="/en/leichte-sprache/">Plain language</a>
+          <a class="lesehilfe-link" href="/en/barrierefreiheit/">Accessibility</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Contrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Read aloud</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Choose language">
           
@@ -172,15 +182,15 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
 
 
-
-  <section class="hilfe-buehne hilfe-buehne--klein">
-    <div class="rahmen">
-      <a class="hilfe-zurueck" href="/en/hilfe/">Back to help</a>
-      <h1>New here</h1>
-      <p class="hilfe-unterzeile">A warm welcome to our practice</p>
-    </div>
-    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
-  </section>
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/en/hilfe/">Back to help</a>
+      <h1>New here</h1>
+      <p class="hilfe-unterzeile">A warm welcome to our practice</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
 
 
 
@@ -188,13 +198,16 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
 
 <main id="inhalt" tabindex="-1">
-  
-  <div class="rahmen anleitung">
-    
-      
-      
-      
-      
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="rezept">
+    
+      
+      
+      
+      
+          
     
 
             <div id="c96" class="frame frame-default frame-type-text frame-layout-0">
@@ -266,75 +279,79 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
-          <section class="checkliste">
-            <h2>Please bring along</h2>
-            <ul><li>Your health insurance card</li><li>A list of your medicines</li><li>Your vaccination record, if you have it</li><li>Doctors' letters and test results you have at home</li><li>For children: the yellow check-up booklet</li></ul>
-          </section>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Make an appointment</h2>
-              <div class="schritt-beschreibung"><p>We work by appointment. Book online via <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib</a> or call us on <a href="tel:+490255393970">02553 93 97 0</a>. On Doctolib, answer the question about your first visit with <strong>“Nein”</strong> (no).</p>
-<p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Book an appointment online</a> <a href="/en/hilfe/termin-online-buchen/" class="knopf knopf--zweit">View the guide</a></p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Check in at reception</h2>
-              <div class="schritt-beschreibung"><p>It is best to arrive a few minutes early. We will take your details and sort out everything else with you.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>A calm conversation</h2>
-              <div class="schritt-beschreibung"><p>At your first appointment we get to know each other: your medical history, your medicines and whatever is on your mind.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>After that, it is easy</h2>
-              <div class="schritt-beschreibung"><p>As a patient you can order prescriptions and referrals online via <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer">medflex</a>. <a href="/en/hilfe/rezept-online-bestellen/">Our guide</a> shows you how.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
+
+        
+    
+      
+      
+      
+      
+          <section class="checkliste" data-fall="">
+            <h2>Please bring along</h2>
+            <ul><li>Your health insurance card</li><li>A list of your medicines</li><li>Your vaccination record, if you have it</li><li>Doctors' letters and test results you have at home</li><li>For children: the yellow check-up booklet</li></ul>
+          </section>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Make an appointment</h2>
+              <div class="schritt-beschreibung"><p>We work by appointment only.</p>
+<p><strong>Statutory insurance:</strong> please make your first appointment by phone on <a href="tel:+490255393970">02553 93 97 0</a>. Online booking via Doctolib is only possible after your first visit.</p>
+<p><strong>Private insurance:</strong> you can also book online via <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib</a>. Answer the question about your first visit with <strong>“Nein”</strong> (no).</p>
+<p><a href="tel:+490255393970" class="knopf">Call 02553 93 97 0</a> <a href="/en/hilfe/termin-online-buchen/#neu" class="knopf knopf--zweit">Guide for new patients</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Check in at reception</h2>
+              <div class="schritt-beschreibung"><p>It is best to arrive a few minutes early. We will take your details and sort out everything else with you.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>A calm conversation</h2>
+              <div class="schritt-beschreibung"><p>At your first appointment we get to know each other: your medical history, your medicines and whatever is on your mind.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>After that, it is easy</h2>
+              <div class="schritt-beschreibung"><p>As a patient you can order prescriptions and referrals online via <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer">medflex</a>. <a href="/en/hilfe/rezept-online-bestellen/">Our guide</a> shows you how.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          
     
 
             <div id="c102" class="frame frame-default frame-type-text frame-layout-1">
@@ -406,24 +423,25 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Print these instructions</button></p>
-  </div>
-
-  <template id="uebung-vorlage">
-    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
-      <div class="uebung-text">
-        <p class="uebung-marke">Practise first, then do it</p>
-        <h2 id="uebung-titel">Practise here at your own pace</h2>
-        <p>The phone shows the real screens. Nothing is sent, you cannot do anything wrong.</p>
-        <div class="uebung-anweisung" aria-live="polite"></div>
-        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
-        <div class="uebung-knoepfe"></div>
-      </div>
-      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
-    </section>
-  </template>
+
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Print these instructions</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Practise first, then do it</p>
+        <h2 id="uebung-titel">Practise here at your own pace</h2>
+        <p>The phone recreates the real steps. Nothing is sent, you cannot do anything wrong.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
 
 </main>
 
@@ -452,7 +470,8 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
       <a href="/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
-        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Kontrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Vorlesen</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
           
@@ -172,15 +182,15 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 
-
-  <section class="hilfe-buehne hilfe-buehne--klein">
-    <div class="rahmen">
-      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
-      <h1>Neu bei uns</h1>
-      <p class="hilfe-unterzeile">Herzlich willkommen in unserer Praxis</p>
-    </div>
-    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
-  </section>
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
+      <h1>Neu bei uns</h1>
+      <p class="hilfe-unterzeile">Herzlich willkommen in unserer Praxis</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
 
 
 
@@ -188,13 +198,16 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 <main id="inhalt" tabindex="-1">
-  
-  <div class="rahmen anleitung">
-    
-      
-      
-      
-      
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="rezept">
+    
+      
+      
+      
+      
+          
     
 
             <div id="c96" class="frame frame-default frame-type-text frame-layout-0">
@@ -266,75 +279,79 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
         
 
-
-    
-      
-      
-      
-      
-          <section class="checkliste">
-            <h2>Das bringen Sie bitte mit</h2>
-            <ul><li>Ihre Versichertenkarte</li><li>Eine Liste Ihrer Medikamente</li><li>Ihren Impfpass, wenn Sie ihn haben</li><li>Arztbriefe und Befunde, die Sie zu Hause haben</li><li>Bei Kindern: das gelbe Untersuchungsheft</li></ul>
-          </section>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Termin vereinbaren</h2>
-              <div class="schritt-beschreibung"><p>Wir sind eine Terminpraxis. Buchen Sie online über <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib</a> oder rufen Sie uns an unter <a href="tel:+490255393970">02553 93 97 0</a>. Bei Doctolib beantworten Sie die Frage nach dem ersten Besuch mit <strong>„Nein“</strong>.</p>
-<p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Termin online buchen</a> <a href="/hilfe/termin-online-buchen/" class="knopf knopf--zweit">Anleitung ansehen</a></p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Am Empfang anmelden</h2>
-              <div class="schritt-beschreibung"><p>Kommen Sie am besten ein paar Minuten früher. Wir nehmen Ihre Daten auf und klären alles Weitere mit Ihnen.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Gespräch in Ruhe</h2>
-              <div class="schritt-beschreibung"><p>Beim ersten Termin lernen wir uns kennen: Ihre Vorgeschichte, Ihre Medikamente und das, was Sie gerade beschäftigt.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Danach ganz bequem</h2>
-              <div class="schritt-beschreibung"><p>Als Patientin oder Patient können Sie Rezepte und Überweisungen online über <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer">medflex</a> bestellen. <a href="/hilfe/rezept-online-bestellen/">Unsere Anleitung</a> zeigt Ihnen, wie das geht.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
+
+        
+    
+      
+      
+      
+      
+          <section class="checkliste" data-fall="">
+            <h2>Das bringen Sie bitte mit</h2>
+            <ul><li>Ihre Versichertenkarte</li><li>Eine Liste Ihrer Medikamente</li><li>Ihren Impfpass, wenn Sie ihn haben</li><li>Arztbriefe und Befunde, die Sie zu Hause haben</li><li>Bei Kindern: das gelbe Untersuchungsheft</li></ul>
+          </section>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Termin vereinbaren</h2>
+              <div class="schritt-beschreibung"><p>Wir sind eine Terminpraxis.</p>
+<p><strong>Gesetzlich versichert:</strong> Ihren ersten Termin vereinbaren Sie bitte telefonisch unter <a href="tel:+490255393970">02553 93 97 0</a>. Online-Buchung über Doctolib ist erst nach Ihrem ersten Besuch möglich.</p>
+<p><strong>Privat versichert:</strong> Sie können auch online über <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib</a> buchen. Beantworten Sie dort die Frage nach dem ersten Besuch mit <strong>„Nein“</strong>.</p>
+<p><a href="tel:+490255393970" class="knopf">02553 93 97 0 anrufen</a> <a href="/hilfe/termin-online-buchen/#neu" class="knopf knopf--zweit">Anleitung für neue Patienten</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Am Empfang anmelden</h2>
+              <div class="schritt-beschreibung"><p>Kommen Sie am besten ein paar Minuten früher. Wir nehmen Ihre Daten auf und klären alles Weitere mit Ihnen.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Gespräch in Ruhe</h2>
+              <div class="schritt-beschreibung"><p>Beim ersten Termin lernen wir uns kennen: Ihre Vorgeschichte, Ihre Medikamente und das, was Sie gerade beschäftigt.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Danach ganz bequem</h2>
+              <div class="schritt-beschreibung"><p>Als Patientin oder Patient können Sie Rezepte und Überweisungen online über <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer">medflex</a> bestellen. <a href="/hilfe/rezept-online-bestellen/">Unsere Anleitung</a> zeigt Ihnen, wie das geht.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          
     
 
             <div id="c102" class="frame frame-default frame-type-text frame-layout-1">
@@ -406,24 +423,25 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
         
 
-
-    
-    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
-  </div>
-
-  <template id="uebung-vorlage">
-    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
-      <div class="uebung-text">
-        <p class="uebung-marke">Erst üben, dann machen</p>
-        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
-        <p>Das Handy zeigt die echten Bildschirme. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
-        <div class="uebung-anweisung" aria-live="polite"></div>
-        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
-        <div class="uebung-knoepfe"></div>
-      </div>
-      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
-    </section>
-  </template>
+
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Erst üben, dann machen</p>
+        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
+        <p>Das Handy stellt den echten Ablauf nach. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
 
 </main>
 
@@ -452,7 +470,8 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

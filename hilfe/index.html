@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
       <a href="/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
-        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Kontrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Vorlesen</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
           
@@ -184,7 +194,7 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
         </p>
       </div>
       <figure class="hilfe-bild">
-        <img src="/fileadmin/praxis/bilder/empfang-gross.jpg" width="2400" height="900" alt="" />
+        <img src="/fileadmin/praxis/bilder/empfang-gross.jpg" width="3200" height="1200" alt="" />
         <figcaption class="hilfe-blase">Schritt für Schritt erklärt, in Ihrem Tempo.</figcaption>
       </figure>
     </div>
@@ -206,16 +216,17 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
         
           <div class="wegweiser-eintrag wegweiser--kalender">
             <button type="button" class="wegweiser-knopf" aria-expanded="false" aria-controls="antwort-89">
-              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#kalender" /></svg></span>
+              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#kalender" /></svg></span>
               <span class="wegweiser-name">Ich möchte einen Termin</span>
             </button>
             <div class="wegweiser-antwort" id="antwort-89" hidden><p>Am einfachsten buchen Sie online über <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib</a>, zu jeder Tageszeit. Unsere Anleitung zeigt Ihnen jeden Schritt, und Sie können vorher in Ruhe üben.</p>
-<p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Termin online buchen</a> <a href="/hilfe/termin-online-buchen/" class="knopf knopf--zweit">Anleitung ansehen</a></p></div>
+<p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Termin online buchen</a> <a href="/hilfe/termin-online-buchen/" class="knopf knopf--zweit">Anleitung ansehen</a></p>
+<p>Ihr erster Termin bei uns? <a href="/hilfe/termin-online-buchen/#neu">So geht es für neue Patienten</a>.</p></div>
           </div>
         
           <div class="wegweiser-eintrag wegweiser--rezept">
             <button type="button" class="wegweiser-knopf" aria-expanded="false" aria-controls="antwort-90">
-              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#rezept" /></svg></span>
+              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#rezept" /></svg></span>
               <span class="wegweiser-name">Ich brauche ein Rezept</span>
             </button>
             <div class="wegweiser-antwort" id="antwort-90" hidden><p>Folgerezepte bestellen Sie über <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer">medflex</a>, von Montag, 7 Uhr, bis Freitag, 12 Uhr.</p>
@@ -224,7 +235,7 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
         
           <div class="wegweiser-eintrag wegweiser--ueberweisung">
             <button type="button" class="wegweiser-knopf" aria-expanded="false" aria-controls="antwort-91">
-              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#ueberweisung" /></svg></span>
+              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#ueberweisung" /></svg></span>
               <span class="wegweiser-name">Ich brauche eine Überweisung</span>
             </button>
             <div class="wegweiser-antwort" id="antwort-91" hidden><p>Auch das geht über <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer">medflex</a>. Wählen Sie dort „Überweisung anfragen“. Der Weg ist fast derselbe wie beim Rezept.</p>
@@ -233,7 +244,7 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
         
           <div class="wegweiser-eintrag wegweiser--krank">
             <button type="button" class="wegweiser-knopf" aria-expanded="false" aria-controls="antwort-92">
-              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#krank" /></svg></span>
+              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#krank" /></svg></span>
               <span class="wegweiser-name">Ich bin krank</span>
             </button>
             <div class="wegweiser-antwort" id="antwort-92" hidden><p>Für akute Beschwerden gibt es montags bis freitags die Akutsprechstunde von 11 bis 13 Uhr, in Ochtrup auch montags und donnerstags von 17 bis 18:30 Uhr. Bitte buchen Sie vorher einen Termin, am einfachsten online über <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib</a>. Bei Infekten bringen Sie bitte eine FFP2-Maske mit.</p>
@@ -242,16 +253,16 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
         
           <div class="wegweiser-eintrag wegweiser--neu">
             <button type="button" class="wegweiser-knopf" aria-expanded="false" aria-controls="antwort-93">
-              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#neu" /></svg></span>
+              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#neu" /></svg></span>
               <span class="wegweiser-name">Ich bin neu in der Praxis</span>
             </button>
-            <div class="wegweiser-antwort" id="antwort-93" hidden><p>Herzlich willkommen! Wir erklären Ihnen, wie der erste Besuch abläuft und was Sie mitbringen sollten.</p>
-<p><a href="/hilfe/neu-bei-uns/" class="knopf">Neu bei uns</a></p></div>
+            <div class="wegweiser-antwort" id="antwort-93" hidden><p>Herzlich willkommen! Wir erklären Ihnen, wie Sie Ihren ersten Termin bekommen, wie der Besuch abläuft und was Sie mitbringen sollten.</p>
+<p><a href="/hilfe/neu-bei-uns/" class="knopf">Neu bei uns</a> <a href="/hilfe/termin-online-buchen/#neu" class="knopf knopf--zweit">Ersten Termin vereinbaren</a></p></div>
           </div>
         
           <div class="wegweiser-eintrag wegweiser--notfall">
             <button type="button" class="wegweiser-knopf" aria-expanded="false" aria-controls="antwort-95">
-              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#notfall" /></svg></span>
+              <span class="wegweiser-symbol"><svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#notfall" /></svg></span>
               <span class="wegweiser-name">Es ist ein Notfall</span>
             </button>
             <div class="wegweiser-antwort" id="antwort-95" hidden><p><strong>Lebensgefahr: Rufen Sie sofort die <a href="tel:112">112</a>.</strong></p>
@@ -278,17 +289,17 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   <section class="hilfe-unten">
     <div class="rahmen hilfe-unten-raster">
       <a class="hilfe-karte hilfe-karte--link" href="/hilfe/neu-bei-uns/">
-        <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#neu" /></svg>
+        <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#neu" /></svg>
         <h2>Neu bei uns?</h2>
         <p>Was Sie mitbringen und wie der erste Besuch abläuft.</p>
       </a>
       <a class="hilfe-karte hilfe-karte--link" href="/leichte-sprache/">
-        <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#gespraech" /></svg>
+        <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#gespraech" /></svg>
         <h2>Leichte Sprache</h2>
         <p>Unsere Praxis, ganz einfach erklärt.</p>
       </a>
       <div class="hilfe-karte">
-        <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#telefon" /></svg>
+        <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#telefon" /></svg>
         <h2>Noch eine Frage?</h2>
         <p>Finden Sie hier keine Antwort, erreichen Sie uns telefonisch.</p>
         <a class="hilfe-nummer" href="tel:+490255393970">02553 93 97 0</a>
@@ -323,7 +334,8 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

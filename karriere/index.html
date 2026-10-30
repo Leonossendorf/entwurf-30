@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
       <a href="/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
-        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Kontrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Vorlesen</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
           
@@ -175,29 +185,29 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
   
   
-  
-<section class="buehne buehne--seite">
-  <div class="buehne-bilder">
-    
-        
-          <figure class="buehne-bild buehne-bild-1">
-            <img loading="eager" src="/fileadmin/praxis/bilder/gebaeude.jpg" width="1600" height="600" alt="" />
-            
-          </figure>
-        
-      
-    
-  </div>
-  <div class="rahmen buehne-raster">
-    <div class="buehne-text">
-      <h1>Karriere</h1>
-      <p class="buehne-unterzeile">Ausbildung, Quereinstieg, Weiterbildung, Festanstellung</p>
-      
-    </div>
-  </div>
-  
-</section>
-
+  
+<section class="buehne buehne--seite">
+  <div class="buehne-bilder">
+    
+        
+          <figure class="buehne-bild buehne-bild-1">
+            <img loading="eager" src="/fileadmin/praxis/bilder/gebaeude.jpg" width="1600" height="600" alt="" />
+            
+          </figure>
+        
+      
+    
+  </div>
+  <div class="rahmen buehne-raster">
+    <div class="buehne-text">
+      <h1>Karriere</h1>
+      <p class="buehne-unterzeile">Ausbildung, Quereinstieg, Weiterbildung, Festanstellung</p>
+      
+    </div>
+  </div>
+  
+</section>
+
 
 
 
@@ -592,7 +602,7 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
     
 
     <form id="bewerbung-44" enctype="multipart/form-data" action="#" method="post">
-<div><input type="hidden" name="tx_form_formframework[bewerbung-44][__state]" value="TzozOToiVFlQTzNcQ01TXEZvcm1cRG9tYWluXFJ1bnRpbWVcRm9ybVN0YXRlIjozOntzOjI1OiIAKgBsYXN0RGlzcGxheWVkUGFnZUluZGV4IjtpOjA7czoxMzoiACoAZm9ybVZhbHVlcyI7YTowOnt9czoxNjoiACoAaG9uZXlwb3ROYW1lcyI7YToxOntpOjA7czoxNjoiOXJiSUV4MmFWMHlVTjVYNyI7fX0=ada6b2adcfe491cf404d95f71f3ca552a3362fc2a19159f27d545699a672c102" /><input type="hidden" name="tx_form_formframework[__trustedProperties]" value="{&quot;bewerbung-44&quot;:{&quot;stelle&quot;:1,&quot;vorname&quot;:1,&quot;nachname&quot;:1,&quot;email&quot;:1,&quot;telefon&quot;:1,&quot;lebenslauf&quot;:{&quot;name&quot;:1,&quot;type&quot;:1,&quot;tmp_name&quot;:1,&quot;error&quot;:1,&quot;size&quot;:1},&quot;nachricht&quot;:1,&quot;datenschutz&quot;:1,&quot;9rbIEx2aV0yUN5X7&quot;:1,&quot;__currentPage&quot;:1}}cef413040730f21ba61bb104d846e1ce59fad0e42dee0d1d2186c622b2f67d6e" >
+<div><input type="hidden" name="tx_form_formframework[bewerbung-44][__state]" value="TzozOToiVFlQTzNcQ01TXEZvcm1cRG9tYWluXFJ1bnRpbWVcRm9ybVN0YXRlIjozOntzOjI1OiIAKgBsYXN0RGlzcGxheWVkUGFnZUluZGV4IjtpOjA7czoxMzoiACoAZm9ybVZhbHVlcyI7YTowOnt9czoxNjoiACoAaG9uZXlwb3ROYW1lcyI7YToxOntpOjA7czoxMDoiZmRnVWN0Mk83bCI7fX0=3f41f364f466c1b548ffb9ee5d83e836dda08d615cd4ca9d8e64823c4b898c37" /><input type="hidden" name="tx_form_formframework[__trustedProperties]" value="{&quot;bewerbung-44&quot;:{&quot;stelle&quot;:1,&quot;vorname&quot;:1,&quot;nachname&quot;:1,&quot;email&quot;:1,&quot;telefon&quot;:1,&quot;lebenslauf&quot;:{&quot;name&quot;:1,&quot;type&quot;:1,&quot;tmp_name&quot;:1,&quot;error&quot;:1,&quot;size&quot;:1},&quot;nachricht&quot;:1,&quot;datenschutz&quot;:1,&quot;fdgUct2O7l&quot;:1,&quot;__currentPage&quot;:1}}6f7a016d482eaefc363d48d2275bd8449ada0693107a153dbaafa47800441961" >
 </div>
 
         
@@ -974,7 +984,7 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
     
         
 
-        <input aria-hidden="true" data-id="9rbIEx2aV0yUN5X7" id="bewerbung-44-9rbIEx2aV0yUN5X7" class="form-control" tabindex="-1" style="position:absolute; margin:0 0 0 -999em;" type="text" name="tx_form_formframework[bewerbung-44][9rbIEx2aV0yUN5X7]" />
+        <input aria-hidden="true" data-id="fdgUct2O7l" id="bewerbung-44-fdgUct2O7l" class="form-control" tabindex="-1" style="position:absolute; margin:0 0 0 -999em;" type="text" name="tx_form_formframework[bewerbung-44][fdgUct2O7l]" />
     
 
 
@@ -1124,7 +1134,8 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 <script>

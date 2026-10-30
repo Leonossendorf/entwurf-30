@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
       <a href="/en/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Choose text size">
-        <span class="schrift-wahl-text" aria-hidden="true">Text size</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Reading aids: text size, contrast, read aloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Reading aids</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Choose text size">
+            <span class="lesehilfe-name" aria-hidden="true">Text size</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Contrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Read aloud</span>
+          </button>
+          <a class="lesehilfe-link" href="/en/leichte-sprache/">Plain language</a>
+          <a class="lesehilfe-link" href="/en/barrierefreiheit/">Accessibility</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Contrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Read aloud</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Choose language">
           
@@ -172,15 +182,15 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
 
 
-
-  <section class="hilfe-buehne hilfe-buehne--klein">
-    <div class="rahmen">
-      <a class="hilfe-zurueck" href="/en/hilfe/">Back to help</a>
-      <h1>Book an appointment online</h1>
-      <p class="hilfe-unterzeile">How to book an appointment via Doctolib</p>
-    </div>
-    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
-  </section>
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/en/hilfe/">Back to help</a>
+      <h1>Book an appointment online</h1>
+      <p class="hilfe-unterzeile">How to book an appointment via Doctolib</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
 
 
 
@@ -188,13 +198,16 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
 
 <main id="inhalt" tabindex="-1">
-  
-  <div class="rahmen anleitung">
-    
-      
-      
-      
-      
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="termin">
+    
+      
+      
+      
+      
+          
     
 
             <div id="c72" class="frame frame-default frame-type-text frame-layout-0">
@@ -220,7 +233,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
     
             <h2 class="">
-                Book an appointment when it suits you
+                Book an appointment whenever it suits you
             </h2>
         
 
@@ -247,8 +260,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
                 
                 
 
-    <p>Doctolib shows you our free appointments and you book the right one straight away. It works around the clock and is free. Our practices work by appointment, and you also need an appointment for the acute clinic.</p>
-<p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Open Doctolib</a></p>
+    <p>On Doctolib you can see our free appointments and book the one that suits you. This works around the clock and is free of charge. Our practices work by appointment only. You also need an appointment for the acute clinic.</p>
 
 
                 
@@ -267,12 +279,52 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
+
+        
+    
+      
+      
+      
+      
+          
+
+<section class="fallwahl" id="fallwahl" data-art="termin" aria-labelledby="fallwahl-titel">
+  <h2 id="fallwahl-titel">Which guide is right for you?</h2>
+  <p class="fallwahl-text">Answer a few short questions. You will then only see the steps that apply to you.</p>
+  <fieldset class="fall-frage" data-dim="besuch">
+    <legend>Have you been treated at our practice before?</legend>
+    <label><input type="radio" name="fall-besuch" value="patient" /><span>Yes, I have been before</span></label>
+    <label><input type="radio" name="fall-besuch" value="neu" /><span>No, I am new</span></label>
+  </fieldset>
+  
+    <fieldset class="fall-frage" data-dim="vers" hidden>
+      <legend>How are you insured?</legend>
+      <label><input type="radio" name="fall-vers" value="gesetzlich" /><span>Statutory health insurance</span></label>
+      <label><input type="radio" name="fall-vers" value="privat" /><span>Private health insurance</span></label>
+    </fieldset>
+  
+  <fieldset class="fall-frage" data-dim="konto" hidden>
+    <legend>Do you have a Doctolib account?</legend>
+    <label><input type="radio" name="fall-konto" value="ohne" /><span>No, or I am not sure</span></label>
+    <label><input type="radio" name="fall-konto" value="mit" /><span>Yes, I have an account</span></label>
+    
+  </fieldset>
+  <div class="fall-ergebnis" aria-live="polite" hidden>
+    <p class="fall-ergebnis-text"><span>Your guide:</span> <strong></strong></p>
+    <a class="knopf knopf--zweit fall-ueben" href="#ueben" hidden>Practise first</a>
+  </div>
+</section>
+
+
+          
+          <div class="uebung-platz"></div>
+        
+    
+      
+      
+      
+      
+          <div class="fall-teil" data-fall="privat">
     
 
             <div id="c73" class="frame frame-default frame-type-text frame-layout-0">
@@ -325,7 +377,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
                 
                 
 
-    <ul><li>A phone, tablet or computer with internet access</li><li>An email address and your mobile number</li><li>For infection appointments: an FFP2 mask for your visit</li></ul>
+    <ul><li>a phone, tablet or computer with internet access</li><li>an email address or your mobile number</li><li>for infection appointments: an FFP2 mask when you visit</li></ul>
 
 
                 
@@ -344,98 +396,286 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,73.6,94.9,12.3" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Open the Doctolib page</h2>
-              <div class="schritt-beschreibung"><p>On our website, tap <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer"><strong>“Book online”</strong></a>. The Doctolib page opens. If a cookie notice appears, simply tap <strong>“Ablehnen”</strong> (decline). You can still book.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Open the Doctolib page" loading="lazy" src="/fileadmin/praxis/hilfe/d1.jpg" width="780" height="848" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,81.1,94.9,15.4" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Tap “Termin buchen”</h2>
-              <div class="schritt-beschreibung"><p>You will see our practice name. Tap the blue button <strong>“Termin buchen”</strong> (book appointment).</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Tap “Termin buchen”" loading="lazy" src="/fileadmin/praxis/hilfe/d2.jpg" width="780" height="676" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,45.2,94.4,25.9" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Choose the specialty</h2>
-              <div class="schritt-beschreibung"><p>For an appointment with our doctors, choose <strong>“Hausarzt / Allgemeinmediziner”</strong> (GP).</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Choose the specialty" loading="lazy" src="/fileadmin/praxis/hilfe/d3.jpg" width="780" height="540" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,61.7,94.4,19.4" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Answer the question about your first visit</h2>
-              <div class="schritt-beschreibung"><p>Have you been to us before? Tap <strong>“Ja”</strong> (yes) or <strong>“Nein”</strong> (no). The question is about the person coming to the appointment, for example your child or your mother.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Answer the question about your first visit" loading="lazy" src="/fileadmin/praxis/hilfe/d4.jpg" width="780" height="720" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Choose the reason and time</h2>
-              <div class="schritt-beschreibung"><p>Choose the reason for your visit, for example the acute clinic. You will then see the free appointments. Tap the time that suits you.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Log in and confirm</h2>
-              <div class="schritt-beschreibung"><p>Finally, log in to Doctolib. The first time, you create a free account with your email address and mobile number. Then confirm the appointment and you will get a confirmation by email.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
+</div>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Open the Doctolib page</h2>
+              <div class="schritt-beschreibung"><p>Tap this button:</p>
+<p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Open Doctolib</a></p>
+<p>The Doctolib page opens in a new window. If a notice about cookies appears, just tap <strong>“ABLEHNEN”</strong> (decline). You can still book.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Tap “TERMIN BUCHEN”</h2>
+              <div class="schritt-beschreibung"><p>You will see our practice name. Tap the blue button <strong>“TERMIN BUCHEN”</strong> (book an appointment).</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Choose the specialty</h2>
+              <div class="schritt-beschreibung"><p>For an appointment with our doctors, choose <strong>“Hausarzt / Allgemeinmediziner”</strong> (GP). For a flu or Covid vaccination, choose <strong>“Medizinischer Fachangestellter (MFA)”</strong>.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient">
+            <div class="schritt-inhalt">
+              <h2>Answer “Ja” to the question about your visit</h2>
+              <div class="schritt-beschreibung"><p>Doctolib asks whether you have been to us before. Tap <strong>“Ja”</strong> (yes). The question is about the person coming to the appointment, for example your child or your mother.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Answer “Nein” to the question about your visit</h2>
+              <div class="schritt-beschreibung"><p>Doctolib asks whether you have been to us before. Tap <strong>“Nein”</strong> (no). The question is about the person coming to the appointment.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Answer “Nein” to the question about your visit" loading="lazy" src="/fileadmin/praxis/hilfe/d-frage-nein.jpg" width="780" height="1040" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Choose the location</h2>
+              <div class="schritt-beschreibung"><p>Choose <strong>Ochtrup</strong> or <strong>Gronau-Epe</strong>. If either is fine, tap <strong>“Ich habe keine Präferenz”</strong> (no preference).</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Choose the location" loading="lazy" src="/fileadmin/praxis/hilfe/d-standort.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Choose your insurance</h2>
+              <div class="schritt-beschreibung"><p>Tap <strong>“Gesetzlich versichert”</strong> (statutory) or <strong>“Privat versichert”</strong> (private).</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Choose your insurance" loading="lazy" src="/fileadmin/praxis/hilfe/d-versicherung.jpg" width="780" height="840" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Choose a category</h2>
+              <div class="schritt-beschreibung"><p>For a planned appointment, choose <strong>“Terminsprechstunde”</strong>. If you are ill, choose <strong>“Akut- und Infektsprechstunde”</strong>. In Epe it is called <strong>“Sprechstunde Epe”</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Choose a category" loading="lazy" src="/fileadmin/praxis/hilfe/d-kategorie.jpg" width="780" height="1040" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Choose the appointment type and doctor</h2>
+              <div class="schritt-beschreibung"><p>Tap the type of appointment, for example <strong>“Sprechstunde”</strong> (consultation). Then choose your doctor. If you do not mind, tap <strong>“Ich habe keine Präferenz”</strong> (no preference).</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Choose the appointment type and doctor" loading="lazy" src="/fileadmin/praxis/hilfe/d-art.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Choose a time</h2>
+              <div class="schritt-beschreibung"><p>You will see the free appointments. Tap the time that suits you.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="mit,privat">
+            <div class="schritt-inhalt">
+              <h2>Tap “EINLOGGEN”</h2>
+              <div class="schritt-beschreibung"><p>Doctolib now asks for your account. Tap the yellow button <strong>“EINLOGGEN”</strong> (log in).</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="mit,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Enter your email or mobile number and password</h2>
+              <div class="schritt-beschreibung"><p>Enter the email address or mobile number of your account and tap <strong>“Weiter”</strong> (next). Then enter your password.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Enter your email or mobile number and password" loading="lazy" src="/fileadmin/praxis/hilfe/d-einloggen.jpg" width="780" height="920" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="ohne,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Tap “REGISTRIEREN”</h2>
+              <div class="schritt-beschreibung"><p>You need a free Doctolib account to book. Under <strong>“Neu auf Doctolib?”</strong> (new to Doctolib) tap <strong>“REGISTRIEREN”</strong> (register).</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Tap “REGISTRIEREN”" loading="lazy" src="/fileadmin/praxis/hilfe/d-konto-ohne.jpg" width="780" height="1240" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="ohne,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Create your account</h2>
+              <div class="schritt-beschreibung"><p>Enter your email address or mobile number and tap <strong>“Weiter”</strong> (next). Doctolib then guides you through the final steps: you receive a code, choose a password and enter your name and date of birth.</p>
+<p>If you already have an account after all, Doctolib will tell you and you can log in.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Create your account" loading="lazy" src="/fileadmin/praxis/hilfe/d-registrieren.jpg" width="780" height="920" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Confirm the appointment</h2>
+              <div class="schritt-beschreibung"><p>Check the details and confirm the appointment. Doctolib also asks who the appointment is for. You then receive a confirmation.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich">
+            <div class="schritt-inhalt">
+              <h2>Please make your first appointment by phone</h2>
+              <div class="schritt-beschreibung"><p>If you are a new patient with statutory insurance, online booking is not yet possible. Please call us:</p>
+<p><a href="tel:+490255393970" class="knopf">Call 02553 93 97 0</a></p>
+<p>At the top of the page you can see whether we are open right now. On the phone, just say: “I am new and would like a first appointment.”</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>What Doctolib shows in this case</h2>
+              <div class="schritt-beschreibung"><p>If you try on Doctolib anyway, you will see this message. It is not an error and you have not done anything wrong.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="What Doctolib shows in this case" loading="lazy" src="/fileadmin/praxis/hilfe/d-stopp.jpg" width="780" height="1214" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich">
+            <div class="schritt-inhalt">
+              <h2>What to bring to your first appointment</h2>
+              <div class="schritt-beschreibung"><p>You can read what to bring and how your first visit works here:</p>
+<p><a href="/en/hilfe/neu-bei-uns/" class="knopf">New here</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich">
+            <div class="schritt-inhalt">
+              <h2>After that, everything works online</h2>
+              <div class="schritt-beschreibung"><p>After your first visit you can book appointments via Doctolib and order prescriptions via medflex. Then answer the first question above with “Yes”.</p>
+<p><a href="#patient" class="knopf knopf--zweit">Guide for your next appointment</a> <a href="/en/hilfe/rezept-online-bestellen/#patient-ohne" class="knopf knopf--zweit">Guide for prescriptions</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <div class="fall-teil" data-fall="privat">
     
 
             <div id="c80" class="frame frame-default frame-type-text frame-layout-1">
@@ -488,7 +728,7 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
                 
                 
 
-    <p>Try it out first, nothing will be sent: <a href="#ueben">Practise now</a>. You will find answers to common questions just below.</p>
+    <p>Try it out first, nothing is sent: <a href="#ueben">Practise now</a>. You will find answers to common questions just below.</p>
 <p>Still have a question? You can reach us on <a href="tel:+490255393970">02553 93 97 0</a>.</p>
 
 
@@ -508,74 +748,85 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
         
 
-
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">I cannot find a free appointment for the acute clinic.</span></summary>
-            <div class="stelle-text"><p>Appointments for the acute clinic are released 24 hours in advance. <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Check again the day before</a>, or give us a call.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Can I book an appointment for a relative?</span></summary>
-            <div class="stelle-text"><p>Yes. Doctolib asks who the appointment is for when you book, so you can book for your child or your parents, for example.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">How do I cancel an appointment?</span></summary>
-            <div class="stelle-text"><p>In your <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib account</a> under “Meine Termine” (my appointments), or by phone. Please cancel in good time so that other patients can use the appointment.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">The text with the code does not arrive.</span></summary>
-            <div class="stelle-text"><p>Check that your mobile number is correct and wait a minute or two. Sometimes it helps to request the code again.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">I have forgotten my password.</span></summary>
-            <div class="stelle-text"><p>When logging in, tap <strong>“Passwort vergessen?”</strong> (forgotten password). Doctolib will send you an email so you can set a new password.</p></div>
-          </details>
-        
-    
-    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Print these instructions</button></p>
-  </div>
-
-  <template id="uebung-vorlage">
-    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
-      <div class="uebung-text">
-        <p class="uebung-marke">Practise first, then do it</p>
-        <h2 id="uebung-titel">Practise here at your own pace</h2>
-        <p>The phone shows the real screens. Nothing is sent, you cannot do anything wrong.</p>
-        <div class="uebung-anweisung" aria-live="polite"></div>
-        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
-        <div class="uebung-knoepfe"></div>
-      </div>
-      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
-    </section>
-  </template>
+</div>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">I am new. Why can’t I book online?</span></summary>
+            <div class="stelle-text"><p>On Doctolib, booking is not available for new patients with statutory insurance. Please call us for your first appointment: <a href="tel:+490255393970">02553 93 97 0</a>. Privately insured patients can also book online as new patients.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">I cannot find a free appointment for the acute clinic.</span></summary>
+            <div class="stelle-text"><p>Appointments for the acute clinic are released 24 hours in advance. <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Check again the day before</a>, or give us a call.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Can I book an appointment for a relative?</span></summary>
+            <div class="stelle-text"><p>Yes. Doctolib asks who the appointment is for when you book, so you can book for your child or your parents, for example.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">How do I cancel an appointment?</span></summary>
+            <div class="stelle-text"><p>In your <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib account</a> under “Meine Termine” (my appointments), or by phone. Please cancel in good time so that other patients can use the appointment.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">The text with the code does not arrive.</span></summary>
+            <div class="stelle-text"><p>Check that your mobile number is correct and wait a minute or two. Sometimes it helps to request the code again.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">I have forgotten my password.</span></summary>
+            <div class="stelle-text"><p>When logging in, tap <strong>“Passwort vergessen?”</strong> (forgotten password). Doctolib will send you an email so you can set a new password.</p></div>
+          </details>
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Print these instructions</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Practise first, then do it</p>
+        <h2 id="uebung-titel">Practise here at your own pace</h2>
+        <p>The phone recreates the real steps. Nothing is sent, you cannot do anything wrong.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
 
 </main>
 
@@ -604,7 +855,8 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

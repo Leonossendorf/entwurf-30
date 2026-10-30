@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,30 +68,32 @@ Freitag|08:00 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
       <a href="/epe/" aria-current="true">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-        <label class="hero-schieber" title="Startbild-Variante wechseln">
-          <span class="hero-schieber-text">Startbild</span>
-          <span class="hero-schieber-zahl" aria-hidden="true">1</span>
-          <input type="checkbox" role="switch" aria-label="Startbild-Variante wechseln" />
-          <span class="hero-schieber-bahn" aria-hidden="true"></span>
-          <span class="hero-schieber-zahl" aria-hidden="true">2</span>
-        </label>
-      
-      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
-        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Kontrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Vorlesen</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
           
@@ -181,34 +183,34 @@ Freitag|08:00 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 
-  
-<section class="buehne buehne--start buehne--epe">
-  <div class="buehne-bilder">
-    
-        <figure class="buehne-bild buehne-bild-1 bild-folgt-gross">
-          <span class="bild-folgt"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10.5" r="1.8"/><path d="M3.5 17l5-4.5 3.5 3 3-2.5 5.5 4.5"/></svg>Bild folgt</span>
-        </figure>
-      
-    
-  </div>
-  <div class="rahmen buehne-raster">
-    <div class="buehne-text">
-      <h1>Ihre Hausarztpraxis in Epe</h1>
-      <p class="buehne-unterzeile">Hausärztliche Versorgung in Gronau-Epe, Markusstraße 10.</p>
-      
-        <div class="buehne-aktionen">
-          <a class="knopf" href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noopener">Termin online buchen</a>
-          <a class="knopf knopf--zweit" href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noopener">Rezept bestellen</a>
-        </div>
-        <p class="buehne-telefon">Lieber telefonisch? <a href="tel:+490255393970">02553 93 97 0</a>. Zum ersten Mal online? <a href="/hilfe/">So geht&#039;s, Schritt für Schritt</a></p>
-      
-    </div>
-  </div>
-  
-    <svg class="buehne-kurve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="kurve-flaeche" d="M0 6 Q720 222 1440 6 V120 H0Z"/><path class="kurve-linie" d="M0 6 Q720 222 1440 6" vector-effect="non-scaling-stroke"/></svg>
-  
-</section>
-
+  
+<section class="buehne buehne--start buehne--epe">
+  <div class="buehne-bilder">
+    
+        <figure class="buehne-bild buehne-bild-1 bild-folgt-gross">
+          <span class="bild-folgt"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10.5" r="1.8"/><path d="M3.5 17l5-4.5 3.5 3 3-2.5 5.5 4.5"/></svg>Bild folgt</span>
+        </figure>
+      
+    
+  </div>
+  <div class="rahmen buehne-raster">
+    <div class="buehne-text">
+      <h1>Ihre Hausarztpraxis in Epe</h1>
+      <p class="buehne-unterzeile">Hausärztliche Versorgung in Gronau-Epe, Markusstraße 10.</p>
+      
+        <div class="buehne-aktionen">
+          <a class="knopf" href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noopener">Termin online buchen</a>
+          <a class="knopf knopf--zweit" href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noopener">Rezept bestellen</a>
+        </div>
+        <p class="buehne-telefon">Lieber telefonisch? <a href="tel:+490255393970">02553 93 97 0</a>. Zum ersten Mal online? <a href="/hilfe/">So geht&#039;s, Schritt für Schritt</a></p>
+      
+    </div>
+  </div>
+  
+    <svg class="buehne-kurve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="kurve-flaeche" d="M0 6 Q720 222 1440 6 V120 H0Z"/><path class="kurve-linie" d="M0 6 Q720 222 1440 6" vector-effect="non-scaling-stroke"/></svg>
+  
+</section>
+
 
   
 
@@ -1126,13 +1128,13 @@ Freitag|08:00 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 <section class="band">
   <div class="rahmen band-raster">
     <a class="band-karte band-karte--hilfe" href="/hilfe/">
-      <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#hand" /></svg>
+      <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#hand" /></svg>
       <span class="band-titel">Wir nehmen Sie an die Hand</span>
       <span class="band-text">Online buchen ist neu für Sie? Hier zeigen wir es Ihnen Schritt für Schritt, und Sie können in Ruhe üben.</span>
       <span class="band-link">Zur Hilfe</span>
     </a>
     <a class="band-karte band-karte--vorsorge" href="/leistungen/vorsorge-finder/">
-      <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793375203#schild" /></svg>
+      <svg class="symbol" aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1793386249#schild" /></svg>
       <span class="band-titel">Welche Vorsorge steht für Sie an?</span>
       <span class="band-text">Alter wählen und sofort sehen, was Ihre Krankenkasse bezahlt.</span>
       <span class="band-link">Zum Vorsorge-Finder</span>
@@ -1169,7 +1171,8 @@ Freitag|08:00 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

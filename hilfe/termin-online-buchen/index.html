@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
       <a href="/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
-        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Kontrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Vorlesen</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
           
@@ -172,15 +182,15 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 
-
-  <section class="hilfe-buehne hilfe-buehne--klein">
-    <div class="rahmen">
-      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
-      <h1>Termin online buchen</h1>
-      <p class="hilfe-unterzeile">So buchen Sie einen Termin über Doctolib</p>
-    </div>
-    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
-  </section>
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
+      <h1>Termin online buchen</h1>
+      <p class="hilfe-unterzeile">So buchen Sie einen Termin über Doctolib</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
 
 
 
@@ -188,13 +198,16 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 <main id="inhalt" tabindex="-1">
-  
-  <div class="rahmen anleitung">
-    
-      
-      
-      
-      
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="termin">
+    
+      
+      
+      
+      
+          
     
 
             <div id="c72" class="frame frame-default frame-type-text frame-layout-0">
@@ -248,194 +261,362 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
                 
 
     <p>Über Doctolib sehen Sie unsere freien Termine und buchen direkt den passenden. Das geht rund um die Uhr und ist kostenlos. Unsere Praxen arbeiten als Terminpraxen. Auch für die Akutsprechstunde brauchen Sie einen Termin.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          
+
+<section class="fallwahl" id="fallwahl" data-art="termin" aria-labelledby="fallwahl-titel">
+  <h2 id="fallwahl-titel">Welche Anleitung passt zu Ihnen?</h2>
+  <p class="fallwahl-text">Beantworten Sie kurz diese Fragen. Danach sehen Sie nur die Schritte, die für Sie gelten.</p>
+  <fieldset class="fall-frage" data-dim="besuch">
+    <legend>Waren Sie schon einmal bei uns in Behandlung?</legend>
+    <label><input type="radio" name="fall-besuch" value="patient" /><span>Ja, ich war schon bei Ihnen</span></label>
+    <label><input type="radio" name="fall-besuch" value="neu" /><span>Nein, ich bin neu</span></label>
+  </fieldset>
+  
+    <fieldset class="fall-frage" data-dim="vers" hidden>
+      <legend>Wie sind Sie versichert?</legend>
+      <label><input type="radio" name="fall-vers" value="gesetzlich" /><span>Gesetzlich versichert</span></label>
+      <label><input type="radio" name="fall-vers" value="privat" /><span>Privat versichert</span></label>
+    </fieldset>
+  
+  <fieldset class="fall-frage" data-dim="konto" hidden>
+    <legend>Haben Sie ein Doctolib-Konto?</legend>
+    <label><input type="radio" name="fall-konto" value="ohne" /><span>Nein, oder ich weiß es nicht</span></label>
+    <label><input type="radio" name="fall-konto" value="mit" /><span>Ja, ich habe ein Konto</span></label>
+    
+  </fieldset>
+  <div class="fall-ergebnis" aria-live="polite" hidden>
+    <p class="fall-ergebnis-text"><span>Ihre Anleitung:</span> <strong></strong></p>
+    <a class="knopf knopf--zweit fall-ueben" href="#ueben" hidden>Erst üben</a>
+  </div>
+</section>
+
+
+          
+          <div class="uebung-platz"></div>
+        
+    
+      
+      
+      
+      
+          <section class="checkliste" data-fall="privat">
+            <h2>Das brauchen Sie</h2>
+            <ul><li>ein Handy, Tablet oder einen Computer mit Internet</li><li>eine E-Mail-Adresse oder Ihre Handynummer</li><li>für Infekt-Termine: eine FFP2-Maske beim Besuch</li></ul>
+          </section>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Seite von Doctolib öffnen</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf diesen Knopf:</p>
 <p><a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" class="knopf" rel="noreferrer">Doctolib öffnen</a></p>
-
-
-                
-                    
-
-
-
-                
-                
-                    
-
-
-
-                
-            </div>
-
-        
-
-
-    
-      
-      
-      
-      
-    
-
-            <div id="c73" class="frame frame-default frame-type-text frame-layout-0">
-                
-                
-                    
-
-
-
-                
-                
-                    
-
-    
-    
-    
-        <header>
-            
-
-    
-            
-                
-
-    
-            <h2 class="">
-                Das brauchen Sie
-            </h2>
-        
-
-
-
-            
-        
-
-
-
-            
-
-
-
-            
-
-
-
-        </header>
-    
-
-
-
-                
-                
-
-    <ul><li>ein Handy, Tablet oder einen Computer mit Internet</li><li>eine E-Mail-Adresse und Ihre Handynummer</li><li>für Infekt-Termine: eine FFP2-Maske beim Besuch</li></ul>
-
-
-                
-                    
-
-
-
-                
-                
-                    
-
-
-
-                
-            </div>
-
-        
-
-
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,73.6,94.9,12.3" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Seite von Doctolib öffnen</h2>
-              <div class="schritt-beschreibung"><p>Tippen Sie auf unserer Website auf <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer"><strong>„Termin online buchen“</strong></a>. Es öffnet sich die Seite von Doctolib. Erscheint ein Hinweis zu Cookies, tippen Sie einfach auf <strong>„Ablehnen“</strong>. Buchen können Sie trotzdem.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Seite von Doctolib öffnen" loading="lazy" src="/fileadmin/praxis/hilfe/d1.jpg" width="780" height="848" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,81.1,94.9,15.4" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>„Termin buchen“ antippen</h2>
-              <div class="schritt-beschreibung"><p>Sie sehen unseren Praxisnamen. Tippen Sie auf den blauen Knopf <strong>„Termin buchen“</strong>.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="„Termin buchen“ antippen" loading="lazy" src="/fileadmin/praxis/hilfe/d2.jpg" width="780" height="676" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,45.2,94.4,25.9" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Fachgebiet wählen</h2>
-              <div class="schritt-beschreibung"><p>Für einen Termin bei unseren Ärztinnen und Ärzten wählen Sie <strong>„Hausarzt / Allgemeinmediziner“</strong>.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Fachgebiet wählen" loading="lazy" src="/fileadmin/praxis/hilfe/d3.jpg" width="780" height="540" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="2.6,61.7,94.4,19.4" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Frage nach dem ersten Besuch beantworten</h2>
-              <div class="schritt-beschreibung"><p>Waren Sie schon einmal bei uns? Tippen Sie auf <strong>„Ja“</strong> oder <strong>„Nein“</strong>. Die Frage bezieht sich auf die Person, die zum Termin kommt, also zum Beispiel auch auf Ihr Kind oder Ihre Mutter.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Frage nach dem ersten Besuch beantworten" loading="lazy" src="/fileadmin/praxis/hilfe/d4.jpg" width="780" height="720" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Grund und Uhrzeit wählen</h2>
-              <div class="schritt-beschreibung"><p>Wählen Sie den Grund Ihres Besuchs, zum Beispiel die Akutsprechstunde. Danach sehen Sie die freien Termine. Tippen Sie auf die Uhrzeit, die Ihnen passt.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Anmelden und bestätigen</h2>
-              <div class="schritt-beschreibung"><p>Zum Abschluss melden Sie sich bei Doctolib an. Beim ersten Mal legen Sie ein kostenloses Konto an, mit E-Mail-Adresse und Handynummer. Dann bestätigen Sie den Termin und bekommen eine Bestätigung per E-Mail.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
+<p>Die Seite von Doctolib öffnet sich in einem neuen Fenster. Erscheint ein Hinweis zu Cookies, tippen Sie einfach auf <strong>„ABLEHNEN“</strong>. Buchen können Sie trotzdem.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Seite von Doctolib öffnen" loading="lazy" src="/fileadmin/praxis/hilfe/d-cookies.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>„TERMIN BUCHEN“ antippen</h2>
+              <div class="schritt-beschreibung"><p>Sie sehen unseren Praxisnamen. Tippen Sie auf den blauen Knopf <strong>„TERMIN BUCHEN“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="„TERMIN BUCHEN“ antippen" loading="lazy" src="/fileadmin/praxis/hilfe/d-profil.jpg" width="780" height="1520" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Fachgebiet wählen</h2>
+              <div class="schritt-beschreibung"><p>Für einen Termin bei unseren Ärztinnen und Ärzten wählen Sie <strong>„Hausarzt / Allgemeinmediziner“</strong>. Für eine Grippe- oder Corona-Impfung wählen Sie <strong>„Medizinischer Fachangestellter (MFA)“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Fachgebiet wählen" loading="lazy" src="/fileadmin/praxis/hilfe/d-fach.jpg" width="780" height="840" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Frage nach dem Besuch mit „Ja“ beantworten</h2>
+              <div class="schritt-beschreibung"><p>Doctolib fragt, ob Sie schon einmal bei uns waren. Tippen Sie auf <strong>„Ja“</strong>. Die Frage bezieht sich auf die Person, die zum Termin kommt, also zum Beispiel auch auf Ihr Kind oder Ihre Mutter.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Frage nach dem Besuch mit „Ja“ beantworten" loading="lazy" src="/fileadmin/praxis/hilfe/d-frage-ja.jpg" width="780" height="1040" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Frage nach dem Besuch mit „Nein“ beantworten</h2>
+              <div class="schritt-beschreibung"><p>Doctolib fragt, ob Sie schon einmal bei uns waren. Tippen Sie auf <strong>„Nein“</strong>. Die Frage bezieht sich auf die Person, die zum Termin kommt.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Frage nach dem Besuch mit „Nein“ beantworten" loading="lazy" src="/fileadmin/praxis/hilfe/d-frage-nein.jpg" width="780" height="1040" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Standort wählen</h2>
+              <div class="schritt-beschreibung"><p>Wählen Sie <strong>Ochtrup</strong> oder <strong>Gronau-Epe</strong>. Wenn Ihnen beides recht ist, tippen Sie auf <strong>„Ich habe keine Präferenz“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Standort wählen" loading="lazy" src="/fileadmin/praxis/hilfe/d-standort.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Versicherung wählen</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf <strong>„Gesetzlich versichert“</strong> oder <strong>„Privat versichert“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Versicherung wählen" loading="lazy" src="/fileadmin/praxis/hilfe/d-versicherung.jpg" width="780" height="840" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Kategorie wählen</h2>
+              <div class="schritt-beschreibung"><p>Für einen geplanten Termin wählen Sie <strong>„Terminsprechstunde“</strong>. Wenn Sie krank sind, wählen Sie <strong>„Akut- und Infektsprechstunde“</strong>. In Epe heißt es <strong>„Sprechstunde Epe“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Kategorie wählen" loading="lazy" src="/fileadmin/praxis/hilfe/d-kategorie.jpg" width="780" height="1040" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Terminart und Ärztin oder Arzt wählen</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf die passende Terminart, zum Beispiel <strong>„Sprechstunde“</strong>. Danach wählen Sie Ihre Ärztin oder Ihren Arzt. Ist es Ihnen egal, tippen Sie auf <strong>„Ich habe keine Präferenz“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Terminart und Ärztin oder Arzt wählen" loading="lazy" src="/fileadmin/praxis/hilfe/d-art.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Uhrzeit wählen</h2>
+              <div class="schritt-beschreibung"><p>Sie sehen die freien Termine. Tippen Sie auf die Uhrzeit, die Ihnen passt.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="mit,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>„EINLOGGEN“ antippen</h2>
+              <div class="schritt-beschreibung"><p>Doctolib fragt jetzt nach Ihrem Konto. Tippen Sie auf den gelben Knopf <strong>„EINLOGGEN“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="„EINLOGGEN“ antippen" loading="lazy" src="/fileadmin/praxis/hilfe/d-konto-mit.jpg" width="780" height="1240" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="mit,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>E-Mail oder Handynummer und Passwort eintragen</h2>
+              <div class="schritt-beschreibung"><p>Tragen Sie die E-Mail-Adresse oder Handynummer Ihres Kontos ein und tippen Sie auf <strong>„Weiter“</strong>. Danach tragen Sie Ihr Passwort ein.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="E-Mail oder Handynummer und Passwort eintragen" loading="lazy" src="/fileadmin/praxis/hilfe/d-einloggen.jpg" width="780" height="920" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="ohne,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>„REGISTRIEREN“ antippen</h2>
+              <div class="schritt-beschreibung"><p>Für die Buchung brauchen Sie ein kostenloses Doctolib-Konto. Tippen Sie bei <strong>„Neu auf Doctolib?“</strong> auf <strong>„REGISTRIEREN“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="„REGISTRIEREN“ antippen" loading="lazy" src="/fileadmin/praxis/hilfe/d-konto-ohne.jpg" width="780" height="1240" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="ohne,privat" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Konto anlegen</h2>
+              <div class="schritt-beschreibung"><p>Tragen Sie Ihre E-Mail-Adresse oder Handynummer ein und tippen Sie auf <strong>„Weiter“</strong>. Doctolib führt Sie dann durch die letzten Schritte: Sie bekommen einen Code, wählen ein Passwort und tragen Ihren Namen und Ihr Geburtsdatum ein.</p>
+<p>Wenn Sie doch schon ein Konto haben, meldet sich Doctolib und Sie können sich einloggen.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Konto anlegen" loading="lazy" src="/fileadmin/praxis/hilfe/d-registrieren.jpg" width="780" height="920" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="privat">
+            <div class="schritt-inhalt">
+              <h2>Termin bestätigen</h2>
+              <div class="schritt-beschreibung"><p>Prüfen Sie die Angaben und bestätigen Sie den Termin. Doctolib fragt dabei auch, für wen der Termin ist. Danach bekommen Sie eine Bestätigung.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich">
+            <div class="schritt-inhalt">
+              <h2>Ihren ersten Termin vereinbaren Sie telefonisch</h2>
+              <div class="schritt-beschreibung"><p>Als neue Patientin oder neuer Patient mit gesetzlicher Versicherung ist die Online-Buchung bei uns noch nicht möglich. Rufen Sie uns bitte an:</p>
+<p><a href="tel:+490255393970" class="knopf">02553 93 97 0 anrufen</a></p>
+<p>Oben auf der Seite sehen Sie, ob wir gerade geöffnet haben. Sagen Sie am Telefon einfach: „Ich bin neu und möchte einen ersten Termin.“</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Das zeigt Doctolib in diesem Fall</h2>
+              <div class="schritt-beschreibung"><p>Versuchen Sie es trotzdem bei Doctolib, sehen Sie diese Meldung. Das ist kein Fehler, und Sie haben nichts falsch gemacht.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Das zeigt Doctolib in diesem Fall" loading="lazy" src="/fileadmin/praxis/hilfe/d-stopp.jpg" width="780" height="1214" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich">
+            <div class="schritt-inhalt">
+              <h2>Das bringen Sie zum ersten Termin mit</h2>
+              <div class="schritt-beschreibung"><p>Was Sie mitbringen sollten und wie Ihr erster Besuch abläuft, lesen Sie hier:</p>
+<p><a href="/hilfe/neu-bei-uns/" class="knopf">Neu bei uns</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu,gesetzlich">
+            <div class="schritt-inhalt">
+              <h2>Danach geht alles online</h2>
+              <div class="schritt-beschreibung"><p>Nach Ihrem ersten Besuch können Sie Termine über Doctolib buchen und Rezepte über medflex bestellen. Beantworten Sie dann die erste Frage oben mit „Ja“.</p>
+<p><a href="#patient" class="knopf knopf--zweit">Anleitung für den nächsten Termin</a> <a href="/hilfe/rezept-online-bestellen/#patient-ohne" class="knopf knopf--zweit">Anleitung für Rezepte</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <div class="fall-teil" data-fall="privat">
     
 
             <div id="c80" class="frame frame-default frame-type-text frame-layout-1">
@@ -508,74 +689,85 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
         
 
-
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Ich finde keinen freien Termin für die Akutsprechstunde.</span></summary>
-            <div class="stelle-text"><p>Die Termine für die Akutsprechstunde werden 24 Stunden im Voraus freigeschaltet. <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Schauen Sie am Vortag noch einmal nach</a>, oder rufen Sie uns an.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Kann ich für Angehörige einen Termin buchen?</span></summary>
-            <div class="stelle-text"><p>Ja. Doctolib fragt beim Buchen, für wen der Termin ist. So können Sie zum Beispiel für Ihr Kind oder Ihre Eltern buchen.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Wie sage ich einen Termin ab?</span></summary>
-            <div class="stelle-text"><p>In Ihrem <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib-Konto</a> unter „Meine Termine“ oder telefonisch bei uns. Bitte sagen Sie rechtzeitig ab, damit andere Patientinnen und Patienten den Termin nutzen können.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Die SMS mit dem Code kommt nicht an.</span></summary>
-            <div class="stelle-text"><p>Prüfen Sie, ob die Handynummer stimmt, und warten Sie ein bis zwei Minuten. Manchmal hilft es, den Code ein zweites Mal anzufordern.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Ich habe mein Passwort vergessen.</span></summary>
-            <div class="stelle-text"><p>Tippen Sie bei der Anmeldung auf <strong>„Passwort vergessen?“</strong>. Doctolib schickt Ihnen dann eine E-Mail, mit der Sie ein neues Passwort festlegen.</p></div>
-          </details>
-        
-    
-    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
-  </div>
-
-  <template id="uebung-vorlage">
-    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
-      <div class="uebung-text">
-        <p class="uebung-marke">Erst üben, dann machen</p>
-        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
-        <p>Das Handy zeigt die echten Bildschirme. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
-        <div class="uebung-anweisung" aria-live="polite"></div>
-        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
-        <div class="uebung-knoepfe"></div>
-      </div>
-      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
-    </section>
-  </template>
+</div>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Ich bin neu. Warum kann ich nicht online buchen?</span></summary>
+            <div class="stelle-text"><p>Bei Doctolib ist die Buchung für neue gesetzlich Versicherte nicht freigeschaltet. Bitte rufen Sie uns für den ersten Termin an: <a href="tel:+490255393970">02553 93 97 0</a>. Privat Versicherte können auch als neue Patienten online buchen.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Ich finde keinen freien Termin für die Akutsprechstunde.</span></summary>
+            <div class="stelle-text"><p>Die Termine für die Akutsprechstunde werden 24 Stunden im Voraus freigeschaltet. <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Schauen Sie am Vortag noch einmal nach</a>, oder rufen Sie uns an.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Kann ich für Angehörige einen Termin buchen?</span></summary>
+            <div class="stelle-text"><p>Ja. Doctolib fragt beim Buchen, für wen der Termin ist. So können Sie zum Beispiel für Ihr Kind oder Ihre Eltern buchen.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Wie sage ich einen Termin ab?</span></summary>
+            <div class="stelle-text"><p>In Ihrem <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Doctolib-Konto</a> unter „Meine Termine“ oder telefonisch bei uns. Bitte sagen Sie rechtzeitig ab, damit andere Patientinnen und Patienten den Termin nutzen können.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Die SMS mit dem Code kommt nicht an.</span></summary>
+            <div class="stelle-text"><p>Prüfen Sie, ob die Handynummer stimmt, und warten Sie ein bis zwei Minuten. Manchmal hilft es, den Code ein zweites Mal anzufordern.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Ich habe mein Passwort vergessen.</span></summary>
+            <div class="stelle-text"><p>Tippen Sie bei der Anmeldung auf <strong>„Passwort vergessen?“</strong>. Doctolib schickt Ihnen dann eine E-Mail, mit der Sie ein neues Passwort festlegen.</p></div>
+          </details>
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Erst üben, dann machen</p>
+        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
+        <p>Das Handy stellt den echten Ablauf nach. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
 
 </main>
 
@@ -604,7 +796,8 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

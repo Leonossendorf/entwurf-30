@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
       <a href="/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Schriftgröße wählen">
-        <span class="schrift-wahl-text" aria-hidden="true">Schrift</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Kontrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Vorlesen</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
           
@@ -172,15 +182,15 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 
-
-  <section class="hilfe-buehne hilfe-buehne--klein">
-    <div class="rahmen">
-      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
-      <h1>Rezept online bestellen</h1>
-      <p class="hilfe-unterzeile">So bestellen Sie Folgerezepte und Überweisungen über medflex</p>
-    </div>
-    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
-  </section>
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
+      <h1>Rezept online bestellen</h1>
+      <p class="hilfe-unterzeile">So bestellen Sie Folgerezepte und Überweisungen über medflex</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
 
 
 
@@ -188,13 +198,16 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
 
 <main id="inhalt" tabindex="-1">
-  
-  <div class="rahmen anleitung">
-    
-      
-      
-      
-      
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="rezept">
+    
+      
+      
+      
+      
+          
     
 
             <div id="c60" class="frame frame-default frame-type-text frame-layout-0">
@@ -247,196 +260,335 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
                 
                 
 
-    <p>Sie nehmen ein Medikament regelmäßig und brauchen ein neues Rezept? Oder Sie brauchen eine Überweisung zum Facharzt? Das bestellen Sie über medflex von zu Hause. Anfragen sind von <strong>Montag, 7 Uhr, bis Freitag, 12 Uhr</strong> möglich. Es kostet Sie nichts.</p>
+    <p>Sie nehmen ein Medikament regelmäßig und brauchen ein neues Rezept? Oder Sie brauchen eine Überweisung zum Facharzt? Das bestellen Sie kostenlos über medflex von zu Hause. Das geht von <strong>Montag, 7 Uhr, bis Freitag, 12 Uhr</strong>.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          
+
+<section class="fallwahl" id="fallwahl" data-art="rezept" aria-labelledby="fallwahl-titel">
+  <h2 id="fallwahl-titel">Welche Anleitung passt zu Ihnen?</h2>
+  <p class="fallwahl-text">Beantworten Sie kurz diese Fragen. Danach sehen Sie nur die Schritte, die für Sie gelten.</p>
+  <fieldset class="fall-frage" data-dim="besuch">
+    <legend>Waren Sie schon einmal bei uns in Behandlung?</legend>
+    <label><input type="radio" name="fall-besuch" value="patient" /><span>Ja, ich war schon bei Ihnen</span></label>
+    <label><input type="radio" name="fall-besuch" value="neu" /><span>Nein, ich bin neu</span></label>
+  </fieldset>
+  
+  <fieldset class="fall-frage" data-dim="konto" hidden>
+    <legend>Wie möchten Sie medflex nutzen?</legend>
+    <label><input type="radio" name="fall-konto" value="ohne" /><span>Ohne Konto (der einfachste Weg)</span></label>
+    <label><input type="radio" name="fall-konto" value="mit" /><span>Mit meinem vorhandenen Konto</span></label>
+    
+      <label><input type="radio" name="fall-konto" value="anlegen" /><span>Ich möchte ein Konto anlegen</span></label>
+    
+  </fieldset>
+  <div class="fall-ergebnis" aria-live="polite" hidden>
+    <p class="fall-ergebnis-text"><span>Ihre Anleitung:</span> <strong></strong></p>
+    <a class="knopf knopf--zweit fall-ueben" href="#ueben" hidden>Erst üben</a>
+  </div>
+</section>
+
+
+          <p class="medflex-status" hidden></p>
+          <div class="uebung-platz"></div>
+        
+    
+      
+      
+      
+      
+          <section class="checkliste" data-fall="patient">
+            <h2>Das brauchen Sie</h2>
+            <ul><li>ein Handy, Tablet oder einen Computer mit Internet</li><li>Ihre Handynummer</li><li>die Packung oder den Namen Ihres Medikaments (am besten mit Stärke, z. B. „100 mg“)</li></ul>
+          </section>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Seite von medflex öffnen</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf diesen Knopf:</p>
 <p><a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" class="knopf" rel="noreferrer">medflex öffnen</a></p>
-
-
-                
-                    
-
-
-
-                
-                
-                    
-
-
-
-                
-            </div>
-
-        
-
-
-    
-      
-      
-      
-      
-    
-
-            <div id="c61" class="frame frame-default frame-type-text frame-layout-0">
-                
-                
-                    
-
-
-
-                
-                
-                    
-
-    
-    
-    
-        <header>
-            
-
-    
-            
-                
-
-    
-            <h2 class="">
-                Das brauchen Sie
-            </h2>
-        
-
-
-
-            
-        
-
-
-
-            
-
-
-
-            
-
-
-
-        </header>
-    
-
-
-
-                
-                
-
-    <ul><li>ein Handy, Tablet oder einen Computer mit Internet</li><li>Ihre Handynummer</li><li>die Packung oder den Namen Ihres Medikaments (am besten mit Stärke, z. B. „100 mg“)</li></ul>
-
-
-                
-                    
-
-
-
-                
-                
-                    
-
-
-
-                
-            </div>
-
-        
-
-
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Seite von medflex öffnen</h2>
-              <div class="schritt-beschreibung"><p>Tippen Sie auf unserer Website auf <a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" rel="noreferrer"><strong>„Rezept bestellen“</strong></a>. Es öffnet sich die Seite von medflex mit unserem Praxisnamen. Scrollen Sie ein Stück nach unten bis zum Kasten <strong>„Wie können wir Ihnen helfen?“</strong>.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Seite von medflex öffnen" loading="lazy" src="/fileadmin/praxis/hilfe/m1.jpg" width="780" height="1400" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="8.7,31.8,82.1,11;30.3,90.5,39.5,8.9|Weiter" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>„Folgerezept anfragen“ wählen</h2>
-              <div class="schritt-beschreibung"><p>Tippen Sie auf <strong>„Folgerezept anfragen“</strong>. Für eine Überweisung wählen Sie <strong>„Überweisung anfragen“</strong>. Danach tippen Sie auf <strong>„Weiter“</strong>.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="„Folgerezept anfragen“ wählen" loading="lazy" src="/fileadmin/praxis/hilfe/m2.jpg" width="780" height="1348" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="8.7,48.8,82.1,14.2;30.3,82.1,39.5,12.5|Weiter" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Ihre Praxis wählen</h2>
-              <div class="schritt-beschreibung"><p>Wählen Sie die Praxis, in der Sie Patientin oder Patient sind: <strong>Ochtrup</strong> oder <strong>Epe</strong>. Tippen Sie dann auf <strong>„Weiter“</strong>.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Ihre Praxis wählen" loading="lazy" src="/fileadmin/praxis/hilfe/m3.jpg" width="780" height="960" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="8.7,59.4,82.1,15.7;28,82,44,11|Bestätigen" data-hat-bild="1">
-            <div class="schritt-inhalt">
-              <h2>Bestätigen, dass Sie schon Patient sind</h2>
-              <div class="schritt-beschreibung"><p>Setzen Sie das Häkchen bei <strong>„Ja, ich bin bereits Patient“</strong> und tippen Sie auf <strong>„Bestätigen“</strong>.</p>
-<p>Sind Sie neu bei uns? Dann vereinbaren Sie bitte zuerst einen Termin.</p></div>
-            </div>
-            
-              <figure class="handy"><img alt="Bestätigen, dass Sie schon Patient sind" loading="lazy" src="/fileadmin/praxis/hilfe/m4.jpg" width="780" height="868" /></figure>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Medikament und Kontaktdaten eintragen</h2>
-              <div class="schritt-beschreibung"><p>Jetzt fragt medflex, welches Medikament Sie brauchen, und nach Ihren Kontaktdaten. Tragen Sie alles ein und folgen Sie den Hinweisen auf dem Bildschirm. Zum Schluss schicken Sie die Anfrage ab.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
-          <article class="schritt-karte" data-tipp="">
-            <div class="schritt-inhalt">
-              <h2>Antwort abwarten</h2>
-              <div class="schritt-beschreibung"><p>Wir antworten Ihnen schriftlich. Ohne Registrierung bekommen Sie unsere Nachricht per SMS und können direkt darauf antworten. Ein elektronisches Rezept lösen Sie mit Ihrer Versichertenkarte in jeder Apotheke ein.</p></div>
-            </div>
-            
-          </article>
-        
-    
-      
-      
-      
-      
+<p>Die Seite von medflex öffnet sich in einem neuen Fenster, oben steht unser Praxisname. Sie brauchen kein Konto und müssen sich nicht anmelden.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Seite von medflex öffnen" loading="lazy" src="/fileadmin/praxis/hilfe/m1.jpg" width="780" height="1400" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>„Folgerezept anfragen“ wählen</h2>
+              <div class="schritt-beschreibung"><p>Scrollen Sie nach unten bis zum Kasten <strong>„Wie können wir Ihnen helfen?“</strong>. Tippen Sie auf <strong>„Folgerezept anfragen“</strong>, für eine Überweisung auf <strong>„Überweisung anfragen“</strong>. Danach tippen Sie auf <strong>„Weiter“</strong>.</p>
+<p>Sie finden den Kasten nicht? Von Freitag, 12 Uhr, bis Montag, 7 Uhr, ist er ausgeblendet. Dann steht dort nur ein gelber Hinweis. Das ist kein Fehler, versuchen Sie es ab Montag, 7 Uhr, noch einmal.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="„Folgerezept anfragen“ wählen" loading="lazy" src="/fileadmin/praxis/hilfe/m2.jpg" width="780" height="1348" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Ihre Praxis wählen</h2>
+              <div class="schritt-beschreibung"><p>Bei <strong>„Wer soll Ihre Anfrage erhalten?“</strong> wählen Sie die Praxis, in der Sie Patientin oder Patient sind: <strong>Ochtrup</strong> oder <strong>Epe</strong>. Tippen Sie dann auf <strong>„Weiter“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Ihre Praxis wählen" loading="lazy" src="/fileadmin/praxis/hilfe/m3.jpg" width="780" height="960" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Bestätigen, dass Sie schon Patient sind</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf das Kästchen bei <strong>„Ja, ich bin bereits Patient“</strong>. Der Haken erscheint, und der graue Knopf <strong>„Bestätigen“</strong> wird blau. Tippen Sie darauf.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Bestätigen, dass Sie schon Patient sind" loading="lazy" src="/fileadmin/praxis/hilfe/m4.jpg" width="780" height="868" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Medikament und Kontaktdaten eintragen</h2>
+              <div class="schritt-beschreibung"><p>Tragen Sie ein, welches Medikament Sie brauchen, und danach Ihre Kontaktdaten. Folgen Sie den Hinweisen auf dem Bildschirm. Zum Schluss schicken Sie die Anfrage ab.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,ohne">
+            <div class="schritt-inhalt">
+              <h2>Antwort abwarten</h2>
+              <div class="schritt-beschreibung"><p>Wir bearbeiten Ihre Anfrage während unserer Praxiszeiten. Ohne Konto bekommen Sie unsere Antwort per SMS und können direkt darauf antworten. Ein elektronisches Rezept lösen Sie mit Ihrer Versichertenkarte in jeder Apotheke ein.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>Bei medflex einloggen</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf diesen Knopf:</p>
+<p><a href="https://app.medflex.de/patient" target="_blank" class="knopf" rel="noreferrer">Zur medflex-Anmeldung</a></p>
+<p>Sind Sie schon auf unserer medflex-Seite? Dann tippen Sie dort oben rechts auf <strong>„Einloggen“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="Bei medflex einloggen" loading="lazy" src="/fileadmin/praxis/hilfe/m-einloggen-knopf.jpg" width="780" height="660" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit" data-hat-bild="1">
+            <div class="schritt-inhalt">
+              <h2>E-Mail-Adresse und Passwort eintragen</h2>
+              <div class="schritt-beschreibung"><p>Tragen Sie Ihre E-Mail-Adresse und Ihr Passwort ein. Tippen Sie dann auf <strong>„Als Patient einloggen“</strong>.</p>
+<p>Passwort vergessen? Tippen Sie auf <strong>„Neues Passwort festlegen“</strong>.</p></div>
+            </div>
+            
+              <figure class="handy"><img alt="E-Mail-Adresse und Passwort eintragen" loading="lazy" src="/fileadmin/praxis/hilfe/m-login.jpg" width="780" height="1688" /></figure>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit">
+            <div class="schritt-inhalt">
+              <h2>Unsere Praxis wählen und Anfrage stellen</h2>
+              <div class="schritt-beschreibung"><p>Wählen Sie in Ihrer Kontaktliste unsere Praxis aus. Tippen Sie unten im Chat auf <strong>„Anfrage stellen“</strong> und dann auf <strong>„Folgerezept anfragen“</strong>.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit">
+            <div class="schritt-inhalt">
+              <h2>Medikament eintragen und abschicken</h2>
+              <div class="schritt-beschreibung"><p>Tragen Sie das Medikament und die Packungsgröße ein. Wählen Sie, ob Sie das Rezept in der Praxis abholen oder über medflex bekommen möchten. Dann schicken Sie die Anfrage ab.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,mit">
+            <div class="schritt-inhalt">
+              <h2>Antwort lesen</h2>
+              <div class="schritt-beschreibung"><p>Unsere Antwort finden Sie in medflex im Chat mit unserer Praxis.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Seite von medflex öffnen</h2>
+              <div class="schritt-beschreibung"><p>Tippen Sie auf diesen Knopf:</p>
+<p><a href="https://arzt.medflex.de/kontakt/allgemeinmedizin/ochtrup/gemeinschaftspraxis-gesenhues-partner/qxwqeg" target="_blank" class="knopf" rel="noreferrer">medflex öffnen</a></p>
+<p>Haben Sie schon eine Einladung von uns per SMS oder E-Mail bekommen? Dann tippen Sie stattdessen auf den Link darin und machen bei Schritt 3 weiter.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>„Über medflex verbinden“ wählen</h2>
+              <div class="schritt-beschreibung"><p>Scrollen Sie nach unten bis zum Kasten <strong>„Wie können wir Ihnen helfen?“</strong>. Tippen Sie auf <strong>„Über medflex verbinden“</strong> und dann auf <strong>„Weiter“</strong>.</p>
+<p>Sie finden den Kasten nicht? Von Freitag, 12 Uhr, bis Montag, 7 Uhr, ist er ausgeblendet. Versuchen Sie es ab Montag, 7 Uhr, noch einmal.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Ihre Angaben eintragen</h2>
+              <div class="schritt-beschreibung"><p>Folgen Sie den Hinweisen auf dem Bildschirm. Tragen Sie Ihre Angaben und Ihre E-Mail-Adresse ein, und wählen Sie ein Passwort. Notieren Sie es an einem sicheren Ort.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>E-Mail-Adresse bestätigen</h2>
+              <div class="schritt-beschreibung"><p>Sie bekommen eine E-Mail von medflex. Tippen Sie auf den Link darin. Keine E-Mail da? Schauen Sie im Spam-Ordner nach. Danach ist Ihr Konto mit unserer Praxis verbunden.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="patient,anlegen">
+            <div class="schritt-inhalt">
+              <h2>Einloggen und loslegen</h2>
+              <div class="schritt-beschreibung"><p>Ab jetzt melden Sie sich hier an:</p>
+<p><a href="https://app.medflex.de/patient" target="_blank" class="knopf" rel="noreferrer">Zur medflex-Anmeldung</a></p>
+<p>Wie Sie mit Konto ein Rezept bestellen, zeigt Ihnen <a href="#patient-mit">die Anleitung mit Konto</a>.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu">
+            <div class="schritt-inhalt">
+              <h2>Zuerst kommen Sie einmal zu uns</h2>
+              <div class="schritt-beschreibung"><p>Rezepte und Überweisungen können Sie online erst bestellen, wenn Sie schon bei uns in Behandlung waren. Vereinbaren Sie deshalb zuerst Ihren ersten Termin. Unsere Anleitung führt Sie durch alles Weitere:</p>
+<p><a href="/hilfe/termin-online-buchen/#neu" class="knopf">Ersten Termin vereinbaren</a> <a href="/hilfe/neu-bei-uns/" class="knopf knopf--zweit">Neu bei uns</a></p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="schritt-karte" data-fall="neu">
+            <div class="schritt-inhalt">
+              <h2>Nach Ihrem ersten Besuch</h2>
+              <div class="schritt-beschreibung"><p>Sobald Sie bei uns waren, geht alles online. Kommen Sie dann einfach zu dieser Seite zurück und beantworten Sie die Frage oben mit „Ja“: <a href="#patient-ohne">Anleitung für Patientinnen und Patienten</a>.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <div class="fall-teil" data-fall="patient">
     
 
             <div id="c68" class="frame frame-default frame-type-text frame-layout-1">
@@ -509,64 +661,65 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
 
         
 
-
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Kostet die Bestellung über medflex etwas?</span></summary>
-            <div class="stelle-text"><p>Nein. Die Nutzung ist für Sie kostenlos.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Muss ich mich bei medflex anmelden?</span></summary>
-            <div class="stelle-text"><p>Nein. Sie können medflex ohne Registrierung nutzen. Unsere Antwort bekommen Sie dann per SMS. Wer möchte, kann sich die kostenlose medflex-App installieren und sieht dort alle Nachrichten auf einen Blick.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Ich bin neu in der Praxis. Kann ich trotzdem bestellen?</span></summary>
-            <div class="stelle-text"><p>Rezepte und Überweisungen können Sie nur bestellen, wenn Sie schon bei uns in Behandlung sind. Bitte buchen Sie zuerst einen Termin: <a href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noreferrer">Termin online buchen</a>. Alles für Ihren Start finden Sie unter <a href="/hilfe/neu-bei-uns/">Neu bei uns</a>.</p></div>
-          </details>
-        
-    
-      
-      
-      
-      
-          <details class="stelle frage">
-            <summary><span class="stelle-titel">Warum kann ich am Wochenende nichts bestellen?</span></summary>
-            <div class="stelle-text"><p>Von Freitag, 12 Uhr, bis Montag, 7 Uhr, nimmt medflex keine Anfragen an. Wir bearbeiten alles während unserer Praxiszeiten. Bestellen Sie Ihr Rezept deshalb am besten rechtzeitig.</p></div>
-          </details>
-        
-    
-    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
-  </div>
-
-  <template id="uebung-vorlage">
-    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
-      <div class="uebung-text">
-        <p class="uebung-marke">Erst üben, dann machen</p>
-        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
-        <p>Das Handy zeigt die echten Bildschirme. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
-        <div class="uebung-anweisung" aria-live="polite"></div>
-        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
-        <div class="uebung-knoepfe"></div>
-      </div>
-      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
-    </section>
-  </template>
+</div>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Kostet die Bestellung über medflex etwas?</span></summary>
+            <div class="stelle-text"><p>Nein. Die Nutzung ist für Sie kostenlos.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Muss ich mich bei medflex anmelden?</span></summary>
+            <div class="stelle-text"><p>Nein. Sie können Rezepte ohne Konto bestellen. Unsere Antwort bekommen Sie dann per SMS. Mit einem Konto sehen Sie alle Nachrichten an einem Ort. <a href="#patient-anlegen">So legen Sie ein Konto an</a>.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Ich bin neu in der Praxis. Kann ich trotzdem bestellen?</span></summary>
+            <div class="stelle-text"><p>Noch nicht. Rezepte und Überweisungen gibt es online erst nach Ihrem ersten Besuch. <a href="/hilfe/termin-online-buchen/#neu">So vereinbaren Sie Ihren ersten Termin</a>.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Warum sehe ich bei medflex den Kasten nicht?</span></summary>
+            <div class="stelle-text"><p>Von Freitag, 12 Uhr, bis Montag, 7 Uhr, nimmt medflex keine Anfragen an. In dieser Zeit ist der Kasten „Wie können wir Ihnen helfen?“ ausgeblendet, und Sie sehen nur den gelben Hinweis. Bestellen Sie Ihr Rezept deshalb am besten rechtzeitig.</p></div>
+          </details>
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Erst üben, dann machen</p>
+        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
+        <p>Das Handy stellt den echten Ablauf nach. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
 
 </main>
 
@@ -595,7 +748,8 @@ Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><spa
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

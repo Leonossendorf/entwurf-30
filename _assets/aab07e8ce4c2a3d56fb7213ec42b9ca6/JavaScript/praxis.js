@@ -48,15 +48,27 @@
     zurueck: 'Back', ablage: 'Drag your PDF here or <u>choose a file</u>', alle: 'All', filter: 'Filter by focus', frage: 'Who can help me with …', mehr: 'More topics', eine: ' person can help with ', mehrere: ' people can help with ',
     offen: 'Open now', bis: 'until', zu: 'Closed now', oeffnetHeute: 'opens today at', oeffnet: 'opens', um: 'at', morgen: 'tomorrow', uhr: '', praxisZu: 'Practice closed', wiederAb: 'back from',
     tage: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    schritt: 'Step', von: 'of', weiter: 'Next', neu: 'Practise again', fast: 'Nearly! Tap the highlighted area.', tippeAuf: 'Now tap', geschafft: 'Well done!', geschafftText: 'That is all there is to it. Nothing was sent.', echt: 'Now do it for real',
-    start: 'Tap the highlighted area on the phone.', tipp: 'Tap here',
+    schritt: 'Step', von: 'of', weiter: 'Next', neu: 'Practise again', fast: 'Nearly! Tap the highlighted area.', geschafft: 'Well done!', geschafftText: 'That is all there is to it. Nothing was sent.', echt: 'Now do it for real',
+    medflexOffen: 'Online ordering is open right now, until Friday at 12 noon.',
+    medflexZu: 'Online ordering is closed right now, it reopens on Monday at 7 am. Until then medflex shows a yellow notice instead of the box “Wie können wir Ihnen helfen?”. That is not an error.',
+    faelle: {
+      'rezept:patient-ohne': 'Order a prescription without an account', 'rezept:patient-mit': 'Order a prescription with your medflex account', 'rezept:patient-anlegen': 'Create a medflex account', 'rezept:neu': 'New to us: your way to a prescription',
+      'termin:patient-ohne': 'Book as an existing patient, create a Doctolib account', 'termin:patient-mit': 'Book as an existing patient with your Doctolib account', 'termin:neu-gesetzlich': 'New to us with statutory insurance: first appointment by phone',
+      'termin:neu-privat-ohne': 'New to us with private insurance, create a Doctolib account', 'termin:neu-privat-mit': 'New to us with private insurance and a Doctolib account'
+    },
     keine: 'No check-ups are listed for this age.', praxis: 'With us at the practice', frauenarzt: 'At your gynaecologist', einladung: 'By invitation', bitteWaehlen: 'Please choose'
   } : {
     zurueck: 'Zurück', ablage: 'PDF hierher ziehen oder <u>auswählen</u>', alle: 'Alle', filter: 'Nach Schwerpunkt filtern', frage: 'Wer hilft mir bei …', mehr: 'Weitere Themen', eine: ' Person hilft bei ', mehrere: ' Personen helfen bei ',
     offen: 'Jetzt geöffnet', bis: 'bis', zu: 'Jetzt geschlossen', oeffnetHeute: 'öffnet heute um', oeffnet: 'öffnet', um: 'um', morgen: 'morgen', uhr: ' Uhr', praxisZu: 'Praxis geschlossen', wiederAb: 'wieder da ab',
     tage: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-    schritt: 'Schritt', von: 'von', weiter: 'Weiter', neu: 'Noch einmal üben', fast: 'Fast! Tippen Sie auf das markierte Feld.', tippeAuf: 'Tippen Sie jetzt auf', geschafft: 'Geschafft!', geschafftText: 'So einfach geht es. Es wurde nichts abgeschickt.', echt: 'Jetzt richtig machen',
-    start: 'Tippen Sie auf das markierte Feld im Handy.', tipp: 'Hier tippen',
+    schritt: 'Schritt', von: 'von', weiter: 'Weiter', neu: 'Noch einmal üben', fast: 'Fast! Tippen Sie auf das markierte Feld.', geschafft: 'Geschafft!', geschafftText: 'So einfach geht es. Es wurde nichts abgeschickt.', echt: 'Jetzt richtig machen',
+    medflexOffen: 'Online-Bestellung ist gerade möglich, noch bis Freitag, 12 Uhr.',
+    medflexZu: 'Online-Bestellung ist gerade geschlossen, wieder ab Montag, 7 Uhr. Bis dahin zeigt medflex einen gelben Hinweis statt des Kastens „Wie können wir Ihnen helfen?“. Das ist kein Fehler.',
+    faelle: {
+      'rezept:patient-ohne': 'Rezept bestellen ohne Konto', 'rezept:patient-mit': 'Rezept bestellen mit Ihrem medflex-Konto', 'rezept:patient-anlegen': 'medflex-Konto anlegen', 'rezept:neu': 'Neu bei uns: Ihr Weg zum Rezept',
+      'termin:patient-ohne': 'Termin buchen als Patient, Doctolib-Konto anlegen', 'termin:patient-mit': 'Termin buchen als Patient mit Doctolib-Konto', 'termin:neu-gesetzlich': 'Neu bei uns und gesetzlich versichert: erster Termin per Telefon',
+      'termin:neu-privat-ohne': 'Neu bei uns und privat versichert, Doctolib-Konto anlegen', 'termin:neu-privat-mit': 'Neu bei uns und privat versichert, mit Doctolib-Konto'
+    },
     keine: 'Für dieses Alter ist hier nichts eingetragen.', praxis: 'Bei uns in der Praxis', frauenarzt: 'Bei Ihrer Frauenärztin oder Ihrem Frauenarzt', einladung: 'Per Einladung', bitteWaehlen: 'Bitte wählen'
   };
   function merken(name, wert) { try { localStorage.setItem(name, wert); } catch (e) {} }
@@ -111,19 +123,25 @@
     window.addEventListener('pagehide', function () { window.speechSynthesis.cancel(); });
   }
 
-  // Startbild-Variante (für die Demo)
-  var heroSchieber = document.querySelector('.hero-schieber input');
-  if (heroSchieber) {
-    heroSchieber.checked = html.dataset.hero === '2';
-    heroSchieber.addEventListener('change', function () {
-      if (heroSchieber.checked) { html.dataset.hero = '2'; } else { delete html.dataset.hero; }
-      merken('praxis-startbild', heroSchieber.checked ? '2' : '1');
+  // Lesehilfen: ein Knopf, alles Weitere im aufklappbaren Feld
+  var hilfeKnopf = document.querySelector('.lesehilfe-knopf');
+  if (hilfeKnopf) {
+    var hilfeFeld = document.getElementById('lesehilfe-feld');
+    var hilfeZeigen = function (an) {
+      hilfeFeld.hidden = !an;
+      hilfeKnopf.setAttribute('aria-expanded', String(an));
+    };
+    hilfeKnopf.addEventListener('click', function () { hilfeZeigen(hilfeFeld.hidden); });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.lesehilfe')) hilfeZeigen(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !hilfeFeld.hidden) { hilfeZeigen(false); hilfeKnopf.focus(); }
     });
   }
 
   jetztGeoeffnet();
   wegweiserEinrichten();
-  ubungEinrichten();
+  medflexStatus();
+  fallwahlEinrichten();
   vorsorgeEinrichten();
   einblenden();
 
@@ -227,122 +245,103 @@
     });
   }
 
-  // ---------- Übungsmodus: entsteht automatisch aus den Anleitungs-Schritten mit Bild ----------
-  function ubungEinrichten() {
-    var vorlage = document.getElementById('uebung-vorlage');
-    var karten = Array.prototype.slice.call(document.querySelectorAll('.schritt-karte[data-hat-bild]'));
-    if (!vorlage || !karten.length) return;
-    var erste = document.querySelector('.schritt-karte');
-    erste.parentNode.insertBefore(vorlage.content.cloneNode(true), erste);
-    var feld = document.querySelector('.uebung');
-    var anweisung = feld.querySelector('.uebung-anweisung');
-    var bildschirm = feld.querySelector('.uebung-bildschirm');
-    var fortschritt = feld.querySelector('.uebung-fortschritt');
-    var knoepfe = feld.querySelector('.uebung-knoepfe');
-    var schritte = karten.map(function (k) {
-      return {
-        titel: k.querySelector('h2').textContent,
-        text: k.querySelector('.schritt-beschreibung').innerHTML.replace(/<\/?a\b[^>]*>/g, ''),
-        bild: k.querySelector('img'),
-        flaechen: (k.dataset.tipp || '').split(';').filter(Boolean).map(function (z) {
-          var teile = z.split('|');
-          var w = teile[0].split(',').map(Number);
-          return { x: w[0], y: w[1], b: w[2], h: w[3], name: teile[1] || '' };
-        })
-      };
+  // ---------- medflex nimmt nur von Montag, 7 Uhr, bis Freitag, 12 Uhr Anfragen an ----------
+  function medflexStatus() {
+    var felder = document.querySelectorAll('.medflex-status');
+    if (!felder.length) return;
+    var jetzt = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Berlin' }));
+    var tag = jetzt.getDay(), minute = jetzt.getHours() * 60 + jetzt.getMinutes();
+    var zu = tag === 0 || tag === 6 || (tag === 5 && minute >= 720) || (tag === 1 && minute < 420);
+    felder.forEach(function (feld) {
+      feld.hidden = false;
+      feld.classList.toggle('zu', zu);
+      feld.textContent = zu ? T.medflexZu : T.medflexOffen;
     });
-    var nr = 0, flaeche = 0;
-    var ziel = document.querySelector('.anleitung a[href*="medflex"], .anleitung a[href*="doctolib"]');
+  }
 
-    function zeige() {
-      var s = schritte[nr];
-      flaeche = 0;
-      bildschirm.innerHTML = '';
-      knoepfe.innerHTML = '';
-      fortschritt.style.width = (nr / schritte.length * 100) + '%';
-      anweisung.className = 'uebung-anweisung';
-      anweisung.innerHTML = '<span class="uebung-schritt">' + T.schritt + ' ' + (nr + 1) + ' ' + T.von + ' ' + schritte.length + '</span><h3></h3><div class="uebung-hinweis"></div>';
-      anweisung.querySelector('h3').textContent = s.titel;
-      anweisung.querySelector('.uebung-hinweis').innerHTML = s.text;
-      var bild = document.createElement('img');
-      bild.src = s.bild.currentSrc || s.bild.src;
-      bild.alt = s.titel;
-      bildschirm.appendChild(bild);
-      if (s.flaechen.length) {
-        tippflaeche();
-      } else {
-        var weiter = document.createElement('button');
-        weiter.type = 'button';
-        weiter.className = 'knopf';
-        weiter.textContent = T.weiter;
-        weiter.addEventListener('click', naechster);
-        knoepfe.appendChild(weiter);
-      }
+  // ---------- Anleitungen: Fragen führen zu genau den Schritten, die für diesen Fall gelten ----------
+  function fallwahlEinrichten() {
+    var wahl = document.querySelector('.fallwahl');
+    if (!wahl) return;
+    var art = wahl.dataset.art;
+    var anleitung = document.querySelector('.anleitung');
+    var teile = document.querySelectorAll('[data-fall]');
+    var ergebnis = wahl.querySelector('.fall-ergebnis');
+    var uebenKnopf = wahl.querySelector('.fall-ueben');
+    var felder = { besuch: wahl.querySelector('[data-dim="besuch"]'), vers: wahl.querySelector('[data-dim="vers"]'), konto: wahl.querySelector('[data-dim="konto"]') };
+    var stand = {};
+    var dimension = { patient: 'besuch', neu: 'besuch', gesetzlich: 'vers', privat: 'vers', mit: 'konto', ohne: 'konto', anlegen: 'konto' };
+    var ueben = false;
+    anleitung.classList.add('mit-fallwahl');
+
+    function fragen() {
+      var neu = stand.besuch === 'neu';
+      if (felder.vers) felder.vers.hidden = !neu;
+      var konto = art === 'termin' ? stand.besuch === 'patient' || (neu && stand.vers === 'privat') : stand.besuch === 'patient';
+      felder.konto.hidden = !konto;
+      if (!neu) delete stand.vers;
+      if (!konto) delete stand.konto;
+      if (art === 'rezept' && neu) return 'neu';
+      if (art === 'termin' && neu && stand.vers === 'gesetzlich') return 'neu-gesetzlich';
+      if (!konto || !stand.konto) return '';
+      return [stand.besuch, stand.vers, stand.konto].filter(Boolean).join('-');
     }
-    function tippflaeche() {
-      var alt = bildschirm.querySelector('.tippflaeche');
-      if (alt) alt.remove();
-      var f = schritte[nr].flaechen[flaeche];
-      var ziel = document.createElement('button');
-      ziel.type = 'button';
-      ziel.className = 'tippflaeche zeigen';
-      ziel.style.cssText = 'left:' + f.x + '%;top:' + f.y + '%;width:' + f.b + '%;height:' + f.h + '%';
-      ziel.setAttribute('aria-label', f.name || T.tipp);
-      ziel.addEventListener('click', function (e) {
-        e.stopPropagation();
-        anweisung.classList.remove('fast');
-        anweisung.classList.add('richtig');
-        flaeche++;
-        if (flaeche < schritte[nr].flaechen.length) {
-          var folgend = schritte[nr].flaechen[flaeche];
-          anweisung.querySelector('.uebung-hinweis').innerHTML = '<p>' + T.tippeAuf + ' <strong></strong>.</p>';
-          anweisung.querySelector('.uebung-hinweis strong').textContent = '„' + folgend.name + '“';
-          tippflaeche();
-        } else {
-          setTimeout(naechster, 420);
-        }
+    function zeigen() {
+      var fall = fragen();
+      wahl.querySelectorAll('input').forEach(function (feld) {
+        feld.checked = stand[feld.closest('[data-dim]').dataset.dim] === feld.value;
       });
-      bildschirm.appendChild(ziel);
+      anleitung.classList.toggle('fall-offen', !!fall);
+      ergebnis.hidden = !fall;
+      teile.forEach(function (teil) {
+        var marken = (teil.dataset.fall || '').split(',').filter(Boolean);
+        var passt = !!fall && ['besuch', 'vers', 'konto'].every(function (dim) {
+          var hier = marken.filter(function (m) { return dimension[m] === dim; });
+          return !hier.length || !stand[dim] || hier.indexOf(stand[dim]) > -1;
+        });
+        teil.classList.toggle('fall-aus', !passt);
+      });
+      if (!fall) { uebungZeigen(''); return; }
+      ergebnis.querySelector('strong').textContent = T.faelle[art + ':' + fall];
+      var geht = window.praxisUebung && window.praxisUebung.gibt(art, fall);
+      uebenKnopf.hidden = !geht;
+      uebungZeigen(geht && ueben ? fall : '');
+      if (window.history.replaceState) window.history.replaceState(null, '', '#' + fall);
     }
-    bildschirm.addEventListener('click', function (e) {
-      if (e.target.closest('.tippflaeche') || nr >= schritte.length || !schritte[nr].flaechen.length) return;
-      anweisung.classList.remove('richtig');
-      anweisung.classList.add('fast');
-      var hinweis = anweisung.querySelector('.uebung-hinweis');
-      if (hinweis.dataset.fast !== '1') {
-        hinweis.dataset.fast = '1';
-        hinweis.insertAdjacentHTML('afterbegin', '<p><strong></strong></p>');
-        hinweis.querySelector('strong').textContent = T.fast;
-      }
+    function uebungZeigen(fall) {
+      var platz = document.querySelector('.uebung-platz');
+      platz.innerHTML = '';
+      if (!fall) return;
+      platz.appendChild(document.getElementById('uebung-vorlage').content.cloneNode(true));
+      window.praxisUebung.starten(platz.querySelector('.uebung'), art, fall, T);
+    }
+    wahl.addEventListener('change', function (e) {
+      stand[e.target.closest('[data-dim]').dataset.dim] = e.target.value;
+      zeigen();
+      if (!ergebnis.hidden) ergebnis.scrollIntoView({ block: 'center', behavior: 'smooth' });
     });
-    function naechster() {
-      nr++;
-      if (nr < schritte.length) { zeige(); return; }
-      fortschritt.style.width = '100%';
-      anweisung.className = 'uebung-anweisung richtig';
-      anweisung.innerHTML = '<h3></h3><p></p>';
-      anweisung.querySelector('h3').textContent = T.geschafft;
-      anweisung.querySelector('p').textContent = T.geschafftText;
-      bildschirm.innerHTML = '<div class="uebung-fertig"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7.500 12.500l3 3 6-6.500"/></svg><strong></strong></div>';
-      bildschirm.querySelector('strong').textContent = T.geschafft;
-      knoepfe.innerHTML = '';
-      var nochmal = document.createElement('button');
-      nochmal.type = 'button';
-      nochmal.className = 'knopf';
-      nochmal.textContent = T.neu;
-      nochmal.addEventListener('click', function () { nr = 0; zeige(); });
-      knoepfe.appendChild(nochmal);
-      if (ziel) {
-        var echt = document.createElement('a');
-        echt.className = 'knopf';
-        echt.href = ziel.href;
-        echt.target = '_blank';
-        echt.rel = 'noopener';
-        echt.textContent = T.echt;
-        knoepfe.appendChild(echt);
+    uebenKnopf.addEventListener('click', function (e) {
+      e.preventDefault();
+      ueben = true;
+      zeigen();
+      document.getElementById('ueben').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+    function ausAdresse() {
+      var teil = location.hash.slice(1);
+      if (teil === 'ueben') {
+        ueben = true;
+        if (!ergebnis.hidden) {
+          zeigen();
+          if (document.getElementById('ueben')) document.getElementById('ueben').scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
+        return;
       }
+      teil.split('-').forEach(function (wert) { if (dimension[wert]) stand[dimension[wert]] = wert; });
+      zeigen();
     }
-    zeige();
+    window.addEventListener('hashchange', ausAdresse);
+    ausAdresse();
+    if (location.hash === '#ueben') wahl.scrollIntoView({ block: 'start' });
   }
 
   // ---------- Vorsorge-Finder: Daten aus der Tabelle im CMS, nichts wird gespeichert ----------

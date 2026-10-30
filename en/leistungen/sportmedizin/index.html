@@ -18,13 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793375203" media="all">
-<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793375203" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1793386249" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1793386249" media="all">
 
 
 
 
-<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(localStorage.getItem('praxis-startbild')==='1')delete d.dataset.hero}catch(e){}</script>
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');}catch(e){}</script>
 
 </head>
 <body>
@@ -68,22 +68,32 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
       <a href="/en/epe/">Gronau-Epe</a>
     </div>
     <div class="werkzeug-rechts">
-      
-      
-      <div class="schrift-wahl" role="group" aria-label="Choose text size">
-        <span class="schrift-wahl-text" aria-hidden="true">Text size</span>
-        <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
-        <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
-        <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Reading aids: text size, contrast, read aloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Reading aids</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Choose text size">
+            <span class="lesehilfe-name" aria-hidden="true">Text size</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normal text">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Large text">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Extra large text">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Contrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Read aloud</span>
+          </button>
+          <a class="lesehilfe-link" href="/en/leichte-sprache/">Plain language</a>
+          <a class="lesehilfe-link" href="/en/barrierefreiheit/">Accessibility</a>
+        </div>
       </div>
-      <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="High contrast">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        <span>Contrast</span>
-      </button>
-      <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Read this page aloud" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-        <span>Read aloud</span>
-      </button>
       
         <div class="sprache-wahl" role="group" aria-label="Choose language">
           
@@ -175,29 +185,29 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
 
   
   
-  
-<section class="buehne buehne--seite">
-  <div class="buehne-bilder">
-    
-        
-          <figure class="buehne-bild buehne-bild-1">
-            <img loading="eager" src="/fileadmin/praxis/bilder/klettern.jpg" width="800" height="600" alt="" />
-            
-          </figure>
-        
-      
-    
-  </div>
-  <div class="rahmen buehne-raster">
-    <div class="buehne-text">
-      <h1>Sports medicine</h1>
-      <p class="buehne-unterzeile">Qualified for peak performance</p>
-      
-    </div>
-  </div>
-  
-</section>
-
+  
+<section class="buehne buehne--seite">
+  <div class="buehne-bilder">
+    
+        
+          <figure class="buehne-bild buehne-bild-1">
+            <img loading="eager" src="/fileadmin/praxis/bilder/klettern.jpg" width="800" height="600" alt="" />
+            
+          </figure>
+        
+      
+    
+  </div>
+  <div class="rahmen buehne-raster">
+    <div class="buehne-text">
+      <h1>Sports medicine</h1>
+      <p class="buehne-unterzeile">Qualified for peak performance</p>
+      
+    </div>
+  </div>
+  
+</section>
+
 
 
 
@@ -411,7 +421,8 @@ Friday|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span
   </div>
 </footer>
 
-<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793375203"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1793386249"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1793386249"></script>
 
 
 </body>

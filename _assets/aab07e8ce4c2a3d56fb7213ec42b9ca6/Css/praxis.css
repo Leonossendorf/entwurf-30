@@ -1108,7 +1108,7 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .schritt-karte h2 { font-size: 1.55rem; margin: 10px 0 .45em; }
 .schritt-beschreibung { font-size: 1.18rem; line-height: 1.6; }
 .schritt-beschreibung strong { color: var(--c-marke-dunkel); }
-.schritt-karte--foto[data-hat-bild] { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); align-items: center; }
+.schritt-karte--foto[data-hat-bild] { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
 .schritt-foto { margin: 0; }
 .schritt-foto img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; }
 .handy { margin: 0; padding: 7px; background: #141c28; border-radius: 26px; box-shadow: 0 22px 36px -24px rgba(16, 33, 55, .7); }

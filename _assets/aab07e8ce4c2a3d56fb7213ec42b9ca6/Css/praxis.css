@@ -1213,6 +1213,9 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .uebung-bildschirm .ziel:focus-visible { outline-color: #14233a; }
 @keyframes tippen { 0%, 100% { box-shadow: 0 0 0 2px rgba(232, 112, 12, .55); } 50% { box-shadow: 0 0 0 9px rgba(232, 112, 12, .18); } }
 
+/* Hinweis, dass etwas in der Demo noch fehlt */
+.demo-hinweis { max-width: 46rem; margin: 18px 0 0; padding: 14px 18px; font-weight: 600; line-height: 1.45; color: #4a3200; background: #fbe3b0; border-radius: 14px; }
+
 /* ---------- Vorsorge-Finder ---------- */
 .vorsorge { padding-top: 16px; }
 .vorsorge > .frame { max-width: 46rem; }

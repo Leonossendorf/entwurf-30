@@ -117,7 +117,7 @@
     heroSchieber.checked = html.dataset.hero === '2';
     heroSchieber.addEventListener('change', function () {
       if (heroSchieber.checked) { html.dataset.hero = '2'; } else { delete html.dataset.hero; }
-      merken('praxis-hero', heroSchieber.checked ? '2' : '1');
+      merken('praxis-startbild', heroSchieber.checked ? '2' : '1');
     });
   }
 
@@ -242,7 +242,7 @@
     var schritte = karten.map(function (k) {
       return {
         titel: k.querySelector('h2').textContent,
-        text: k.querySelector('.schritt-beschreibung').innerHTML,
+        text: k.querySelector('.schritt-beschreibung').innerHTML.replace(/<\/?a\b[^>]*>/g, ''),
         bild: k.querySelector('img'),
         flaechen: (k.dataset.tipp || '').split(';').filter(Boolean).map(function (z) {
           var teile = z.split('|');
@@ -352,6 +352,7 @@
     var regler = document.getElementById('vorsorge-alter');
     var wert = document.getElementById('vorsorge-wert');
     var ausgabe = document.querySelector('.vorsorge-ergebnis');
+    var aktion = document.getElementById('vorsorge-aktion');
     var eintraege = daten.textContent.split(/\r?\n/).filter(Boolean).map(function (z) {
       var t = z.split('|');
       return { titel: t[0], von: +t[1], bis: +t[2], wer: t[3], takt: t[4], text: t[5], ort: t[6] };
@@ -383,6 +384,7 @@
         });
         block.appendChild(kopf);
         block.appendChild(liste);
+        if (ort === 'praxis' && aktion) block.appendChild(aktion.content.cloneNode(true));
         ausgabe.appendChild(block);
       });
     }

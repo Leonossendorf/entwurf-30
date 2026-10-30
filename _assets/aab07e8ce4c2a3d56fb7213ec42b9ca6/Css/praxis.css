@@ -1094,6 +1094,8 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .anleitung > .frame-layout-0 h2, .fall-teil > .frame-layout-0 h2, .checkliste h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
 .anleitung > .frame .ce-bodytext p, .anleitung > .frame .ce-bodytext li, .fall-teil > .frame .ce-bodytext p { font-size: 1.18rem; line-height: 1.6; }
 .anleitung > .frame-layout-1, .fall-teil > .frame-layout-1 { max-width: none; background: #fbecd6; border-radius: 22px; padding: 26px 30px; margin-top: 28px; }
+.schritt-karte, .checkliste { scroll-margin-top: 16px; }
+.schritt-karte:focus, .checkliste:focus { outline: none; }
 .schritt-karte {
   counter-increment: schritt; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; gap: 40px; align-items: start;
   margin: 0 0 18px; padding: 32px 36px 32px 108px; background: #fff; border: 1.5px solid #f0dcc1; border-radius: 26px;
@@ -1133,6 +1135,7 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .fall-ergebnis-text { margin: 0; font-size: 1.15rem; }
 .fall-ergebnis-text span { display: block; color: var(--c-leise); font-size: 1rem; }
 .fall-ergebnis-text strong { font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: 1.3rem; color: var(--c-marke-dunkel); }
+.fall-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
 .fall-ueben[hidden] { display: none; }
 .medflex-status { margin: 0 0 18px; padding: 14px 20px; font-weight: 600; font-size: 1.1rem; background: #dcefe3; border-left: 5px solid #1f8a4c; border-radius: 12px; }
 .medflex-status[hidden] { display: none; }
@@ -1148,6 +1151,7 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .uebung-marke { display: inline-block; margin: 0 0 12px; padding: 4px 14px; font-weight: 600; color: var(--c-marke-dunkel); background: #fbe3b0; border-radius: 999px; }
 .uebung h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: .3em; }
 .uebung-text > p:not(.uebung-marke) { font-size: 1.15rem; color: #e8eff9; }
+.uebung-text > p.uebung-demo { padding: 14px 18px; font-weight: 600; line-height: 1.45; color: #4a3200; background: #fbe3b0; border-radius: 14px; }
 .uebung-anweisung { min-height: 8.5rem; margin: 18px 0 14px; padding: 20px 22px; color: var(--c-text); background: #fff; border-radius: 18px; }
 .uebung-anweisung h3 { margin: 0 0 6px; font-size: 1.3rem; color: var(--c-marke-dunkel); }
 .uebung-anweisung p { margin: 0; font-size: 1.1rem; line-height: 1.5; }
@@ -1205,7 +1209,6 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .uebung-bildschirm .ziel { position: relative; z-index: 2; outline: 3px solid #e8700c; outline-offset: 2px; animation: tippen 1.3s ease-in-out infinite; }
 .uebung-bildschirm .ziel:focus-visible { outline-color: #14233a; }
 @keyframes tippen { 0%, 100% { box-shadow: 0 0 0 2px rgba(232, 112, 12, .55); } 50% { box-shadow: 0 0 0 9px rgba(232, 112, 12, .18); } }
-.uebung-vereinfacht { margin-top: 12px; font-size: .95rem; color: #dbe6f5; }
 
 /* ---------- Vorsorge-Finder ---------- */
 .vorsorge { padding-top: 16px; }

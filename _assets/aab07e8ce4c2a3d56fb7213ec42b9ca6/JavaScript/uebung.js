@@ -275,7 +275,7 @@
     var gesamt = weg.bilder.reduce(function (n, b) { return n + b.schritte.length; }, 0);
     var nr, bildNr, schrittNr, fertigGezaehlt, flaeche, ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function band() { return el('div', 'us-band', L('Übung: Nichts wird abgeschickt', 'Practice: nothing is sent')); }
+    function band() { return el('div', 'us-band', L('Demo-Übung: Nichts wird abgeschickt', 'Practice demo: nothing is sent')); }
     function schirm(bild) {
       bildschirm.innerHTML = '';
       bildschirm.className = 'uebung-bildschirm us-' + bild.thema;
@@ -393,7 +393,6 @@
       }
     });
     anfang();
-    feld.querySelector('.uebung-text').appendChild(el('p', 'uebung-vereinfacht', L('Vereinfacht nachgebaut. Beim echten Dienst können einzelne Bildschirme etwas anders aussehen.', 'A simplified recreation. Individual screens may look slightly different on the real service.')));
   }
 
   window.praxisUebung = {

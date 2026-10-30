@@ -326,6 +326,14 @@
       zeigen();
       document.getElementById('ueben').scrollIntoView({ block: 'start', behavior: 'smooth' });
     });
+    wahl.querySelector('.fall-anleitung').addEventListener('click', function (e) {
+      e.preventDefault();
+      var start = anleitung.querySelector('.checkliste:not(.fall-aus), .schritt-karte:not(.fall-aus)');
+      if (!start) return;
+      start.setAttribute('tabindex', '-1');
+      start.focus({ preventScroll: true });
+      start.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
     function ausAdresse() {
       var teil = location.hash.slice(1);
       if (teil === 'ueben') {

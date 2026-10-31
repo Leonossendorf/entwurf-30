@@ -1120,6 +1120,21 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 .anleitung-druck { margin: 32px 0 0; }
 .anleitung .frage { margin: 0 0 10px; }
 
+/* Anleitung: Karte für Meldungen und Sackgassen, ohne Nummer */
+.problem-karte {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; gap: 40px; align-items: start;
+  margin: 0 0 18px; padding: 32px 36px 32px 108px; background: #fdf4e6; border: 1.5px solid #e4bd82; border-radius: 26px; scroll-margin-top: 16px;
+}
+.problem-karte:not([data-hat-bild]) { grid-template-columns: minmax(0, 1fr); }
+.problem-karte::before {
+  content: "!"; position: absolute; left: 28px; top: 28px; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%;
+  font-family: var(--f-kopf); font-weight: 700; font-size: 1.8rem; color: #fff; background: #8f5a0b;
+}
+.problem-karte h2 { font-size: 1.55rem; margin: 10px 0 .45em; }
+.problem-karte ul { margin: 0 0 .8em; padding-left: 1.2em; }
+.problem-karte li { margin-bottom: .45em; }
+main a[href^="tel:"] { white-space: nowrap; }
+
 /* Fragen zur passenden Anleitung */
 .fallwahl { margin: 24px 0 18px; padding: 30px 34px; background: #e3edf9; border-radius: 26px; scroll-margin-top: 16px; }
 .fallwahl h2 { margin-bottom: .25em; font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
@@ -1287,8 +1302,9 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
   .wegweiser-eintrag.offen .wegweiser-knopf { min-height: 0; flex-direction: row; justify-content: flex-start; padding: 16px 18px 6px; }
   .wegweiser-antwort { padding: 8px 20px 18px; }
   .schritt-karte, .schritt-karte--foto[data-hat-bild] { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 24px 20px; }
-  .schritt-karte::before { position: static; width: 46px; height: 46px; font-size: 1.3rem; }
-  .schritt-karte .handy { max-width: 15rem; }
+  .schritt-karte::before, .problem-karte::before { position: static; width: 46px; height: 46px; font-size: 1.3rem; }
+  .schritt-karte .handy, .problem-karte .handy { max-width: 15rem; }
+  .problem-karte { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 24px 20px; }
   .vorsorge-eintrag { grid-template-columns: minmax(0, 1fr); }
   .vorsorge-rhythmus { grid-column: 1 !important; grid-row: auto; max-width: none; text-align: left; justify-self: start; }
   .ueben-band-raster { border-radius: 0; }
@@ -1298,7 +1314,7 @@ html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 @media print {
   .werkzeug, .kopf, .fuss, .uebung, .anleitung-druck, .vorsorge-aktion, .vorsorge-druck, .vorsorge-kinder, .hilfe-zurueck, .brotkrumen, .sprungmarke, .hilfe-welle { display: none !important; }
   .hilfe-buehne { background: none; padding: 0 0 12px; }
-  .schritt-karte { break-inside: avoid; border: 1px solid #000; }
+  .schritt-karte, .problem-karte { break-inside: avoid; border: 1px solid #000; }
   .einblenden { opacity: 1 !important; transform: none !important; }
 }
 

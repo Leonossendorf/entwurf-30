@@ -1360,11 +1360,11 @@ html.kontrast .vorsorge-aktion { background: #000; }
 .buehne-bild-neu, .hauptfeld { display: none; }
 
 html[data-neu="2"] { scroll-behavior: smooth; }
-[data-neu="2"] .buehne--start .buehne-bild-1, [data-neu="2"] .buehne--start .buehne-text, .start-liste .service-kacheln { display: none; }
+[data-neu="2"] .buehne--start .buehne-bild-1, [data-neu="2"] .buehne--start .buehne-text, [data-neu="2"] .service-kacheln { display: none; }
 [data-neu="2"][data-konzept="klar"] .buehne--start .buehne-bild-neu { display: block; height: 100%; }
 
 /* Überschrift und Hauptpunkte mittig auf dem Tresen, Gesichter und Logo bleiben frei */
-[data-neu="2"] .hauptfeld { display: block; position: relative; z-index: 3; margin-top: calc(-1 * clamp(262px, 20.8vw, 340px)); }
+[data-neu="2"] .hauptfeld { --bild-hoehe: max(34rem, min(45.8vw, calc(100svh - 236px))); display: block; position: relative; z-index: 3; box-sizing: border-box; min-height: var(--bild-hoehe); padding: calc(var(--bild-hoehe) * .49) 0 28px; }
 .hauptfeld .rahmen { max-width: 960px; }
 .hauptfeld-tafel { padding: 24px 28px 22px; text-align: center; background: rgba(255, 255, 255, .97); border-radius: 26px; box-shadow: 0 26px 50px -28px rgba(16, 33, 55, .6); }
 .hauptfeld h1 { margin: 0 0 .15em; font-size: clamp(1.9rem, 3.1vw, 2.75rem); line-height: 1.12; }
@@ -1396,7 +1396,7 @@ html[data-neu="2"] { scroll-behavior: smooth; }
 html.kontrast .hauptfeld-tafel, html.kontrast .hauptpunkt, html.kontrast .kurzwege { background: #fff; border: 2px solid #000; }
 
 @media (min-width: 861px) {
-  html[data-neu="2"][data-hero="2"][data-konzept="klar"] .buehne--start .buehne-raster { min-height: max(34rem, min(45.8vw, calc(100svh - 236px))); padding: 0; }
+  html[data-neu="2"][data-hero="2"][data-konzept="klar"] .buehne--start .buehne-raster { display: none; }
   html[data-neu="2"][data-hero="2"][data-konzept="klar"] .buehne--start .buehne-bild img { object-position: 50% 20%; }
 }
 
@@ -1423,7 +1423,8 @@ html.kontrast .hauptfeld-tafel, html.kontrast .hauptpunkt, html.kontrast .kurzwe
   .start-liste .service > .frame:nth-of-type(n), .start-liste .notdienst-kasten { grid-column: auto; grid-row: auto; }
 }
 @media (max-width: 860px) {
-  [data-neu="2"] .hauptfeld { margin-top: -28px; }
+  [data-neu="2"] .hauptfeld { min-height: 0; margin-top: -28px; padding: 0; }
+  [data-neu="2"] .buehne--start { background: #fff; }
   .hauptfeld .rahmen { padding: 0 14px; }
   .hauptfeld-tafel { padding: 20px 16px 16px; }
   .hauptpunkte, .kurzwege { grid-template-columns: minmax(0, 1fr); }

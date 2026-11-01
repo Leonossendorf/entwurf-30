@@ -733,7 +733,6 @@ textarea.form-control { min-height: 96px; resize: vertical; }
   .menue ul ul { display: block; position: static; border: 0; box-shadow: none; padding: 0 0 0 14px; min-width: 0; background: transparent; }
   .menue li.aktiv > a { box-shadow: none; }
   .knopf--kopf { display: none; }
-  .kacheln { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .kompetenz-raster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 860px) {
@@ -757,10 +756,6 @@ textarea.form-control { min-height: 96px; resize: vertical; }
   [data-konzept] .buehne--start .buehne-bilder, [data-konzept] .buehne--seite .buehne-bilder { width: auto; }
   [data-konzept="modern"] .buehne--start .buehne-bilder { height: 300px; }
 
-  .kacheln { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .kacheln li:last-child { grid-column: 1 / -1; }
-  .kachel { padding: 16px; }
-  .kachel-symbol { width: 28px; height: 28px; margin-bottom: 6px; }
   [data-konzept="klar"] .service-kacheln { margin-top: 24px; }
   [data-konzept="modern"] .kachel-symbol { width: 44px; height: 44px; padding: 10px; }
 
@@ -877,6 +872,20 @@ main:focus { outline: none; }
 .werkzeug-knopf:hover { border-color: var(--c-marke); color: var(--c-marke); }
 .werkzeug-knopf[aria-pressed="true"] { background: var(--c-marke); border-color: var(--c-marke); color: #fff; }
 
+/* Schieber für den Vergleich der Startbilder */
+.hero-schieber { position: relative; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; cursor: pointer; }
+.hero-schieber-text { margin-right: 2px; }
+.hero-schieber-zahl { font-variant-numeric: tabular-nums; color: var(--c-leise); }
+.hero-schieber input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.hero-schieber-bahn { position: relative; width: 46px; height: 26px; background: #6f8197; border-radius: 999px; transition: background .2s ease; }
+.hero-schieber-bahn::after { content: ""; position: absolute; left: 3px; top: 3px; width: 20px; height: 20px; background: #fff; border-radius: 50%; box-shadow: 0 1px 3px rgba(16, 33, 55, .4); transition: transform .2s ease; }
+.hero-schieber input:checked ~ .hero-schieber-bahn { background: var(--c-marke); }
+.hero-schieber input:checked ~ .hero-schieber-bahn::after { transform: translateX(20px); }
+.hero-schieber input:focus-visible ~ .hero-schieber-bahn { outline: 3px solid var(--c-marke); outline-offset: 2px; }
+.buehne-bild-neu { display: none; }
+[data-startfoto="2"] .buehne--start .buehne-bild-1 { display: none; }
+[data-startfoto="2"][data-konzept="klar"] .buehne--start .buehne-bild-neu { display: block; height: 100%; }
+
 /* Lesehilfen: ein Knopf mit dem bekannten Symbol, alles Weitere im Feld */
 .lesehilfe { position: relative; }
 .lesehilfe-knopf svg { width: 22px; height: 22px; stroke-width: 1.6; }
@@ -899,7 +908,7 @@ html[data-schrift="1"] { font-size: 118.75%; }
 html[data-schrift="2"] { font-size: 137.5%; }
 [data-konzept="klar"] .buehne-text { max-width: 37.5rem; }
 html[data-schrift] .buehne h1 { max-width: none; }
-html[data-schrift] .kacheln { grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr)); }
+html[data-schrift] .kacheln { grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); }
 html[data-schrift] .news-list-view { grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
 html[data-schrift] .team { grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
 html[data-schrift] .kompetenz-raster { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
@@ -945,7 +954,7 @@ html.kontrast :focus-visible { outline: 4px solid #000; outline-offset: 3px; }
   }
   .kurve-flaeche { fill: var(--c-grund); }
   .kurve-linie { fill: none; stroke: var(--c-marke); stroke-width: 3; }
-  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-raster { min-height: 36rem; padding-top: 40px; padding-bottom: 150px; align-items: flex-start; }
+  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-raster { min-height: max(36rem, min(48.3vw, calc(100svh - 212px))); padding-top: 40px; padding-bottom: 150px; align-items: flex-start; }
   html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-text {
     max-width: 25rem; padding: 26px 30px 24px; border-top: 0; border-radius: 22px;
     background: rgba(255, 255, 255, .95); box-shadow: 0 24px 50px -28px rgba(16, 33, 55, .55);
@@ -954,19 +963,14 @@ html.kontrast :focus-visible { outline: 4px solid #000; outline-offset: 3px; }
   html[data-hero="2"] .buehne--start .buehne-unterzeile { font-size: 1.05rem; }
   html[data-hero="2"] .buehne--start .buehne-aktionen { display: none; }
   html[data-hero="2"] .buehne--start .buehne-telefon { margin-top: 14px; font-size: .98rem; }
-  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-bild img { object-position: 60% 40%; }
+  html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-bild img { object-position: 50% 30%; }
   html[data-hero="2"][data-konzept="klar"] .service-kacheln { margin-top: -118px; }
-  html[data-hero="2"] .kachel { border-radius: 18px; }
-  html[data-hero="2"] .kacheln li:nth-child(1), html[data-hero="2"] .kacheln li:nth-child(5) { margin-top: -6px; }
-  html[data-hero="2"] .kacheln li:nth-child(2), html[data-hero="2"] .kacheln li:nth-child(4) { margin-top: 12px; }
-  html[data-hero="2"] .kacheln li:nth-child(3) { margin-top: 20px; }
 }
 html[data-hero="2"] .kachel-hilfe { border-radius: 999px; }
 @media (max-width: 860px) {
   html[data-hero="2"] .buehne--start .buehne-bilder { border-radius: 0 0 50% 50% / 0 0 34px 34px; overflow: hidden; }
   html[data-hero="2"] .buehne--start .buehne-aktionen { margin-bottom: 10px; }
   html[data-hero="2"][data-konzept="klar"] .buehne--start .buehne-text { margin: 0; border-top: 0; box-shadow: none; padding: 22px 0 8px; background: transparent; }
-  html[data-hero="2"] .kachel { border-radius: 16px; }
 }
 
 /* Bild folgt */
@@ -1343,4 +1347,67 @@ html.kontrast .vorsorge-aktion { background: #000; }
 /* Wegweiser: sechs Karten in zwei gleichen Reihen */
 @media (min-width: 900px) {
   .wegweiser-feld { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Startseite: zwei Hauptpunkte und drei Kurzwege */
+html { scroll-behavior: smooth; }
+.kacheln { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.hauptpunkt { gap: 10px; justify-content: space-between; padding: 16px 22px 16px; border: 1.5px solid; border-radius: 22px; box-shadow: 0 20px 38px -26px rgba(16, 33, 55, .55); }
+.hauptpunkt--termin { background: #e3edf9; border-color: #b4cbe8; }
+.hauptpunkt--rezept { background: #fbecd6; border-color: #eccb9c; }
+.kacheln .hauptpunkt .kachel { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 2px 16px; align-items: center; height: auto; padding: 0; background: none; border: 0; border-radius: 0; box-shadow: none; }
+.hauptpunkt-symbol { grid-row: 1 / 3; display: grid; place-items: center; width: 62px; height: 62px; background: #fff; border-radius: 50%; }
+.hauptpunkt .kachel-symbol { width: 32px; height: 32px; margin: 0; }
+.hauptpunkt .kachel-titel { align-self: end; font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: 1.45rem; line-height: 1.2; }
+.hauptpunkt .kachel-text { align-self: start; color: #3c4a5c; font-size: .96rem; }
+.hauptpunkt--rezept .kachel-symbol { stroke: #8f5a0b; }
+.hauptpunkt .kachel:hover .kachel-titel { color: var(--c-marke-dunkel); text-decoration: underline; text-underline-offset: .18em; }
+.hauptpunkt .kachel-hilfe { align-self: flex-start; background: #fff; }
+.hauptpunkt .kachel-hilfe:hover { background: var(--c-marke); color: #fff; }
+.kurzwege { gap: 0; overflow: hidden; background: #fff; border: 1px solid var(--c-linie); border-radius: 22px; box-shadow: 0 20px 38px -26px rgba(16, 33, 55, .55); }
+.kurzweg { flex: 1 1 auto; display: flex; align-items: center; gap: 12px; padding: 7px 16px; color: var(--c-text); text-decoration: none; }
+.kurzweg + .kurzweg { border-top: 1px solid var(--c-linie); }
+.kurzweg .kachel-symbol { flex: none; width: 26px; height: 26px; margin: 0; }
+.kurzweg-text { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; }
+.kurzweg .kachel-titel { font-size: 1rem; }
+.kurzweg .kachel-text { font-size: .88rem; }
+.kurzweg-pfeil { flex: none; width: 20px; height: 20px; fill: none; stroke: var(--c-marke); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.kurzweg:hover { background: #f2f6fb; color: var(--c-text); }
+.kurzweg:hover .kachel-titel { color: var(--c-marke); }
+html.kontrast .hauptpunkt, html.kontrast .kurzwege { background: #fff; border: 2px solid #000; }
+
+/* Startseite: Text mittig, Neuigkeiten darunter, Zeiten danach */
+.start-spalte { padding-top: 72px; }
+.start-spalte .start-inhalt > .frame-type-text { max-width: 50rem; margin: 0 auto 56px; text-align: center; }
+.start-spalte .frame-type-news_pi1 { margin-bottom: 0; }
+.start-zeiten { margin-top: 72px; padding: 64px 0; background: #f2f6fb; scroll-margin-top: 0; }
+.start-zeiten .abschnitt-titel { text-align: center; margin-bottom: 1.1em; }
+.start-zeiten .service { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 44px; scroll-margin-top: 150px; }
+.start-zeiten .service .frame { margin: 0; scroll-margin-top: 24px; }
+.start-zeiten .service > .frame:nth-child(1) { grid-column: 1; grid-row: 1; }
+.start-zeiten .service > .frame:nth-child(2) { grid-column: 2; grid-row: 1 / 3; }
+.start-zeiten .service > .frame:nth-child(3) { grid-column: 1; grid-row: 2; }
+.start-zeiten .service > .frame:nth-child(4) { grid-column: 3; grid-row: 1; }
+.notdienst-kasten { grid-column: 3; grid-row: 2; align-self: start; padding: 18px 20px; background: #fff; border-top: 3px solid #e08a1e; border-radius: 0 0 14px 14px; scroll-margin-top: 24px; }
+.notdienst-kasten h3 { margin: 0 0 .6em; font-family: var(--f-kopf); font-size: 1.2rem; color: var(--c-text); }
+.notdienst-kasten p { margin: 0 0 .6em; border: 0; padding: 0; }
+.notdienst-nummer { font-family: var(--f-kopf); font-weight: var(--gew-kopf); font-size: 1.5rem; text-decoration: none; }
+.leistungen { margin-top: 0; }
+@media (max-width: 1080px) {
+  .kacheln { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kurzwege { grid-column: 1 / -1; flex-direction: row; }
+  .kurzweg + .kurzweg { border-top: 0; border-left: 1px solid var(--c-linie); }
+  .start-zeiten .service { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .start-zeiten .service > .frame:nth-child(n), .notdienst-kasten { grid-column: auto; grid-row: auto; }
+}
+@media (max-width: 760px) {
+  .kacheln { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  html[data-hero="2"] .buehne--start .buehne-aktionen { display: none; }
+  .hauptpunkt { padding: 18px; }
+  .kurzwege { flex-direction: column; }
+  .kurzweg { padding: 12px 16px; }
+  .kurzweg + .kurzweg { border-left: 0; border-top: 1px solid var(--c-linie); }
+  .start-spalte { padding-top: 48px; }
+  .start-zeiten { margin-top: 48px; padding: 44px 0; }
+  .start-zeiten .service { grid-template-columns: minmax(0, 1fr); }
 }

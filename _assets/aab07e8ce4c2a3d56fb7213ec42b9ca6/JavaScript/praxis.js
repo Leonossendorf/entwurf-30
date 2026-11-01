@@ -123,13 +123,13 @@
     window.addEventListener('pagehide', function () { window.speechSynthesis.cancel(); });
   }
 
-  // Startbild vergleichen (nur für die Demo): 1 ist Standard, 2 das neue Foto
-  var fotoSchieber = document.querySelector('.hero-schieber input');
-  if (fotoSchieber) {
-    fotoSchieber.checked = html.dataset.startfoto === '2';
-    fotoSchieber.addEventListener('change', function () {
-      if (fotoSchieber.checked) { html.dataset.startfoto = '2'; } else { delete html.dataset.startfoto; }
-      merken('praxis-startfoto', fotoSchieber.checked ? '2' : '1');
+  // Startseite vergleichen (nur für die Demo): 1 ist der bisherige Stand, 2 der neue Versuch
+  var heroSchieber = document.querySelector('.hero-schieber input');
+  if (heroSchieber) {
+    heroSchieber.checked = html.dataset.neu === '2';
+    heroSchieber.addEventListener('change', function () {
+      if (heroSchieber.checked) { html.dataset.neu = '2'; } else { delete html.dataset.neu; }
+      merken('praxis-neuer-hero', heroSchieber.checked ? '2' : '1');
     });
   }
 

@@ -413,6 +413,7 @@
   // ---------- Dezentes Einblenden beim Scrollen ----------
   function einblenden() {
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.CSS && CSS.supports('animation-timeline: view()')) return;
     var beob = new IntersectionObserver(function (treffer) {
       treffer.forEach(function (t) {
         if (t.isIntersecting) { t.target.classList.add('da'); beob.unobserve(t.target); }

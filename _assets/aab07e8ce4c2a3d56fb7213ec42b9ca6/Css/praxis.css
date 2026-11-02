@@ -1268,7 +1268,7 @@ main a[href^="tel:"] { white-space: nowrap; }
 
 /* ---------- Dezente Bewegung ---------- */
 @media (prefers-reduced-motion: no-preference) {
-  .einblenden { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }
+  .einblenden { opacity: 0; transform: translateY(14px); transition: opacity .32s ease, transform .32s cubic-bezier(.2, .7, .2, 1); }
   .einblenden.da { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1364,11 +1364,11 @@ html[data-neu="2"] { scroll-behavior: smooth; }
 [data-neu="2"][data-konzept="klar"] .buehne--start .buehne-bild-neu { display: block; height: 100%; }
 
 /* Überschrift und Hauptpunkte mittig auf dem Tresen, Gesichter und Logo bleiben frei */
-[data-neu="2"] .hauptfeld { --bild-hoehe: max(34rem, min(45.8vw, calc(100svh - 236px))); display: block; position: relative; z-index: 3; box-sizing: border-box; min-height: var(--bild-hoehe); padding: calc(var(--bild-hoehe) * .49) 0 28px; }
+[data-neu="2"] .hauptfeld { --bild-hoehe: max(34rem, min(45.8vw, calc(100svh - 236px))); display: block; position: relative; z-index: 3; box-sizing: border-box; min-height: var(--bild-hoehe); padding: calc(var(--bild-hoehe) * .545) 0 22px; }
 .hauptfeld .rahmen { max-width: 960px; }
-.hauptfeld-tafel { padding: 24px 28px 22px; text-align: center; background: rgba(255, 255, 255, .97); border-radius: 26px; box-shadow: 0 26px 50px -28px rgba(16, 33, 55, .6); }
+.hauptfeld-tafel { padding: 20px 28px 20px; text-align: center; background: rgba(255, 255, 255, .97); border-radius: 26px; box-shadow: 0 26px 50px -28px rgba(16, 33, 55, .6); }
 .hauptfeld h1 { margin: 0 0 .15em; font-size: clamp(1.9rem, 3.1vw, 2.75rem); line-height: 1.12; }
-.hauptfeld-text { margin: 0 auto 16px; font-size: 1.08rem; line-height: 1.45; color: var(--c-leise); }
+.hauptfeld-text { margin: 0 auto 13px; font-size: 1.08rem; line-height: 1.45; color: var(--c-leise); }
 .hauptpunkte { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; text-align: left; }
 .hauptpunkt { display: flex; flex-direction: column; gap: 10px; padding: 14px 18px; border: 1.5px solid; border-radius: 18px; }
 .hauptpunkt--termin { background: #e3edf9; border-color: #b4cbe8; }
@@ -1442,3 +1442,49 @@ html.kontrast .hauptfeld-tafel, html.kontrast .hauptpunkt, html.kontrast .kurzwe
   html[data-hero="2"] .buehne--start .buehne-unterzeile { max-width: none; font-size: 1.08rem; line-height: 1.5; }
   html[data-hero="2"] .buehne--start .buehne-telefon { margin-top: 16px; line-height: 1.5; }
 }
+
+/* ---------- Bewegung: hängt am Scrollen, nicht an der Zeit, also wartet niemand ---------- */
+.kachel, .hauptpunkt, .kurzweg-pfeil, .meldung, .knopf { transition-property: transform, translate, background-color, border-color, color, box-shadow; transition-duration: .18s; transition-timing-function: ease; }
+.hauptpunkt:hover { transform: translateY(-2px); box-shadow: 0 16px 28px -22px rgba(16, 33, 55, .55); }
+.kurzweg:hover .kurzweg-pfeil { translate: 0 3px; }
+.meldung:hover { transform: translateY(-3px); }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Beim Laden nur ein kurzer Auftakt */
+  @keyframes hero-rein { from { opacity: 0; translate: 0 14px; } }
+  .buehne--start .buehne-text, .hauptfeld-tafel, .kurzwege, .service-kacheln .kacheln > li { animation: hero-rein .34s cubic-bezier(.2, .7, .2, 1) backwards; }
+  .kurzwege { animation-delay: .08s; }
+  .service-kacheln .kacheln > li:nth-child(2) { animation-delay: .04s; }
+  .service-kacheln .kacheln > li:nth-child(3) { animation-delay: .08s; }
+  .service-kacheln .kacheln > li:nth-child(4) { animation-delay: .12s; }
+  .service-kacheln .kacheln > li:nth-child(5) { animation-delay: .16s; }
+
+  @supports (animation-timeline: view()) {
+    @keyframes auftauchen { from { opacity: 0; translate: 0 30px; scale: .985; } }
+    @keyframes titel-auftauchen { from { opacity: 0; translate: 0 18px; } }
+    @keyframes bild-sanft { from { scale: 1; } to { scale: 1.08; } }
+    @keyframes feld-bild { from { scale: 1.14; translate: 0 -3.5%; } to { scale: 1.14; translate: 0 3.5%; } }
+
+    .feld-karte, .feld-kachel, .meldung, .schritt-karte, .problem-karte, .band-karte, .wegweiser-eintrag, .hilfe-karte, .person,
+    .start-liste .service > .frame, .notdienst-kasten {
+      animation: auftauchen linear backwards; animation-timeline: view(); animation-range: entry 0px entry 170px;
+    }
+    .abschnitt-titel, .frame-type-news_pi1 > header, .start-liste .start-inhalt > .frame-type-text {
+      animation: titel-auftauchen linear backwards; animation-timeline: view(); animation-range: entry 0px entry 120px;
+    }
+    /* Nebeneinander liegende Karten kommen leicht versetzt */
+    .news-list-view > :nth-child(2), .news-list-view > :nth-child(2) .meldung, .band-karte:nth-child(2), .feld-karte:nth-child(2), .feld-kachel:nth-child(4n + 2),
+    .start-liste .service > .frame:nth-of-type(2) { animation-range: entry 45px entry 215px; }
+    .news-list-view > :nth-child(3), .news-list-view > :nth-child(3) .meldung, .feld-karte:nth-child(3), .feld-kachel:nth-child(4n + 3),
+    .start-liste .service > .frame:nth-of-type(4), .notdienst-kasten { animation-range: entry 90px entry 260px; }
+    .feld-kachel:nth-child(4n) { animation-range: entry 135px entry 305px; }
+
+    /* Das Startbild zoomt beim Weiterscrollen ganz leicht, die Schwerpunkte-Bilder wandern in ihrem Rahmen */
+    .buehne--start .buehne-bild img { transform-origin: 50% 0; animation: bild-sanft linear both; animation-timeline: scroll(root); animation-range: 0 760px; }
+    .feld-karte img { animation: feld-bild linear both; animation-timeline: view(); animation-range: cover; }
+  }
+}
+@media print {
+  * { animation: none !important; }
+}
+html.kontrast * { animation: none !important; }

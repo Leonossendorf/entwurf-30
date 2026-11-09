@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="de-DE" data-konzept="klar" data-hero="2">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:,">
+    <meta charset="utf-8">
+
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2026 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+
+<title>E-Rezept einlösen</title>
+<meta name="generator" content="TYPO3 CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?v=1794212195" media="all">
+<link rel="stylesheet" href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Css/praxis.css?v=1794212195" media="all">
+
+
+
+
+<script>try{var d=document.documentElement,p=new URLSearchParams(location.search),k=p.get('konzept');if(['klar','herzlich','modern'].indexOf(k)>-1){d.dataset.konzept=k;d.classList.add('mit-umschalter')}var s=localStorage.getItem('praxis-schrift');if(s==='1'||s==='2')d.dataset.schrift=s;if(localStorage.getItem('praxis-kontrast')==='1')d.classList.add('kontrast');if(0&&localStorage.getItem('praxis-neuer-hero')==='2')d.dataset.neu='2'}catch(e){}</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="sprungmarke" href="#inhalt">Direkt zum Inhalt</a>
+
+
+<div class="demoleiste">
+  <div class="rahmen demoleiste-innen">
+    <span class="demoleiste-titel">Designvorschlag</span>
+    <div class="umschalter" role="group" aria-label="Designvorschlag wählen">
+      <button type="button" data-konzept-wahl="klar">Klar</button>
+      <button type="button" data-konzept-wahl="herzlich">Herzlich</button>
+      <button type="button" data-konzept-wahl="modern">Modern</button>
+    </div>
+    <span class="demoleiste-hinweis">Entwurf von Leon Oßendorf</span>
+  </div>
+</div>
+
+<div class="werkzeug">
+  <div class="rahmen werkzeug-innen">
+    <p class="jetzt" data-zeiten="Montag|07:30 – 12:00|14:30 – 18:00
+Dienstag|07:30 – 13:00|
+Mittwoch|07:30 – 13:00|
+Donnerstag|07:30 – 12:00|14:30 – 18:00
+Freitag|07:30 – 13:00|" data-zu-von="1798412400" data-zu-bis="1799017200"><span class="jetzt-punkt" aria-hidden="true"></span><span class="jetzt-text"></span></p>
+    <div class="standort-wahl" role="group" aria-label="Standort wählen">
+      <a href="/" aria-current="true">Ochtrup</a>
+      <a href="/epe/">Gronau-Epe</a>
+    </div>
+    <div class="werkzeug-rechts">
+      
+      <div class="lesehilfe">
+        <button type="button" class="werkzeug-knopf lesehilfe-knopf" aria-expanded="false" aria-controls="lesehilfe-feld" aria-label="Lesehilfen: Schriftgröße, Kontrast, Vorlesen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4"/><circle class="voll" cx="12" cy="6.7" r="1.75"/><path d="M6.4 9.6c1.9.6 3.8.9 5.6.9s3.700-.3 5.600-.9M12 10.500v3.700m0 0-2.500 5m2.500-5 2.500 5"/></svg>
+          <span>Lesehilfen</span>
+        </button>
+        <div class="lesehilfe-feld" id="lesehilfe-feld" hidden>
+          <div class="lesehilfe-zeile" role="group" aria-label="Schriftgröße wählen">
+            <span class="lesehilfe-name" aria-hidden="true">Schrift</span>
+            <div class="schrift-wahl">
+              <button type="button" data-schrift-stufe="0" aria-pressed="true" aria-label="Normale Schrift">A</button>
+              <button type="button" data-schrift-stufe="1" aria-pressed="false" aria-label="Große Schrift">A</button>
+              <button type="button" data-schrift-stufe="2" aria-pressed="false" aria-label="Sehr große Schrift">A</button>
+            </div>
+          </div>
+          <button type="button" class="werkzeug-knopf kontrast-knopf" aria-pressed="false" aria-label="Hoher Kontrast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+            <span>Kontrast</span>
+          </button>
+          <button type="button" class="werkzeug-knopf vorlesen-knopf" aria-pressed="false" aria-label="Diese Seite vorlesen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></svg>
+            <span>Vorlesen</span>
+          </button>
+          <a class="lesehilfe-link" href="/leichte-sprache/">Leichte Sprache</a>
+          <a class="lesehilfe-link" href="/barrierefreiheit/">Barrierefreiheit</a>
+        </div>
+      </div>
+      
+        <div class="sprache-wahl" role="group" aria-label="Sprache wählen">
+          
+            <a href="/hilfe/e-rezept/" hreflang="de-DE" lang="de-DE" aria-current="true">DE<span class="nur-vorlesen"> (Deutsch)</span></a>
+          
+            <a href="/en/hilfe/e-rezept/" hreflang="en-GB" lang="en-GB">EN<span class="nur-vorlesen"> (English)</span></a>
+          
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<header class="kopf">
+  <div class="rahmen kopf-innen">
+    <a class="logo" href="/">
+      <img src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/logo.png" width="512" height="70" alt="Gemeinschaftspraxis Gesenhues &amp; Partner – zur Startseite" />
+    </a>
+    <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
+    <nav class="menue" id="hauptmenue" aria-label="Hauptmenü">
+      <ul>
+        
+          <li class=" hat-unter">
+            <a href="/leistungen/">Leistungen</a>
+            
+              <ul>
+                
+                  <li><a href="/leistungen/diabetologie/">Diabetologie</a></li>
+                
+                  <li><a href="/leistungen/kindergesundheit/">Kindergesundheit</a></li>
+                
+                  <li><a href="/leistungen/sportmedizin/">Sportmedizin</a></li>
+                
+                  <li><a href="/leistungen/vorsorge-finder/">Vorsorge-Finder</a></li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="aktiv hat-unter">
+            <a href="/hilfe/">Hilfe</a>
+            
+              <ul>
+                
+                  <li><a href="/hilfe/rezept-online-bestellen/">Rezept und Überweisung (medflex)</a></li>
+                
+                  <li><a href="/hilfe/termin-online-buchen/">Termin buchen (Doctolib)</a></li>
+                
+                  <li><a href="/hilfe/neu-bei-uns/">Neu bei uns</a></li>
+                
+                  <li><a href="/hilfe/e-rezept/">E-Rezept einlösen</a></li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="">
+            <a href="/praxisteam/">Praxisteam</a>
+            
+          </li>
+        
+          <li class="">
+            <a href="/aktuelles/">Aktuelles</a>
+            
+          </li>
+        
+          <li class="">
+            <a href="/karriere/">Karriere</a>
+            
+          </li>
+        
+          <li class="">
+            <a href="/kontakt/">Kontakt</a>
+            
+          </li>
+        
+      </ul>
+    </nav>
+    <a class="knopf knopf--kopf" href="https://www.doctolib.de/gemeinschaftspraxis/ochtrup/gemeinschaftspraxis-gesenhues-partner" target="_blank" rel="noopener">Termin buchen</a>
+  </div>
+</header>
+
+
+
+
+
+  
+
+
+
+
+  <section class="hilfe-buehne hilfe-buehne--klein">
+    <div class="rahmen">
+      <a class="hilfe-zurueck" href="/hilfe/">Zurück zur Hilfe</a>
+      <h1>E-Rezept einlösen</h1>
+      <p class="hilfe-unterzeile">Ihr Rezept liegt sicher bereit. So holen Sie Ihr Medikament ab.</p>
+    </div>
+    <svg class="hilfe-welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q720 150 1440 0 V80 H0Z"/></svg>
+  </section>
+
+
+
+
+
+
+<main id="inhalt" tabindex="-1">
+  
+  
+  
+  
+  
+  <div class="rahmen anleitung" data-anleitung="rezept">
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c329" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Ihr Rezept liegt sicher bereit
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Rezepte für Medikamente bekommen Sie heute als E-Rezept. Statt eines rosa Zettels wird Ihr Rezept sicher gespeichert. In der Apotheke stecken Sie einfach Ihre Gesundheitskarte ein, und die Apotheke sieht Ihr Rezept. Ein Handy brauchen Sie dafür nicht.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c330" class="frame frame-default frame-type-text frame-layout-1">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Das Wichtigste in einem Satz
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Gesundheitskarte mitnehmen, in der Apotheke einstecken, Medikament mitnehmen. Mehr ist es nicht.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c331" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                In drei Schritten zum Medikament
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          <article class="ablauf-karte">
+            <span class="karten-symbol"><svg aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1794212195#rezept" /></svg></span>
+            <h3>Rezept bekommen</h3>
+            <div class="karten-text"><p>Beim Termin in der Praxis oder bequem von zu Hause: Folgerezepte bestellen Sie online über medflex.</p>
+<p><a href="/hilfe/rezept-online-bestellen/">So bestellen Sie ein Rezept</a></p></div>
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="ablauf-karte">
+            <span class="karten-symbol"><svg aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1794212195#uhr" /></svg></span>
+            <h3>Kurz warten</h3>
+            <div class="karten-text"><p>Ihr Rezept ist erst da, wenn die Ärztin oder der Arzt es unterschrieben hat. Haben Sie über medflex bestellt, warten Sie bitte auf unsere Antwort.</p></div>
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="ablauf-karte">
+            <span class="karten-symbol"><svg aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1794212195#karte" /></svg></span>
+            <h3>In der Apotheke einlösen</h3>
+            <div class="karten-text"><p>Stecken Sie Ihre Gesundheitskarte ein. Die Apotheke sieht Ihr Rezept und gibt Ihnen das Medikament. Sie können jede Apotheke wählen.</p></div>
+          </article>
+        
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c335" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Drei Wege, Ihr E-Rezept einzulösen
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          <article class="weg-karte weg-karte--tipp">
+            <span class="karten-symbol"><svg aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1794212195#karte" /></svg></span>
+            <span class="weg-marke">Am einfachsten</span>
+            <h3>Mit der Gesundheitskarte</h3>
+            <div class="karten-text"><p><strong>Das brauchen Sie:</strong> Ihre Gesundheitskarte. Keine PIN, kein Handy.</p>
+<p><strong>So geht es:</strong> Karte in der Apotheke einstecken, fertig. Auch eine Person Ihres Vertrauens kann mit Ihrer Karte für Sie abholen.</p></div>
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="weg-karte">
+            <span class="karten-symbol"><svg aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1794212195#handy" /></svg></span>
+            
+            <h3>Mit der App</h3>
+            <div class="karten-text"><p><strong>Das brauchen Sie:</strong> ein Smartphone und die App „Das E-Rezept“ oder die App Ihrer Krankenkasse. Zum Anmelden einmal Ihre GesundheitsID von der Krankenkasse oder Ihre Karte mit PIN.</p>
+<p><strong>So geht es:</strong> In der App sehen Sie Ihre Rezepte, wählen eine Apotheke und bestellen vor. Dann liegt das Medikament schon bereit, viele Apotheken bringen es auch.</p>
+<p><a href="https://www.das-e-rezept-fuer-deutschland.de/" target="_blank" rel="noreferrer">Zur App „Das E-Rezept“</a></p></div>
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="weg-karte">
+            <span class="karten-symbol"><svg aria-hidden="true"><use href="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/Images/symbole.svg?v=1794212195#ausdruck" /></svg></span>
+            
+            <h3>Mit einem Ausdruck</h3>
+            <div class="karten-text"><p><strong>Das brauchen Sie:</strong> einen Ausdruck mit Code. Den bekommen Sie auf Wunsch bei uns.</p>
+<p><strong>So geht es:</strong> Zeigen Sie den Ausdruck in der Apotheke vor, dort wird der Code gescannt. Praktisch, wenn jemand ohne Ihre Karte für Sie abholt.</p></div>
+          </article>
+        
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c354" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Falls es einmal hakt
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          <article class="problem-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Wenn die Apotheke Ihr Rezept nicht findet</h2>
+              <div class="schritt-beschreibung"><p>Meist ist es dann noch nicht unterschrieben. Ein E-Rezept erscheint erst nach der Unterschrift, und die geschieht nicht immer sofort.</p><ul><li>Warten Sie auf unsere Antwort zu Ihrer Bestellung und versuchen Sie es dann noch einmal.</li><li>In der App sehen Sie selbst, ob Ihr Rezept schon da ist.</li><li>Ist es dringend, rufen Sie uns an: <a href="tel:+490255393970">02553 93 97 0</a>.</li></ul></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="problem-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Wenn Ihre Gesundheitskarte nicht funktioniert</h2>
+              <div class="schritt-beschreibung"><p>Ist die Karte kaputt oder abgelaufen, bekommen Sie bei Ihrer Krankenkasse eine neue. Bis dahin lösen Sie Ihr Rezept mit einem Ausdruck ein. Fragen Sie uns einfach danach.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          <article class="problem-karte" data-fall="">
+            <div class="schritt-inhalt">
+              <h2>Wenn das Medikament nicht vorrätig ist</h2>
+              <div class="schritt-beschreibung"><p>Die Apotheke kann es meist bestellen. Möchten Sie lieber in eine andere Apotheke, sagen Sie das. Die Apotheke gibt Ihr Rezept dann wieder frei, und Sie lösen es woanders ein.</p></div>
+            </div>
+            
+          </article>
+        
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c342" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Häufige Fragen
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Wie lange ist mein E-Rezept gültig?</span></summary>
+            <div class="stelle-text"><p>Lösen Sie es innerhalb von 28 Tagen ein, dann zahlt Ihre Krankenkasse. Danach können Sie es bis zu drei Monate nach dem Ausstellen noch einlösen, müssen das Medikament dann aber selbst bezahlen.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Muss ich für ein Folgerezept in die Praxis kommen?</span></summary>
+            <div class="stelle-text"><p>Nein. Sie bestellen es über medflex: <a href="/hilfe/rezept-online-bestellen/">So geht es</a>. Wichtig: Ihre Gesundheitskarte muss in diesem Quartal einmal bei uns eingelesen worden sein.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Kann jemand anderes mein Medikament abholen?</span></summary>
+            <div class="stelle-text"><p>Ja. Geben Sie der Person Ihre Gesundheitskarte oder den Ausdruck mit. In der App können Sie Rezepte auch für Ihre Familie verwalten.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Gibt es das E-Rezept auch für Kinder?</span></summary>
+            <div class="stelle-text"><p>Ja. Sie lösen es mit der Gesundheitskarte Ihres Kindes oder mit dem Ausdruck ein.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Kostet das E-Rezept etwas?</span></summary>
+            <div class="stelle-text"><p>Nein, nichts extra. Die Zuzahlung in der Apotheke ist dieselbe wie beim Papierrezept.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Kann ich es bei einer Online-Apotheke einlösen?</span></summary>
+            <div class="stelle-text"><p>Ja, Sie können jede Apotheke wählen, auch eine Versandapotheke. Das geht über die App „Das E-Rezept“ oder in der App der Apotheke: Sie halten Ihre Gesundheitskarte ans Handy. Dafür braucht die Karte das Funk-Zeichen und eine sechsstellige Nummer auf der Vorderseite.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Ich bin privat versichert. Bekomme ich auch ein E-Rezept?</span></summary>
+            <div class="stelle-text"><p>Das hängt von Ihrer Versicherung ab. Viele Privatversicherte bekommen weiterhin ein Papierrezept. Einige private Versicherungen bieten das E-Rezept schon über ihre App an.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Was gibt es noch auf Papier?</span></summary>
+            <div class="stelle-text"><p>Verordnungen für Physiotherapie und andere Heilmittel, für Hilfsmittel wie einen Rollator und für bestimmte starke Schmerzmittel bekommen Sie weiterhin auf Papier.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Ich brauche ein Medikament dauerhaft. Geht das einfacher?</span></summary>
+            <div class="stelle-text"><p>Ja. Ihre Ärztin oder Ihr Arzt kann ein Rezept für bis zu vier Abholungen innerhalb eines Jahres ausstellen. Sprechen Sie uns beim nächsten Termin darauf an.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          <details class="stelle frage" data-fall="">
+            <summary><span class="stelle-titel">Wo wird mein Rezept gespeichert?</span></summary>
+            <div class="stelle-text"><p>In einem besonders geschützten Netz des Gesundheitswesens. 100 Tage nach dem Einlösen wird es automatisch gelöscht.</p></div>
+          </details>
+        
+    
+      
+      
+      
+      
+          
+    
+
+            <div id="c353" class="frame frame-default frame-type-text frame-layout-1">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Noch Fragen zum E-Rezept?
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Ihr Folgerezept bestellen Sie über medflex: <a href="/hilfe/rezept-online-bestellen/">So geht es Schritt für Schritt</a>. Fragen zu Ihrem Medikament beantwortet Ihnen auch jede Apotheke. Mehr zum E-Rezept: <a href="https://www.das-e-rezept-fuer-deutschland.de/" target="_blank" rel="noreferrer">das-e-rezept-fuer-deutschland.de</a>.</p>
+<p>Erreichen Sie uns telefonisch unter <a href="tel:+490255393970">02553 93 97 0</a>.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+    <p class="anleitung-druck"><button type="button" class="knopf knopf--zweit druck-knopf">Anleitung ausdrucken</button></p>
+  </div>
+
+  <template id="uebung-vorlage">
+    <section class="uebung" id="ueben" aria-labelledby="uebung-titel">
+      <div class="uebung-text">
+        <p class="uebung-marke">Demo, noch unvollständig</p>
+        <h2 id="uebung-titel">Hier können Sie in Ruhe üben</h2>
+        <p class="uebung-demo">Das ist bisher nur eine unvollständige Demo. Sie zeigt eine Idee für Menschen, die mit solchen Abläufen schnell überfordert sind: Erst in Ruhe üben, dann selbst machen.</p>
+        <p>Das Handy stellt den Ablauf nach. Nichts wird abgeschickt, Sie können nichts falsch machen.</p>
+        <div class="uebung-anweisung" aria-live="polite"></div>
+        <div class="uebung-leiste"><span class="uebung-fortschritt"></span></div>
+        <div class="uebung-knoepfe"></div>
+      </div>
+      <div class="uebung-handy"><div class="uebung-bildschirm"></div></div>
+    </section>
+  </template>
+
+</main>
+
+<footer class="fuss">
+  <div class="rahmen fuss-raster">
+    <div>
+      <p class="fuss-name">Gemeinschaftspraxis<br />Gesenhues &amp; Partner</p>
+      <p>Marktplatz 1<br />48607 Ochtrup</p>
+      <p><a href="tel:+490255393970">02553 93 97 0</a><br /><a href="mailto:kontakt@praxis-gesenhues.de">kontakt@praxis-gesenhues.de</a></p>
+    </div>
+    <div>
+      <h2 class="fuss-titel">Außerhalb der Sprechzeiten</h2>
+      <p>Ärztlicher Bereitschaftsdienst<br /><a class="fuss-nummer" href="tel:116117">116 117</a></p>
+      <p>Lebensbedrohlicher Notfall<br /><a class="fuss-nummer" href="tel:112">112</a></p>
+    </div>
+    <blockquote class="fuss-zitat">
+      <p>Die beste Arznei für den Menschen ist der Mensch.</p>
+      <footer>Paracelsus</footer>
+    </blockquote>
+  </div>
+  <div class="rahmen fuss-unten">
+    <span>Unverbindlicher Entwurf von Leon Oßendorf, kein offizieller Auftritt der Gemeinschaftspraxis Gesenhues &amp; Partner.</span>
+    <a href="/hilfe/">Hilfe</a>
+    <a href="/barrierefreiheit/">Barrierefreiheit</a>
+    <a href="/leichte-sprache/">Leichte Sprache</a>
+  </div>
+</footer>
+
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/uebung.js?v=1794212195"></script>
+<script src="/_assets/aab07e8ce4c2a3d56fb7213ec42b9ca6/JavaScript/praxis.js?v=1794212195"></script>
+
+
+</body>
+</html>

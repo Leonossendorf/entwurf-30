@@ -1488,3 +1488,40 @@ html.kontrast .hauptfeld-tafel, html.kontrast .hauptpunkt, html.kontrast .kurzwe
   * { animation: none !important; }
 }
 html.kontrast * { animation: none !important; }
+
+/* ---------- Wissensseiten (z. B. E-Rezept): Ablauf-Schritte und Karten nebeneinander ---------- */
+.anleitung:has(> .weg-karte, > .ablauf-karte) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 20px; }
+.anleitung:has(> .weg-karte, > .ablauf-karte) > * { grid-column: 1 / -1; }
+.anleitung > .weg-karte, .anleitung > .ablauf-karte { grid-column: auto; }
+.anleitung > .frame-type-header, .anleitung > .frame-layout-0:not(:has(.ce-bodytext)) { margin: 40px 0 18px; }
+.karten-symbol { display: grid; place-items: center; width: 60px; height: 60px; margin-bottom: 14px; border-radius: 50%; background: #e3edf9; color: var(--c-marke-dunkel); }
+.karten-symbol svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.karten-text p { margin: 0 0 .6em; font-size: 1.08rem; line-height: 1.55; }
+.karten-text p:last-child { margin-bottom: 0; }
+.karten-text strong { color: var(--c-marke-dunkel); }
+.ablauf-karte, .weg-karte { position: relative; margin: 0 0 20px; padding: 26px 26px 24px; border-radius: 24px; }
+.ablauf-karte h3, .weg-karte h3 { margin: 0 0 .45em; font-size: 1.35rem; }
+.anleitung { counter-reset: schritt ablauf; }
+.ablauf-karte { counter-increment: ablauf; background: #f2f6fb; }
+.ablauf-karte::before { content: counter(ablauf); position: absolute; right: 24px; top: 20px; font-family: var(--f-kopf); font-weight: 700; font-size: 3rem; line-height: 1; color: #c6d6ea; }
+.ablauf-karte + .ablauf-karte::after { content: ""; position: absolute; left: -20px; top: 56px; width: 20px; height: 2px; background: #b4cbe8; }
+.weg-karte { background: #fff; border: 1.5px solid var(--c-linie); box-shadow: 0 18px 34px -28px rgba(16, 33, 55, .5); }
+.weg-karte--tipp { border-color: #b4cbe8; box-shadow: 0 0 0 3px #e3edf9, 0 18px 34px -28px rgba(16, 33, 55, .5); }
+.weg-marke { position: absolute; right: 20px; top: 22px; padding: 4px 12px; font-size: .88rem; font-weight: 700; color: #fff; background: var(--c-marke); border-radius: 999px; }
+.weg-karte .karten-symbol { background: #fbecd6; color: #8f5a0b; }
+.weg-karte--tipp .karten-symbol { background: #e3edf9; color: var(--c-marke-dunkel); }
+html.kontrast .ablauf-karte, html.kontrast .weg-karte { background: #fff; border: 2px solid #000; box-shadow: none; }
+@media (max-width: 900px) {
+  .anleitung:has(> .weg-karte, > .ablauf-karte) { grid-template-columns: minmax(0, 1fr); }
+  .ablauf-karte + .ablauf-karte::after { display: none; }
+}
+@media print {
+  .ablauf-karte, .weg-karte { break-inside: avoid; border: 1px solid #000; box-shadow: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .ablauf-karte, .weg-karte { animation: auftauchen linear backwards; animation-timeline: view(); animation-range: entry 0px entry 170px; }
+    .ablauf-karte:nth-of-type(3n + 2), .weg-karte:nth-of-type(3n + 2) { animation-range: entry 45px entry 215px; }
+  }
+}
+
